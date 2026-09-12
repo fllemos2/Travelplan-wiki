@@ -1,0 +1,224 @@
+{
+  "main": {
+    "id": "05ce630c2cc3d7f8",
+    "type": "split",
+    "children": [
+      {
+        "id": "44e21c08ed9a11c7",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "24cc73e61cd1149a",
+            "type": "leaf",
+            "state": {
+              "type": "graph",
+              "state": {},
+              "icon": "lucide-git-fork",
+              "title": "Visualização em gráfico"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "320edad3f28314a7",
+    "type": "split",
+    "children": [
+      {
+        "id": "9c2085500f9986e4",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "f8b293c0632c6157",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Explorador de arquivos"
+            }
+          },
+          {
+            "id": "ae5ccc6ca44d4e90",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Procurar"
+            }
+          },
+          {
+            "id": "1be954ac26fa5e97",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-bookmark",
+              "title": "Marcadores"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "92929be08e6384ac",
+    "type": "split",
+    "children": [
+      {
+        "id": "5ad2f71e2a362304",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "6ddebdcebe50d302",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Links inversos"
+            }
+          },
+          {
+            "id": "e1e30509a0953220",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "wiki/financeiro/plano-de-viabilidade.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Links de saída"
+            }
+          },
+          {
+            "id": "dc80a1c215dbf565",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Etiquetas"
+            }
+          },
+          {
+            "id": "ca69808ab8bf2c5f",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "Todas as propriedades"
+            }
+          },
+          {
+            "id": "0d046941641334ae",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "wiki/financeiro/plano-de-viabilidade.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Sumário"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Abrir a troca rápida": false,
+      "graph:Abrir visualização em gráfico": false,
+      "canvas:Criar novo canvas": false,
+      "daily-notes:Abrir a nota de hoje": false,
+      "templates:Inserir modelo": false,
+      "command-palette:Abrir paleta de comandos": false,
+      "bases:Criar nova base": false
+    }
+  },
+  "active": "24cc73e61cd1149a",
+  "lastOpenFiles": [
+    "Sem título.base",
+    "log.md",
+    "Sem título",
+    "wiki/financeiro/plano-de-viabilidade.md",
+    "raw/2026-09-01-briefing-fundador.md",
+    "wiki/consultas/onde-exatamente.md",
+    "wiki/consultas/onde-exatamente.md.tmp.12692.a5cca9af8b89",
+    "wiki/destinos/engadina-st-moritz.md",
+    "wiki/destinos/zermatt.md",
+    "wiki/destinos/jungfrau-interlaken.md",
+    "wiki/financeiro/estrategia-livelo.md",
+    "jungfrau-interlaken.md",
+    "wiki/logistica/regras-de-compra.md",
+    "wiki/destinos/piemonte-langhe.md",
+    "wiki/destinos/verona.md",
+    "raw/2026-09-01-briefing-completo.md",
+    "wiki/destinos/cinque-terre.md",
+    "pagina.md",
+    "wiki/entidades/obsidian.md",
+    "raw/2026-09-02-decisoes-italia-suica.md",
+    "wiki/sintese/o-sonho.md",
+    "hot-cache.md.tmp.29004.d898aea1b491",
+    "wiki/consultas/melhor-epoca.md",
+    "wiki/roteiros/rota-mestra.md",
+    "index.md.tmp.29004.d3f071ed7d08",
+    "wiki/fontes/briefing-fundador.md",
+    "CLAUDE.md.tmp.29004.21e204403c94",
+    "wiki/a-agencia.md",
+    "wiki/logistica/checklist-prazos.md",
+    "wiki/ofertas/historico-de-precos.md",
+    "wiki/ofertas",
+    "wiki/financeiro",
+    "wiki/logistica",
+    "wiki/roteiros",
+    "wiki/destinos",
+    "hot-cache.md"
+  ]
+}

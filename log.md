@@ -1,0 +1,244 @@
+# Log
+
+Registro append-only. Mais recente embaixo. `grep "^## \[" log.md | tail -5` para ver o que rolou por último.
+
+Tipos: `ingest` · `query` · `lint` · `refactor` · `schema`
+
+---
+
+## [2026-09-01] schema | Fundação do cofre
+
+Cofre Obsidian vazio convertido em LLM Wiki.
+
+- Criadas as pastas `raw/` (+`assets/`), `wiki/` (`sintese`, `entidades`, `conceitos`, `fontes`, `consultas`), `meta/` (`templates`, `lint`).
+- Escrito `CLAUDE.md` — schema em 8 seções: arquitetura, convenções, ingest, query, lint, index/log, hot cache, postura.
+- Criados `index.md`, `log.md`, `hot-cache.md`.
+- Criados 4 moldes em `meta/templates/`.
+- Removido `Bem-vindo.md` (nota padrão do Obsidian, sem conteúdo).
+
+Pendente: domínio do cofre indefinido; git não inicializado; Obsidian não apontado para `meta/templates/` nem `raw/assets/`.
+
+## [2026-09-01] ingest | LLM Wiki — Um Padrão para Bases de Conhecimento Pessoais
+
+Fonte: `raw/2026-09-01-llm-wiki-padrao.md` (colada pelo Fabio; autor e data de publicação desconhecidos).
+Primeiro ingest do cofre — a fonte é o documento que motivou a existência dele.
+
+**Nasceram (6):**
+- `wiki/fontes/llm-wiki-padrao.md` — página de leitura
+- `wiki/conceitos/wiki-compilada-vs-rag.md`
+- `wiki/conceitos/ciclo-ingest-query-lint.md`
+- `wiki/conceitos/arquitetura-tres-camadas.md`
+- `wiki/entidades/obsidian.md`
+- `wiki/entidades/memex.md`
+
+**Atualizados (3):** `wiki/overview.md` (criado nesta passada e já ligado ao mapa), `index.md`, `hot-cache.md`.
+
+**Contradições:** nenhuma — cofre vazio, não havia com o que conflitar.
+
+**Em aberto:**
+- Nenhuma síntese criada. Síntese exige tese, e tese exige domínio — que ainda não temos.
+- `memex` está em `confianca: media` por ser conhecimento de segunda mão; *As We May Think* (1945) deveria entrar em `raw/` se o tema voltar.
+- Três lacunas registradas na página da fonte: onde o `index.md` quebra por escala; como medir se uma propagação foi *boa*; como evitar deriva de síntese rumo à última fonte lida.
+
+## [2026-09-01] schema | Domínio definido — Agência de Viagem Particular
+
+O cofre deixou de ser genérico. Fonte: `raw/2026-09-01-briefing-fundador.md`.
+
+- `CLAUDE.md` ganhou a **§9 — O domínio**: pastas do domínio, a equipe, ordem de trabalho, e regras extras (preço sempre com fonte e data; exigência legal só de fonte oficial; estimativa rotulada; eu não compro).
+- Árvore de pastas da §1 atualizada.
+- Novas pastas: `wiki/destinos/`, `wiki/roteiros/`, `wiki/ofertas/`, `wiki/financeiro/`, `wiki/logistica/`, `.claude/agents/`.
+
+**Contratados (6 subagentes reais em `.claude/agents/`):** `controlador-financeiro`,
+`cacador-ofertas`, `curador-destinos`, `arquiteto-roteiro`, `despachante`, `concierge-visual`.
+
+## [2026-09-01] ingest | Briefing Fundador — a missão da agência
+
+Fonte primária: o cliente descrevendo o próprio sonho.
+
+**Nasceram (7):**
+- `wiki/fontes/briefing-fundador.md` — página de leitura
+- `wiki/sintese/o-sonho.md` — **primeira síntese do cofre**; tese: a viagem está mal datada, não impossível. `confianca: baixa`, com 10 campos em branco
+- `wiki/a-agencia.md` — quadro de funcionários e ordem de trabalho
+- `wiki/logistica/regras-de-compra.md` — o limite honesto da agência
+- `wiki/financeiro/plano-de-viabilidade.md` — esqueleto da aritmética
+- `wiki/ofertas/historico-de-precos.md` — esqueleto da linha de base
+- `wiki/logistica/checklist-prazos.md` — esqueleto da linha do tempo regressiva
+
+**Atualizados (4):** `CLAUDE.md`, `index.md`, `wiki/overview.md`, `hot-cache.md`.
+
+**Recusa registrada:** o briefing pediu "ser capaz de acessar e comprar quando surgirem
+ofertas incríveis". Recusado e documentado em `regras-de-compra.md`. Contraproposta:
+gatilho pré-autorizado + dossiê de execução + alerta push. Eu decido, o Fabio clica.
+
+**Em aberto — bloqueia toda a agência:** os 10 campos de `o-sonho.md`. Sem destino,
+composição da família, origem, capacidade de poupança e janela de datas, nenhum
+funcionário sai do lugar. É o próximo passo e é do Fabio.
+
+## [2026-09-01] ingest | Briefing completo — dados da viagem
+
+Fonte: `raw/2026-09-01-briefing-completo.md`. O ingest que tirou o projeto do papel.
+
+**Dados que entraram:** Fabio 52, Fabiana 53, Zoe 8 (primeira internacional) · origem GIG ·
+R$ 2.000/mês · 10–15 dias · janela 2ºsem/27–1ºsem/29 · passaportes válidos +5 anos ·
+~60k pontos Livelo · econômica, Airbnb/3★ nota >8, trem preferido.
+Três destinos desejados: norte da Itália (Fabiana), Suíça (Fabio), Disneyland Paris (Zoe).
+
+**Nasceram (3):**
+- `wiki/roteiros/rota-mestra.md` — **descoberta estrutural:** os três sonhos formam um corredor
+  geográfico contínuo (Milão → Suíça → Paris). Ninguém abre mão de nada. Exige passagem *open-jaw*.
+- `wiki/consultas/melhor-epoca.md` — resposta à pergunta do Fabio: **18/set a 05/out**. Única janela
+  que entrega os 7 critérios pedidos, e ainda é baixa temporada.
+- `raw/2026-09-01-briefing-completo.md` (fonte)
+
+**Atualizados (4):**
+- `wiki/sintese/o-sonho.md` — tese **v0 → v1**, `confianca: baixa → media`. Ganhou data, rota e orçamento.
+- `wiki/financeiro/plano-de-viabilidade.md` — **a data: setembro de 2028** (24 meses × R$ 2.000 = R$ 48.000
+  contra custo realista de ~R$ 55.800; diferença fechada por Livelo + parcelamento + gratuidades da Zoe).
+  Custo-alvo em 3 cenários e linha do tempo do dinheiro.
+- `wiki/ofertas/historico-de-precos.md` — primeiras âncoras (GIG–MIL a partir de R$ 4.457, KAYAK);
+  gatilho nº 1 criado e **pausado** até out/2027.
+- `wiki/logistica/checklist-prazos.md` — data-alvo fixada; passaportes marcados ✅; **ETIAS** entrou como
+  a mudança regulatória mais provável até 2028.
+
+**Descartado com fundamento:** set/2027 (12 meses, R$ 24.000) — não cobre nem as passagens mais dez dias
+a três. Julho (férias escolares BR) — 25–30% mais caro para entregar viagem pior, e sem colheita de uva.
+
+**Contradições:** nenhuma.
+
+**Em aberto:**
+- 🔴 **Decisão da família:** tirar a Zoe da escola ~2 semanas em setembro. Bloqueia a confirmação da data.
+- Estratégia Livelo (qual programa, qual campanha) — a maior alavanca não trabalhada.
+- Onde exatamente no norte da Itália e na Suíça — trabalho do `curador-destinos`.
+- Trem × carro — preferência é trem; análise formal pendente.
+- Todos os custos são `[estimativa — não verificado]`. Passagens de set/2028 são **incotáveis** hoje:
+  companhias vendem ~330 dias à frente. Vigilância real começa em out/2027.
+
+## [2026-09-01] ingest | Homeschooling — a trava de calendário caiu
+
+Fabio informou que a família aderiu ao homeschooling com a Zoe. Fato curto, consequência grande.
+
+**Resolvido:** a decisão 🔴 que travava a data-alvo (tirar a Zoe da escola por ~2 semanas em setembro)
+deixou de existir. **Setembro de 2028 está confirmado** como janela. Julho sai definitivamente de cena —
+ele só era considerado porque as férias escolares eram a única janela possível.
+
+**Reenquadramento:** flexibilidade total de datas não é conveniência, é **alavanca financeira** — a
+segunda maior do projeto, atrás só do Livelo. Famílias com filho na escola pagam prêmio por viajar nas
+mesmas três semanas que todo mundo; os Lemos não pagam mais.
+
+**Atualizados (2):**
+- `wiki/consultas/melhor-epoca.md` — bloco de conflito vira `[!success]` resolvido; nova seção
+  "O que a flexibilidade total compra" (janela ampla, saída meio de semana, disponibilidade de resgate,
+  duração livre, plano B real). Corrigido cabeçalho duplicado introduzido na edição.
+- `wiki/ofertas/historico-de-precos.md` — **gatilho nº 1 ampliado**: de "18/set a 05/out" para
+  "qualquer 12–15 dias entre 10/set e 15/out de 2028", com preferência por saída terça/quarta.
+
+**Despachado:** `controlador-financeiro` (via general-purpose — as definições em `.claude/agents/`
+só entram no quadro após reiniciar o Claude Code) para a **estratégia Livelo**: para onde transferir,
+padrão de bônus, milhas por trecho GIG–Europa, transferir × Resgate Fácil, e como acumular em 24 meses.
+Entregável: `wiki/financeiro/estrategia-livelo.md`.
+
+**Em aberto:** resultado do Livelo; onde exatamente na Itália e na Suíça; trem × carro;
+propagar o fato do homeschooling para `o-sonho.md` e `plano-de-viabilidade.md` quando o agente liberar
+esses arquivos (ele está lendo os dois).
+
+## [2026-09-01] refactor | Propagação do homeschooling + Livelo interrompido
+
+**Propagação concluída (3):** o fato do homeschooling chegou às páginas centrais, que tinham ficado
+para trás porque o agente estava lendo os arquivos.
+- `wiki/sintese/o-sonho.md` — bloco "Decisão pendente com a família" vira "Homeschooling — a trava caiu"
+  (`[!success]`); campo **Quando** passa a registrar a janela de caça (10/set–15/out) em vez de data fixa;
+  "escola inegociável" sai de *o que derrubaria a tese* e é substituído por interrupção da poupança.
+- `wiki/financeiro/plano-de-viabilidade.md` — **nova alavanca nº 6**: flexibilidade total de datas,
+  ligada à alavanca nº 1 (assento de resgate por milhas). Agora são 7 alavancas. Risco de alta temporada
+  removido de *o que derrubaria o plano*.
+- `index.md` — headline e resumos atualizados; referência ao conflito escolar removida.
+
+> [!failure] Estratégia Livelo — NÃO entregue
+> O agente `controlador-financeiro` foi despachado em background e **morreu quando o Claude Code foi
+> reiniciado** (reinício que eu mesmo recomendei, para carregar os agentes de `.claude/agents/`).
+> `wiki/financeiro/estrategia-livelo.md` **não existe**. Nenhum dado de Livelo entrou no cofre.
+> A alavanca nº 1 do orçamento segue sem análise. **Precisa ser refeito.**
+
+**Aprendizado operacional:** não despachar agente em background imediatamente antes de recomendar
+reinício da sessão. Ou o trabalho vem primeiro, ou o reinício vem primeiro.
+
+**Estado dos funcionários:** os 6 subagentes de `.claude/agents/` estão **ativos** após o reinício —
+`controlador-financeiro`, `cacador-ofertas`, `curador-destinos`, `arquiteto-roteiro`, `despachante`,
+`concierge-visual`. Agora podem ser chamados pelo nome.
+
+## [2026-09-02] ingest | Decisões sobre Itália e Suíça
+
+Fonte: `raw/2026-09-02-decisoes-italia-suica.md`. O Fabio respondeu as 6 decisões em aberto.
+
+**Fechadas (4):**
+- **Duração: 12 a 15 dias** (antes 10–15). Reduz a folga do roteiro.
+- **Poupança de R$ 2.000/mês: confirmada** como compromisso. A data de set/2028 deixa de depender de suposição.
+- **Teto de passagem: delegado** ao `cacador-ofertas` — critério é melhor custo-benefício, não um número fixo.
+- **Livelo: refazer** a pesquisa que se perdeu.
+
+**Preferências declaradas (não são decisões finais — o Fabio pediu explicitamente sugestões):**
+- Itália: **Cinque Terre e Verona fundamentais**; colheita no **Piemonte desejável**, não obrigatória.
+- Suíça: **Jungfrau/Interlaken e Zermatt**; passeio de **trem cênico** pelos Alpes; vistas de **pasto verde
+  com neve ao fundo**; e uma **experiência de escorregar na neve de trenó**.
+
+**Duas tensões identificadas e despachadas para análise:**
+
+1. **Ziguezague italiano.** Cinque Terre fica a sudoeste de Milão (litoral), Verona a leste, Piemonte a
+   sudoeste no interior — três direções a partir do mesmo hub. Com Suíça e Paris no mesmo pacote de 12–15
+   dias, a rota deixa de ser a linha reta descrita em [[rota-mestra]]. Precisa de veredito honesto sobre
+   o que cabe.
+2. **Trenó na neve em setembro.** Em setembro não há neve pisável em altitude normal — só em glaciar.
+   A experiência pedida pode não existir na janela escolhida. Hipóteses a verificar em fonte oficial:
+   Snow Fun Park do Jungfraujoch (sazonalidade?), Matterhorn Glacier Paradise em Zermatt (neve o ano todo),
+   ou substituto sem neve (tobogã alpino de trilho / *rodelbahn*).
+
+**Despachados (2, em paralelo, background):**
+- `controlador-financeiro` → **estratégia Livelo** (segunda tentativa; a primeira morreu no reinício da
+  sessão). Entregável: `wiki/financeiro/estrategia-livelo.md`.
+- `curador-destinos` → **onde exatamente**, com as 5 perguntas: cabe o ziguezague? onde escorregar na neve
+  em setembro? qual trem cênico avança a rota em vez de desviar? Jungfrau e Zermatt ou só um? Piemonte vale
+  o desvio, ou Valpolicella perto de Verona entrega a mesma emoção? Entregáveis: páginas em
+  `wiki/destinos/` + `wiki/consultas/onde-exatamente.md`.
+
+**Em aberto:** resultado dos dois agentes; propagar as decisões para `o-sonho.md` e `rota-mestra.md`
+(segurado — os agentes estão lendo esses arquivos).
+
+## [2026-09-02] ingest | Estratégia Livelo — entregue pelo controlador-financeiro
+
+Nasceu `wiki/financeiro/estrategia-livelo.md` (22 KB). Segunda tentativa; a primeira morreu no reinício.
+
+> [!warning] Contradição resolvida contra o gerente
+> `plano-de-viabilidade.md`, alavanca nº 1, afirmava que o Livelo poderia cobrir **"uma passagem
+> inteira — cerca de R$ 6.000"**. **Está errado.** O número foi estimativa minha (gerente), sem pesquisa.
+> Os 60.000 pontos de hoje valem **um trecho, não uma passagem**: ~R$ 2.200 a R$ 3.000.
+> Uma passagem são duas pontas; a 74.000 milhas/ponta com bônus de 100%, exigiria 74.000 pontos Livelo —
+> mais do que a família tem hoje.
+> **Correção:** com aporte disciplinado ao longo de 24 meses, o alvo realista é **~R$ 5.000**
+> (teto ~R$ 11.000 se as 6 pontas saírem por milhas). R$ 5.000 fecham **64% dos R$ 7.800** que faltam.
+> O bloco de contradição está registrado na §5.1 da página nova.
+
+**Três achados estruturais:**
+1. **Milhas eliminam o prêmio de open-jaw.** Passagem-prêmio são dois one-ways independentes — sem
+   sobretaxa multi-destino. Os 10–15% que a [[rota-mestra]] paga por entrar em Milão e sair de Paris
+   **desaparecem** no resgate. Vale ~R$ 2.000 sozinho. Se só uma ponta for de milhas, preferir
+   **CDG→GIG** (Air France direto, taxas de resgate historicamente baixas).
+2. **O melhor programa para Europa dá o pior bônus.** LATAM Pass resgata Europa mais barato (58.506
+   milhas GIG–FRA em promo) mas recebe só **25%** de bônus da Livelo; Smiles e Azul dão **80–100%** e
+   cobram mais milhas. Decisão só é possível em **out/2027**, com o calendário de assentos-prêmio na tela.
+3. **O risco imediato não é preço, é validade.** Pontos Livelo expiram em **24 meses** do lançamento.
+   A compra das passagens está prevista para jan–abr/2028 — **parte dos 60.000 pontos atuais pode
+   expirar antes**. Mitigação: Clube Livelo (pontos do assinante não expiram) ou cartão cujos pontos
+   não expiram (BB Altus, BRB Dux, Bradesco Aeternum).
+
+**Números-âncora:** 222.000 pontos = alvo para as 6 pontas · 74.000 milhas/trecho GIG–CDG (Air France
+via Smiles) · CPM 2,60 c/ponto no Livelo Viagens contra 6,03 c/ponto transferindo com bônus de 100% —
+**transferir vale 2,3x**. Cotação usada: US$ 1 = R$ 5,1556 · € 1 = R$ 5,9737 (Investing.com, 02/09/2026).
+
+**🔴 Ação com prazo — 15/09/2026:** o Fabio precisa abrir o extrato Livelo e anotar a data de vencimento
+de cada lote dos 60.000 pontos. É a única tarefa da página que não pode esperar. Nenhuma fonte responde
+isso — só o extrato dele.
+
+**Propagação PENDENTE** (segurada porque o `curador-destinos` ainda está lendo esses arquivos):
+- `plano-de-viabilidade.md` — trocar a alavanca nº 1 por "~R$ 5.000, com aporte — ver [[estrategia-livelo]]"
+- `rota-mestra.md` — registrar que milhas anulam o prêmio de open-jaw
+- `checklist-prazos.md` — inserir a tarefa de 15/09/2026
