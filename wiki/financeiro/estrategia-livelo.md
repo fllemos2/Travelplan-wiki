@@ -2,25 +2,27 @@
 tipo: sintese
 titulo: Estratégia Livelo — quanto os pontos tiram do bloco de passagens
 criado: 2026-09-02
-atualizado: 2026-09-02
+atualizado: 2026-09-13
 tags: [financeiro, milhas, livelo, passagens, alavanca]
-fontes: ["[[plano-de-viabilidade]]", "[[o-sonho]]", "[[rota-mestra]]"]
+fontes: ["[[plano-de-viabilidade]]", "[[o-sonho]]", "[[rota-mestra]]", "[[extrato-livelo]]"]
 confianca: media
 status: ativo
 ---
 
 # Estratégia Livelo — quanto os pontos tiram do bloco de passagens
 
-> ## Veredito
+> ## Veredito (atualizado 13/09/2026 — ver [[extrato-livelo]])
 >
-> **Os 60.000 pontos de hoje valem UM TRECHO, não uma passagem inteira.** ≈ **R$ 2.200 a R$ 3.000**
-> do bloco de R$ 18.000 — e não os R$ 6.000 que o [[plano-de-viabilidade]] assumiu. Isso é uma
-> **correção para baixo** da alavanca nº 1.
+> **O saldo real é 79.479 pontos** (+8.500 a receber em 22/09/2026 → **87.979** em breve) — bem
+> acima dos 60.000 usados nos cálculos abaixo até 12/09. **Sem nenhum ponto a expirar** — o maior
+> risco desta página (§7) está **resolvido**.
 >
-> **Mas a alavanca continua sendo a maior do projeto — desde que a família a alimente.**
-> Com aporte disciplinado (Clube + cartão + uma compra de pontos em promoção), o alvo realista é
-> **~R$ 5.000 tirados do bloco de passagens**, com teto de **~R$ 11.000** se todas as seis pontas
-> saírem por milhas. R$ 5.000 sozinhos já cobrem **64% dos R$ 7.800** que faltam fechar.
+> Com o saldo atual, o ativo cobre **~R$ 2.900 a R$ 4.000** do bloco de R$ 18.000 (um trecho, sem
+> aporte) — ainda **abaixo dos R$ 6.000** que o [[plano-de-viabilidade]] assumiu originalmente,
+> mas acima da estimativa anterior desta página (R$ 2.200–3.000 sobre 60.000 pontos).
+>
+> **Com aporte disciplinado**, o alvo realista sobe para **~R$ 5.500 tirados do bloco de
+> passagens**, teto de **~R$ 11.750** se todas as seis pontas saírem por milhas. Ver §5 recalculada.
 >
 > **Três achados que mudam a estratégia:**
 > 1. **Milhas matam o prêmio de open-jaw.** Passagem-prêmio são dois one-ways independentes. Os
@@ -138,23 +140,28 @@ praticamente o mesmo preço que custa **comprar** o ponto (R$ 26,83–30/milheir
 
 ## 5. Quanto isso cobre do bloco de R$ 18.000
 
-### 5.1 O ativo de hoje, sozinho
+### 5.1 O ativo de hoje, sozinho (atualizado com [[extrato-livelo]], 13/09/2026)
 
-**60.000 pontos**, sem nenhum aporte:
+**79.479 pontos confirmados** (+8.500 a caminho em 22/09/2026), sem nenhum aporte adicional:
 
 | Rota de uso | Resultado | Vale |
 |---|---|---|
-| Livelo Viagens | R$ 1.561 de desconto | **R$ 1.561** garantidos |
-| → LATAM +25% = 75.000 milhas | 1 trecho promo (58,5k), sobram 16,5k | **R$ 2.230–3.000** |
-| → Smiles +80% = 108.000 milhas | 1 trecho de 74k, sobram 34k | **R$ 2.230–3.000** |
-| → Smiles +100% = 120.000 milhas | 1 trecho de 74k, sobram 46k — **não fecha o segundo** | **R$ 2.230–3.000** |
+| Livelo Viagens | 79.479 pts a ~2,60c/pt | **R$ 2.066** garantidos |
+| → LATAM +25% = 99.349 milhas | 1 trecho promo (58,5k), sobram 40,8k | **R$ 2.230–3.000** |
+| → Smiles +80% = 143.062 milhas | 1 trecho de 74k, sobram ~69k — **quase fecha o segundo** | **R$ 2.230–3.000**, potencial de mais |
+| → Smiles +100% = 158.958 milhas | 1 trecho de 74k, sobram ~85k — **fecha quase 2** com mais ~62k pontos | **R$ 2.230–3.000+** |
 
-> [!warning] Contradição com o [[plano-de-viabilidade]]
-> A alavanca nº 1 do plano diz: *"bem trabalhado, isso pode cobrir uma passagem inteira — cerca de
-> R$ 6.000 do bloco de R$ 18.000."* **Os números não sustentam isso com os 60.000 pontos atuais.**
-> Uma passagem inteira são DUAS pontas: a 74.000 milhas por ponta e bônus de 100%, seriam
-> **148.000 milhas = 74.000 pontos Livelo** — mais do que a família tem. O valor correto do ativo
-> atual é **um trecho: R$ 2.200 a R$ 3.000.** Os R$ 6.000 só aparecem **com aporte**.
+**Com os 87.979 pontos projetados (após 22/09):** o cenário Smiles +100% chega a 175.958 milhas —
+falta pouco (**~74.000 milhas**, ou seja, ~46.000 pontos Livelo adicionais) para fechar duas pontas
+inteiras nesse programa.
+
+> [!warning] Contradição com o [[plano-de-viabilidade]] — parcialmente resolvida
+> A alavanca nº 1 do plano dizia: *"bem trabalhado, isso pode cobrir uma passagem inteira — cerca de
+> R$ 6.000 do bloco de R$ 18.000."* Com 60.000 pontos isso não fechava. **Com 79.479–87.979
+> pontos, o cenário melhora**: ainda não cobre uma passagem inteira (2 pontas) sem aporte, mas chega
+> perto no cenário Smiles +100%. O valor seguro do ativo atual, sem aporte, continua sendo
+> **um trecho garantido: R$ 2.200 a R$ 3.000** — o segundo trecho depende de bônus alto e
+> disponibilidade de assento-prêmio, não é garantido.
 
 ### 5.2 O que custa cobrir as seis pontas
 
@@ -177,20 +184,23 @@ Comprar pontos em campanha: melhor preço observado em ago/2026 foi **R$ 26,83/m
 preço-alvo de referência para 2026, **R$ 30/milheiro** ([Melhores Destinos](https://www.melhoresdestinos.com.br/milhas/valor-milheiro-livelo)).
 Compra parcelável em **até 12x sem juros** acima de R$ 240, limite de **100.000 pontos por CPF a cada 30 dias**.
 
+**Recalculado com o saldo real de 79.479 pontos** ([[extrato-livelo]], 13/09/2026):
+
 | | Enxuto (3 trechos) | **Realista (4 trechos)** | Teto (6 trechos) |
 |---|---|---|---|
 | Pontos necessários | ~111.000 | ~148.000 | ~222.000 |
-| Pontos a adquirir (já com os 60.000) | 51.000 | 88.000 | 162.000 |
-| Custo de compra a R$ 27/milheiro | R$ 1.377 | **R$ 2.376** | R$ 4.374 |
+| Pontos a adquirir (já com os 79.479) | 31.521 | 68.521 | 142.521 |
+| Custo de compra a R$ 27/milheiro | R$ 851 | **R$ 1.850** | R$ 3.848 |
 | Taxas de embarque `[não verificado]` | ~R$ 1.200 | **~R$ 1.600** | ~R$ 2.400 |
-| **Custo total em dinheiro** | R$ 2.577 | **R$ 3.976** | R$ 6.774 |
+| **Custo total em dinheiro** | R$ 2.051 | **R$ 3.450** | R$ 6.248 |
 | Valor deslocado do bloco (a R$ 3.000/trecho) | R$ 9.000 | **R$ 12.000** | R$ 18.000 |
-| **Economia líquida no bloco** | **~R$ 6.400** | **~R$ 8.000** | **~R$ 11.200** |
+| **Economia líquida no bloco** | **~R$ 6.950** | **~R$ 8.550** | **~R$ 11.750** |
 
-> **Ancoragem prudente para o [[plano-de-viabilidade]]: use R$ 5.000.**
-> É abaixo do cenário realista da tabela porque a tabela assume (a) tarifa de campanha em Smiles
+> **Ancoragem prudente para o [[plano-de-viabilidade]]: sobe de R$ 5.000 para R$ 5.500.**
+> Ainda abaixo do cenário realista da tabela, porque ela assume (a) tarifa de campanha em Smiles
 > e (b) assento-prêmio disponível para 3 pessoas nas mesmas datas. Nenhuma das duas é garantida.
-> **R$ 5.000 já fecham 64% dos R$ 7.800 que faltam.**
+> **R$ 5.500 fecham ~70% dos R$ 7.800** que faltavam no cenário original — o ganho de ~R$ 500 vem
+> inteiramente do saldo real ser maior que a estimativa de 60.000 usada até 12/09.
 
 ### 5.4 O bônus escondido: milhas matam o prêmio de open-jaw
 
@@ -245,14 +255,13 @@ CPF precisa fechar seus próprios resgates, o que fragmenta o ativo.
 
 ## 7. Riscos — o que pode dar errado entre hoje e set/2028
 
-**1. Expiração — o risco imediato, e o único que já está correndo.**
+**1. Expiração — RESOLVIDO em 13/09/2026.** ✅
 Pontos Livelo valem **24 meses a partir do lançamento na conta**
 ([Regulamento oficial Livelo](https://www.livelo.com.br/regulamentos/programa-pontos-livelo) ·
-[AwardWallet](https://awardwallet.com/travel/pontos-livelo-expiracao/)). Pontos expirados só podem ser
-recuperados **em até 6 meses**, mediante taxa. **Parte dos 60.000 pontos de hoje pode vencer antes de
-janeiro de 2028, que é quando o plano prevê a compra das passagens.**
-Mitigação: assinatura do Clube Livelo (pontos do assinante **não expiram**) ou migração do gasto para
-cartão cujos pontos não expiram (BB Altus, BRB Dux, Bradesco Aeternum).
+[AwardWallet](https://awardwallet.com/travel/pontos-livelo-expiracao/)). O extrato do Fabio
+([[extrato-livelo]], 13/09/2026) confirma: **nenhum ponto dos 79.479 está marcado para expirar.**
+O risco que motivava a tarefa urgente de 15/09 não se concretiza — não há necessidade imediata de
+assinar o Clube Livelo só por proteção de validade (continua valendo por preço, se a campanha for boa).
 
 **2. Desvalorização.** LATAM Pass reajustou a tabela fixa de parceiras em **02/03/2026**, com aumentos
 de 20% em rotas envolvendo Europa — **voos com origem ou destino no Brasil ficaram de fora desta
@@ -285,7 +294,7 @@ R$ 5.100 do [[plano-de-viabilidade]] não pode ser tocada para comprar ponto.** 
 
 | # | Ação | Prazo |
 |---|---|---|
-| 1 | **Abrir o extrato Livelo e anotar a data de expiração de cada lote dos 60.000 pontos.** Se algum vence antes de dez/2027, decidir na hora: assinar Clube ou usar | **15/09/2026** |
+| 1 | ~~Abrir o extrato Livelo e anotar a data de expiração de cada lote~~ — ✅ **Feito 13/09/2026.** Saldo real 79.479 pts, sem expiração. Ver [[extrato-livelo]] | ~~15/09/2026~~ ✅ |
 | 2 | Responder: **qual cartão a família usa e quanto pontua?** Se for < 2 pts/US$, avaliar migração — vale mais que tudo nesta página | 30/09/2026 |
 | 3 | Assinar o **Clube Livelo apenas em campanha de adesão** (milheiro ≤ R$ 20). Nunca no preço cheio | até dez/2026 |
 | 4 | Abrir conta Livelo para a Fabiana (2º CPF) e verificar a regra de conta familiar | 30/09/2026 |
@@ -323,7 +332,8 @@ R$ 5.100 do [[plano-de-viabilidade]] não pode ser tocada para comprar ponto.** 
 O que esta página **não sabe** e precisa ser pesquisado:
 
 - **Taxas de embarque de resgate em GIG→MXP (LATAM) e CDG→GIG (Air France/Smiles e LATAM).** A maior lacuna. Impacto de até ±R$ 2.400 no total.
-- **Data de expiração dos lotes atuais** dos 60.000 pontos. Só o extrato do Fabio responde.
+- ~~Data de expiração dos lotes atuais~~ — ✅ resolvida em 13/09/2026: sem expiração ([[extrato-livelo]]).
+- **De onde vêm os 8.500 pontos a receber em 22/09/2026?** Não identificado na fonte — cartão, campanha ou cashback. `[não verificado]`
 - **Qual cartão a família usa e quanto gasta nele.** Define a acumulação orgânica de 24 meses — hoje ela é `[estimativa — não verificado]`.
 - **Se a Livelo permite somar saldos entre CPFs da mesma família.** Sem isso, o segundo CPF fragmenta em vez de somar.
 - **Se a Zoe, menor de idade, pode ter conta Livelo** (terceiro CPF para os tetos de compra).

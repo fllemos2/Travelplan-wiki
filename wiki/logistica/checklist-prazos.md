@@ -2,9 +2,9 @@
 tipo: conceito
 titulo: Checklist de Prazos
 criado: 2026-09-01
-atualizado: 2026-09-01
+atualizado: 2026-09-13
 tags: [logistica, prazos, documentos]
-fontes: []
+fontes: ["[[extrato-livelo]]"]
 confianca: alta
 status: ativo
 ---
@@ -24,6 +24,7 @@ Prazos são contados **regressivamente a partir da data de embarque**. O item ma
 | Prazo | Item | Antecedência típica | Quem | Status |
 |---|---|---|---|---|
 | ✅ | Passaportes dos três | válidos por +5 anos — cobre a viagem com folga | Fabio | ✔️ |
+| ✅ **15/09/2026** | Abrir extrato Livelo e checar expiração de pontos — feito 13/09: **79.479 pts, sem expiração**. Ver [[extrato-livelo]] | — | Fabio | ✔️ |
 | 🔴 **D-365** | **Autorização de viagem para a Zoe**, se ela viajar sem um dos pais | — | Fabio | ⬜ |
 | D-365 | Confirmar situação do **ETIAS** para brasileiros no Espaço Schengen — é a mudança mais provável até 2028 | — | Despachante | ⬜ |
 | D-120 | Confirmar exigências de entrada (Itália/Suíça/França) na fonte oficial | | Despachante | ⬜ |

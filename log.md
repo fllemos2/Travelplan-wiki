@@ -242,3 +242,21 @@ isso — só o extrato dele.
 - `plano-de-viabilidade.md` — trocar a alavanca nº 1 por "~R$ 5.000, com aporte — ver [[estrategia-livelo]]"
 - `rota-mestra.md` — registrar que milhas anulam o prêmio de open-jaw
 - `checklist-prazos.md` — inserir a tarefa de 15/09/2026
+
+> [!warning] Nota operacional — trabalho perdido de uma execução remota (13/09/2026)
+> Uma rotina cloud do `concierge-visual` rodou em 13/09, publicou um Artifact e enviou e-mail com
+> sucesso, e tinha inclusive fechado esta propagação pendente (Livelo, rota-mestra, checklist) — mas
+> o `git push` falhou por permissão (GitHub App sem acesso) e o container foi reciclado antes da
+> correção. As edições de wiki dessa rotina **se perderam**; só o Artifact e o e-mail (já entregues)
+> sobreviveram. GitHub reconectado em seguida pelo Fabio. A propagação acima segue pendente e será
+> refeita numa próxima operação.
+
+## [2026-09-13] ingest | Extrato Livelo — 13/09/2026
+
+- Fonte: `raw/2026-09-13-extrato-livelo.md` (print de tela, transcrito verbatim) → [[wiki/fontes/extrato-livelo|página de fonte]]
+- Criadas: [[wiki/fontes/extrato-livelo]]
+- Atualizadas: [[wiki/financeiro/estrategia-livelo]] (saldo real 79.479 pts, sem expiração, seção 5 recalculada, ancoragem de R$ 5.000 → R$ 5.500), [[wiki/logistica/checklist-prazos]] (tarefa de 15/09 marcada ✅), `index.md`
+- Pontos-chave: saldo real 79.479 pontos (32% acima da estimativa de 60.000 usada até aqui); **sem nenhum ponto a expirar**; +8.500 pontos a receber em 22/09/2026 (total projetado: 87.979)
+- Contradições: nenhuma nova — a contradição já registrada entre [[estrategia-livelo]] e [[plano-de-viabilidade]] (R$ 6.000 vs. valor real) permanece, mas a distância diminuiu
+- Questões resolvidas: "data de expiração dos lotes atuais" (lacuna de [[estrategia-livelo]] §9) — resolvida, sem expiração
+- Questões novas: de onde vêm os 8.500 pontos a receber em 22/09? `[não verificado]`

@@ -2,7 +2,7 @@
 
 Catálogo de tudo que existe no cofre. Atualizado a cada ingest. Primeira parada de toda query.
 
-**Estado:** 4 fontes · 19 páginas · 6 funcionários · atualizado em 2026-09-02
+**Estado:** 5 fontes · 20 páginas · 6 funcionários · atualizado em 2026-09-13
 **Domínio:** Agência de Viagem Particular — viabilizar a viagem de família dos Lemos
 **🎯 A viagem:** Itália · Suíça · Disneyland Paris — **set/2028** (janela 10/set–15/out) — ~R$ 55.800
 
@@ -21,7 +21,7 @@ Catálogo de tudo que existe no cofre. Atualizado a cada ingest. Primeira parada
 
 ## Financeiro
 
-- [[wiki/financeiro/estrategia-livelo|Estratégia Livelo]] — quanto os pontos realmente tiram do bloco de passagens. **Corrige para baixo** a alavanca nº 1: 60k pontos valem um trecho (~R$ 2.200–3.000), não uma passagem. Com aporte, ~R$ 5.000. **Tarefa com prazo: 15/09/2026.** `media`
+- [[wiki/financeiro/estrategia-livelo|Estratégia Livelo]] — saldo real confirmado: **79.479 pontos, sem expiração** ([[wiki/fontes/extrato-livelo|extrato 13/09]]). Cobre um trecho (~R$ 2.200–4.000) sem aporte; com aporte, ~R$ 5.500. `media`
 - [[wiki/financeiro/plano-de-viabilidade|Plano de Viabilidade]] — **a data: setembro de 2028.** Custo-alvo em 3 cenários (~R$ 43k / 55,8k / 74k), as 6 alavancas que fecham a diferença, e a linha do tempo do dinheiro. `media`
 
 ## Ofertas
@@ -31,7 +31,7 @@ Catálogo de tudo que existe no cofre. Atualizado a cada ingest. Primeira parada
 ## Logística
 
 - [[wiki/logistica/regras-de-compra|Regras de Compra]] — **leia esta.** O que eu posso e não posso executar; por que eu não compro; e o dossiê de execução que resolve o problema de outro jeito.
-- [[wiki/logistica/checklist-prazos|Checklist de Prazos]] — linha do tempo regressiva a partir de set/2028. Passaportes ✅; **ETIAS** é o item a vigiar.
+- [[wiki/logistica/checklist-prazos|Checklist de Prazos]] — linha do tempo regressiva a partir de set/2028. Passaportes ✅; extrato Livelo ✅ (13/09); **ETIAS** é o item a vigiar.
 
 ## Destinos
 
@@ -58,6 +58,7 @@ Catálogo de tudo que existe no cofre. Atualizado a cada ingest. Primeira parada
 - [[wiki/fontes/briefing-fundador|Briefing Fundador]] — o Fabio define a missão da agência; o que foi pedido e a única coisa que eu recusei. `2026-09-01`
 - **Briefing completo** — `raw/2026-09-01-briefing-completo.md`: família, origem, poupança, destinos, janela e padrão de viagem. *(fonte lida direto; conteúdo compilado em [[wiki/sintese/o-sonho|O Sonho]])* `2026-09-01`
 - [[wiki/fontes/llm-wiki-padrao|LLM Wiki — Um Padrão para Bases de Conhecimento Pessoais]] — documento fundador do método. `2026-09-01`
+- [[wiki/fontes/extrato-livelo|Extrato Livelo — 13/09/2026]] — saldo real 79.479 pts, sem expiração; resolve a tarefa urgente do checklist. `2026-09-13`
 
 ## Consultas arquivadas
 
