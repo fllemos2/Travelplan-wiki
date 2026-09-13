@@ -260,3 +260,12 @@ isso — só o extrato dele.
 - Contradições: nenhuma nova — a contradição já registrada entre [[estrategia-livelo]] e [[plano-de-viabilidade]] (R$ 6.000 vs. valor real) permanece, mas a distância diminuiu
 - Questões resolvidas: "data de expiração dos lotes atuais" (lacuna de [[estrategia-livelo]] §9) — resolvida, sem expiração
 - Questões novas: de onde vêm os 8.500 pontos a receber em 22/09? `[não verificado]`
+
+## [2026-09-13] refactor | Fotos reais no relatório mensal
+
+- Escopo: substituir as ilustrações SVG do Artifact "Sonho Lemos — Setembro/2028" por fotos reais, a pedido do Fabio.
+- Busca via agente: 3 fotos do Wikimedia Commons, licenças CC verificadas (Lauterbrunnen — Chensiyuan, CC BY-SA 4.0; Matterhorn/Zermatt — Andrew Bossi, CC BY-SA 2.5; Langhe/Barolo — Giorgio Galeotti, CC BY 4.0).
+- Processamento: redimensionadas e comprimidas (~230–280 KB cada), salvas em `raw/assets/` (lauterbrunnen-vale-01.jpg, zermatt-matterhorn-01.jpg, piemonte-langhe-vinhedos-01.jpg), embutidas no Artifact como `data:` URI.
+- Criadas: [[wiki/consultas/relatorio-mensal-2026-09]] (a página tinha se perdido no incidente de push anterior — recriada aqui)
+- Atualizadas: `index.md`
+- Artifact republicado na mesma URL: https://claude.ai/code/artifact/6f84004b-752c-42c9-9ec3-944a5aa8072f
