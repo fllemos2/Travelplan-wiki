@@ -12,7 +12,7 @@ status: ativo
 # Onde Exatamente — o veredito de destinos
 
 > [!success] Decisão fechada em 13/09/2026
-> O Fabio aceitou a recomendação abaixo: **Zermatt e Piemonte estão cortados.** O Arranjo A (14 dias) é a rota oficial. Ver [[decisao-paris]]. A única lacuna que resta é o detalhamento de Paris — ver [[paris]].
+> O Fabio aceitou a recomendação abaixo: **Zermatt e Piemonte estão cortados.** O Arranjo A é a rota oficial. Ver [[decisao-paris]]. **Duração ajustada de 14 para 16 dias** em seguida ([[decisao-16-dias]]) para caber Paris sem apertar — ver a grade revisada no §3.
 
 > **Resumo em quatro linhas.**
 > 1. **Não cabia tudo.** Cinque Terre + Verona + Piemonte + Jungfrau + Zermatt + Paris em 12–15 dias era uma corrida de trem, não uma viagem.
@@ -88,7 +88,7 @@ Milão é o centro; os três destinos italianos apontam para três direções di
 
 ## 3. Os três arranjos
 
-### 🏆 Arranjo A — "Um alpino só, dois trens cênicos" · **14 dias / 13 noites** · RECOMENDADO
+### 🏆 Arranjo A — "Um alpino só, dois trens cênicos" · **16 dias / 15 noites** (revisado 13/09/2026, [[decisao-16-dias]]) · DECIDIDO
 
 | Dia | Programa | Noite | Trem do dia |
 |---|---|---|---|
@@ -103,15 +103,20 @@ Milão é o centro; os três destinos italianos apontam para três direções di
 | 9 | **Jungfraujoch + Snow Fun Park: o trenó na neve** | Lauterbrunnen | ~4h ida e volta |
 | 10 | Grindelwald: **rodelbahn de Pfingstegg**, Trümmelbach, Wengen | Lauterbrunnen | curto |
 | 11 | → Basel → Paris | Marne-la-Vallée | ~5h30 |
-| 12 | **Disneyland Park** | Disney | — |
-| 13 | ⚠️ Louvre (manhã, versão essencial) + Versalhes (tarde, versão condensada) — **ver tensão abaixo** | Paris | — |
-| 14 | CDG → GIG | — | — |
+| 12 | **Disneyland Park**, dia inteiro | Disney/Paris | — |
+| 13 | Walt Disney Studios **ou** folga/Paris livre — flexível no dia | Paris | — |
+| 14 | **Palácio de Versalhes**, dia inteiro, sem pressa | Paris | RER C |
+| 15 | **Museu do Louvre**, dia inteiro, sem pressa; tarde livre em Paris | Paris | — |
+| 16 | CDG → GIG | — | — |
 
-**O que entrega:** Cinque Terre ✅ · Verona ✅ · colheita de uva ✅ (Valpolicella) · trem cênico ✅✅ (Bernina UNESCO + Brünig) · pasto verde com neve ao fundo ✅ · **trenó na neve ✅** · Disneyland ✅ · Louvre ✅ · Versalhes ✅
+**O que entrega:** Cinque Terre ✅ · Verona ✅ · colheita de uva ✅ (Valpolicella) · trem cênico ✅✅ (Bernina UNESCO + Brünig) · pasto verde com neve ao fundo ✅ · **trenó na neve ✅** (no Jungfraujoch, não no pasto — ver nota) · Disneyland ✅ · Louvre ✅, dia inteiro · Versalhes ✅, dia inteiro
 **O que sacrifica:** Zermatt e o Matterhorn; Piemonte e a trufa.
+**Dias com mais de 4h sentado:** os mesmos 5 do arranjo anterior — os 2 dias extras (D14, D15) são de passeio em Paris, não de deslocamento.
 
-> [!warning] Tensão adicionada em 13/09/2026 — ver [[paris]]
-> O pedido do Fabio (Disney + Versalhes + Louvre, cada um merecendo ao menos meio dia) não cabe com folga nos 2 dias de Paris deste arranjo. A linha D13 acima é uma **primeira tentativa condensada**, não uma solução testada — falta verificar tempo de RER até Versalhes e horários de entrada do Louvre. Se não couber, o Arranjo A vira **15 dias** em vez de 14. Trabalho do [[arquiteto-roteiro]].
+> [!success] Resolvido em 13/09/2026 — [[decisao-16-dias]]
+> O Fabio decidiu esticar de 14 para **16 dias** em vez de condensar Versalhes e Louvre num só dia. Cada um agora tem **seu próprio dia inteiro**, sem pressa. Grade acima é uma primeira distribuição — detalhamento fino (horários de RER, reserva de entrada do Louvre) é trabalho do [[arquiteto-roteiro]].
+>
+> **Nota de precisão:** o trenó na neve da Zoe acontece no **Snow Fun Park do Jungfraujoch** (geleira a 3.454 m), não no vale verde de Lauterbrunnen — são dois lugares e duas experiências diferentes na mesma região. O relatório mensal tinha uma frase que misturava os dois; corrigido.
 **Dias com mais de 4h sentado:** 5 dos 14 (D2, D4, D6, D7, D11). É bastante — mas dois deles (D7 e D8) *são* o passeio.
 
 ### Arranjo B — "Os dois alpinos" · **15 dias / 14 noites**
@@ -160,7 +165,7 @@ Igual ao A até o dia 5. Depois:
 
 | | **A — Jungfrau + Bernina** | B — Jungfrau + Zermatt | C — Jungfrau + Piemonte |
 |---|---|---|---|
-| Dias | **14** | 15 | 14 |
+| Dias | **16** (revisado 13/09) | 15 | 14 |
 | Noites caras (Suíça) | **4** | 6 | 3 |
 | Custo relativo | **base** | **+R$ 7.000–8.000** | +R$ 1.400 |
 | Trem cênico | **Bernina UNESCO + Brünig** | GoldenPass | ❌ nenhum |

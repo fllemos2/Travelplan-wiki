@@ -2,9 +2,9 @@
 tipo: sintese
 titulo: Plano de Viabilidade
 criado: 2026-09-01
-atualizado: 2026-09-01
+atualizado: 2026-09-13
 tags: [financeiro, orcamento, viabilidade, data-alvo]
-fontes: ["[[briefing-completo]]", "[[melhor-epoca]]", "[[rota-mestra]]"]
+fontes: ["[[briefing-completo]]", "[[melhor-epoca]]", "[[rota-mestra]]", "[[decisao-16-dias]]"]
 confianca: media
 status: ativo
 ---
@@ -27,30 +27,35 @@ status: ativo
 | **Set/2028** | **24** | **R$ 48.000** | ✅ **A recomendada.** Cobre o enxuto com folga e alcança o realista com as alavancas abaixo |
 | Set/2029 | 36 | R$ 72.000 | Cobre o confortável — mas **fora da janela emocional** |
 
-O cenário realista custa ~R$ 55.800. Em setembro de 2028 haverá R$ 48.000 em caixa. **A diferença de ~R$ 7.800 é fechada pelas alavancas**, não por sacrifício de experiência.
+O cenário realista custa ~R$ 59.400 (16 dias, atualizado em 13/09/2026). Em setembro de 2028 haverá R$ 48.000 em caixa. **A diferença de ~R$ 11.400 é fechada pelas alavancas**, não por sacrifício de experiência — um pouco mais do que os R$ 7.800 originais, por conta dos 2 dias extras.
 
-## Custo-alvo — 3 pessoas, 14 dias, setembro/2028
+## Custo-alvo — 3 pessoas, 16 dias, setembro/2028
 
 > ⚠️ **Todos os valores abaixo são `[estimativa — não verificado]`**, exceto os marcados com fonte. Preço de viagem envelhece; estes servem para dimensionar a poupança, não para reservar.
+
+> [!warning] Recalculado em 13/09/2026 — [[decisao-16-dias]]
+> O Fabio decidiu **16 dias** (antes: 14, do [[onde-exatamente|Arranjo A]]), para não apertar Paris (Disney + Versalhes + Louvre). Os blocos abaixo que escalam com duração (hospedagem, alimentação, seguro/chip) foram **extrapolados linearmente** pela razão de dias/noites — não é uma cotação nova. Passagens, Disneyland e atrações não mudam com duração. **Recálculo formal é trabalho do [[controlador-financeiro]].**
 
 | Bloco | Enxuto | **Realista** | Confortável | Nota |
 |---|---|---|---|---|
 | Passagens *open-jaw* GIG→Milão / Paris→GIG | 15.000 | **18.000** | 22.000 | âncora: ida-e-volta GIG–Milão a partir de R$ 4.457 na baixa ([KAYAK](https://www.kayak.com.br/voos/Rio-de-Janeiro-Galeao-Internacional-GIG/Milao-MIL)); *open-jaw* costuma custar 10–15% mais |
-| Hospedagem (13 noites) | 7.500 | **10.600** | 15.000 | Suíça é o dobro da Itália por noite |
-| Alimentação | 4.500 | **6.000** | 9.000 | com cozinha no apartamento em parte dos dias |
-| Trens + passe suíço | 5.000 | **6.500** | 8.500 | o passe suíço domina este bloco |
-| Disneyland Paris (2 dias) | 2.200 | **2.800** | 4.000 | |
-| Atrações (Jungfraujoch + Itália + Paris) | 3.000 | **4.400** | 6.000 | Jungfraujoch ida/volta ~CHF 177/adulto com Swiss Travel Pass ([myswissalps](https://www.myswissalps.com/details/buy-jungfrau-travel-pass/)) |
-| Seguro, chip, transporte local | 2.000 | **2.400** | 3.000 | seguro é obrigatório no Espaço Schengen |
-| **Subtotal** | 39.200 | **50.700** | 67.500 | |
-| **Reserva de emergência (10%)** | 3.900 | **5.100** | 6.800 | **inegociável** |
-| **TOTAL** | **~43.000** | **~55.800** | **~74.000** | |
+| Hospedagem (15 noites) | 8.700 | **12.200** | 17.300 | 13→15 noites, extrapolado linear (+15%). Suíça é o dobro da Itália por noite |
+| Alimentação | 5.100 | **6.900** | 10.300 | 14→16 dias, extrapolado linear (+14%). Com cozinha no apartamento em parte dos dias |
+| Trens + passe suíço | 5.000 | **6.500** | 8.500 | sem mudança — dias extras não são de trem ativo na Suíça; `[a verificar]` se o Swiss Travel Pass muda de faixa (3/4/6/8/15 dias) |
+| Disneyland Paris (2 dias) | 2.200 | **2.800** | 4.000 | sem mudança |
+| Atrações (Jungfraujoch + Itália + Paris + Versalhes/Louvre) | 3.400 | **4.900** | 6.500 | +R$ 500 estimado para ingressos de Versalhes e Louvre `[estimativa — não verificado]` |
+| Seguro, chip, transporte local | 2.300 | **2.700** | 3.400 | 14→16 dias, extrapolado linear (+14%). Seguro é obrigatório no Espaço Schengen |
+| **Subtotal** | 41.700 | **54.000** | 72.000 | |
+| **Reserva de emergência (10%)** | 4.200 | **5.400** | 7.200 | **inegociável** |
+| **TOTAL** | **~45.900** | **~59.400** | **~79.200** | |
+
+**Impacto do incremento de 14→16 dias: +R$ 3.600 no cenário realista** (de R$ 55.800 para R$ 59.400).
 
 ## As alavancas que fecham os R$ 7.800
 
 Sete alavancas, em ordem de impacto. Nenhuma delas corta experiência.
 
-**1. Livelo — a maior.** 60.000 pontos hoje, mais 24 meses de acumulação. Transferências para programas aéreos costumam sair com bônus de 80–100% em campanhas. Bem trabalhado, isso pode cobrir **uma passagem inteira** — cerca de R$ 6.000 do bloco de R$ 18.000. *Precisa de análise dedicada: qual programa, qual campanha, quantas milhas para GIG–Europa na baixa.*
+**1. Livelo — a maior.** **79.479 pontos confirmados** (+8.500 a caminho em 22/09/2026), **sem nenhum expirando** ([[extrato-livelo]], 13/09/2026), mais 24 meses de acumulação. Alvo realista: **~R$ 5.500 tirados do bloco de R$ 18.000**, teto de ~R$ 11.750 se as seis pontas saírem por milhas. Ver [[estrategia-livelo]] para o cálculo completo.
 
 **2. Parcelamento sem juros da passagem.** Agências brasileiras costumam parcelar em 10–12x. Comprando a passagem no mês ~20 e pagando até o mês ~32, a compra é antecipada **sem custo adicional** — o dinheiro da poupança continua rendendo e a tarifa boa é travada.
 

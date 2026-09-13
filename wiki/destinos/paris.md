@@ -5,7 +5,7 @@ aliases: [Disneyland Paris, Eurodisney]
 criado: 2026-09-13
 atualizado: 2026-09-13
 tags: [destino, paris, franca, disney, financeiro]
-fontes: ["[[decisao-paris]]", "[[onde-exatamente]]", "[[rota-mestra]]"]
+fontes: ["[[decisao-paris]]", "[[onde-exatamente]]", "[[rota-mestra]]", "[[decisao-16-dias]]"]
 confianca: media
 status: ativo
 ---
@@ -18,16 +18,19 @@ O destino final da rota, decidido pela Zoe. O Fabio fechou em 13/09/2026 os trê
 
 O [[onde-exatamente|Arranjo A]] (recomendado, 14 dias) já chega a Paris de trem — Interlaken/Basel → Paris, ~5h de TGV, sem custar dia adicional (2026-09-02). Isso atende diretamente o pedido de trem no trecho Suíça-França ([[decisao-paris]], 2026-09-13).
 
-No Arranjo A original, os dias em Paris eram: D11 chegada, D12 Disneyland Park, D13 "Walt Disney Studios ou Paris", D14 voo de volta. **Versalhes e Louvre não estavam alocados.**
+No Arranjo A original (14 dias), os dias em Paris eram: D11 chegada, D12 Disneyland Park, D13 "Walt Disney Studios ou Paris", D14 voo de volta. **Versalhes e Louvre não estavam alocados.**
 
-## ⚠️ Tensão de tempo — a verificar com o arquiteto-roteiro
+## ✅ Resolvido em 13/09/2026 — [[decisao-16-dias]]
 
-> [!warning] Contradição de escopo × dias disponíveis
-> O pedido de 13/09/2026 exige 3 compromissos de meio-a-um-dia-inteiro cada (Disneyland, Versalhes, Louvre), mas o Arranjo A só reserva **2 dias cheios em Paris** (D12 e D13) além do dia de chegada (D11, já consumido por translado) e do dia de partida (D14, consumido por voo). Encaixar os três programas em 2 dias exige uma das duas saídas:
-> 1. **Condensar**: Disneyland Park inteiro num dia; no outro, Louvre pela manhã (versão essencial, 3–4h) + Versalhes à tarde (versão condensada, jardins + salão dos espelhos, sem tempo para os Trianons). Aperto real — Versalhes fica a 1h de RER do centro, ida e volta consome ~1h30 sozinha.
-> 2. **Estender 1 dia**: Arranjo A vira 15 dias, com um dia inteiro para Versalhes (que merece o dia todo) e um dia inteiro para o Louvre + Disney nos outros dois.
+> [!success] Viagem estendida para 16 dias, sem condensar nada
+> O Fabio decidiu **16 dias no total** em vez de apertar Versalhes e Louvre num mesmo dia. Grade revisada em [[onde-exatamente]] §3:
+> - D12: Disneyland Park, dia inteiro
+> - D13: Walt Disney Studios ou folga em Paris (flexível)
+> - D14: **Versalhes**, dia inteiro, sem pressa
+> - D15: **Louvre**, dia inteiro, sem pressa, com tarde livre
+> - D16: voo de volta
 >
-> `[não verificado]`: tempo real de deslocamento Paris→Versalhes por RER C e horário de abertura/fechamento do Louvre e de Versalhes — dados que o arquiteto-roteiro precisa antes de fechar a grade dia a dia.
+> `[não verificado]`: tempo real de deslocamento Paris→Versalhes por RER C e regras de reserva de horário do Louvre — o arquiteto-roteiro precisa confirmar antes de fechar a grade fina (horários, traslados).
 
 ## Os três compromissos
 

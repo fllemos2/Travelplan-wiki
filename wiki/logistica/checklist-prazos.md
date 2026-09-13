@@ -4,7 +4,7 @@ titulo: Checklist de Prazos
 criado: 2026-09-01
 atualizado: 2026-09-13
 tags: [logistica, prazos, documentos]
-fontes: ["[[extrato-livelo]]", "[[decisao-paris]]"]
+fontes: ["[[extrato-livelo]]", "[[decisao-paris]]", "[[decisao-16-dias]]"]
 confianca: alta
 status: ativo
 ---

@@ -52,12 +52,12 @@ Distâncias reais de trem, todas curtas e cênicas:
 - ✅ **Norte da Itália:** Cinque Terre + Verona (com desvio de 25 min ao Valpolicella para a colheita de uva). **Piemonte cortado.**
 - ✅ **Suíça:** região Jungfrau (Lauterbrunnen/Grindelwald), via linha do Bernina + linha do Brünig. **Zermatt cortado.**
 - ✅ **Trem × carro:** trem venceu — confirmado em toda a rota, inclusive o trecho Suíça→Paris (Basel→Paris, TGV Lyria, ~3h03 desse trecho / ~5h30 desde Interlaken).
-- ✅ **Rota oficial:** [[onde-exatamente|Arranjo A]], 14 dias / 13 noites.
+- ✅ **Rota oficial:** [[onde-exatamente|Arranjo A]], baseado nos mesmos destinos — **duração ajustada para 16 dias / 15 noites** em 13/09/2026 ([[decisao-16-dias]]), para acomodar Paris (Disney + Versalhes + Louvre) sem apertar.
 
 ## O que ainda não está decidido
 
-- **Paris — encaixe de Disney + Versalhes + Louvre.** O Fabio pediu os três; o Arranjo A só reserva 2 dias cheios em Paris. Pode exigir esticar para 15 dias. Ver [[paris]] e a tensão registrada em [[onde-exatamente]] §3.
-- **Quantas noites exatas em cada trecho** dentro do Arranjo A — grade dia a dia formal é trabalho do [[arquiteto-roteiro]].
+- **Grade dia a dia formal dos 16 dias**, com os 2 dias extras alocados (folga + Versalhes + Louvre com tempo real, não condensado). Trabalho do [[arquiteto-roteiro]].
+- **Se o Swiss Travel Pass muda de faixa** com a duração maior — `[a verificar]`.
 
 ## Relacionadas
 

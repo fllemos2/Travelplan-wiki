@@ -278,3 +278,13 @@ isso — só o extrato dele.
 - Pontos-chave: (1) Fabio aceita cortar Zermatt e Piemonte, conforme recomendação de [[onde-exatamente]] desde 02/09; (2) Paris precisa acomodar Disneyland + Versalhes + Louvre; (3) trecho Suíça→Paris de trem já era o plano (Basel→Paris, TGV Lyria) — requisito atendido sem mudança
 - Contradições: nenhuma
 - Questões novas: os 3 compromissos de Paris cabem em 2 dias do Arranjo A (14 dias), ou a viagem precisa esticar para 15? `[não verificado]` — depende de tempo de RER até Versalhes e regras de horário do Louvre. Registrado em [[wiki/destinos/paris]] e sinalizado para o `arquiteto-roteiro`.
+
+## [2026-09-13] decisao | Duração ajustada para 16 dias; correção do relatório mensal
+
+- Fonte: `raw/2026-09-13-decisao-16-dias.md` (mensagem do Fabio, verbatim) → [[wiki/fontes/decisao-16-dias|página de fonte]]
+- Criadas: [[wiki/fontes/decisao-16-dias]]
+- Atualizadas: [[wiki/financeiro/plano-de-viabilidade]] (custo-alvo recalculado para 16 dias/15 noites, extrapolação linear dos blocos que escalam com duração; alavanca Livelo também corrigida — ainda tinha os números antigos de 60.000 pontos não propagados desde o ingest de [[extrato-livelo]]), [[wiki/roteiros/rota-mestra]], [[wiki/consultas/onde-exatamente]] (Arranjo A revisado: 16 dias/15 noites, Versalhes e Louvre com dia inteiro cada em vez de condensados), [[wiki/destinos/paris]] (tensão marcada como resolvida)
+- Pontos-chave: (1) Fabio decide 16 dias em vez de condensar Paris; (2) impacto financeiro: +R$ 3.600 no cenário realista (R$ 55.800 → R$ 59.400); (3) encontrada e corrigida propagação perdida da alavanca Livelo em plano-de-viabilidade.md
+- Correção adicional, fora da wiki: o título do Artifact "Sonho Lemos" dizia "Zoe vai pisar na neve... num pasto verde dos Alpes" — logicamente incoerente (o trenó é na geleira do Jungfraujoch, a 3.454 m; o pasto verde é o vale de Lauterbrunnen, lugares e experiências diferentes). Corrigido, junto com a duração e a seção de decisão (Zermatt/Piemonte/Paris), agora marcada como fechada em vez de pendente. Artifact republicado na mesma URL.
+- Contradições: nenhuma nova
+- Questões novas: `[a verificar]` se o Swiss Travel Pass muda de faixa de dias com a duração maior — impacto no bloco de trens ainda não avaliado

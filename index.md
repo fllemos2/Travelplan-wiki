@@ -2,9 +2,9 @@
 
 Catálogo de tudo que existe no cofre. Atualizado a cada ingest. Primeira parada de toda query.
 
-**Estado:** 6 fontes · 28 páginas · 6 funcionários · atualizado em 2026-09-13
+**Estado:** 7 fontes · 30 páginas · 6 funcionários · atualizado em 2026-09-13
 **Domínio:** Agência de Viagem Particular — viabilizar a viagem de família dos Lemos
-**🎯 A viagem:** Itália · Suíça · Disneyland Paris — **set/2028** (janela 10/set–15/out) — ~R$ 55.800
+**🎯 A viagem:** Itália · Suíça · Disneyland Paris — **set/2028** · **16 dias** (revisado 13/09) — ~R$ 59.400
 
 ---
 
@@ -23,7 +23,7 @@ Catálogo de tudo que existe no cofre. Atualizado a cada ingest. Primeira parada
 ## Financeiro
 
 - [[wiki/financeiro/estrategia-livelo|Estratégia Livelo]] — saldo real confirmado: **79.479 pontos, sem expiração** ([[wiki/fontes/extrato-livelo|extrato 13/09]]). Cobre um trecho (~R$ 2.200–4.000) sem aporte; com aporte, ~R$ 5.500. `media`
-- [[wiki/financeiro/plano-de-viabilidade|Plano de Viabilidade]] — **a data: setembro de 2028.** Custo-alvo em 3 cenários (~R$ 43k / 55,8k / 74k), as 6 alavancas que fecham a diferença, e a linha do tempo do dinheiro. `media`
+- [[wiki/financeiro/plano-de-viabilidade|Plano de Viabilidade]] — **a data: setembro de 2028, 16 dias** (revisado 13/09). Custo-alvo em 3 cenários (~R$ 46k / 59,4k / 79k), as 7 alavancas que fecham a diferença, e a linha do tempo do dinheiro. `media`
 
 ## Ofertas
 
@@ -68,6 +68,7 @@ Catálogo de tudo que existe no cofre. Atualizado a cada ingest. Primeira parada
 - [[wiki/fontes/llm-wiki-padrao|LLM Wiki — Um Padrão para Bases de Conhecimento Pessoais]] — documento fundador do método. `2026-09-01`
 - [[wiki/fontes/extrato-livelo|Extrato Livelo — 13/09/2026]] — saldo real 79.479 pts, sem expiração; resolve a tarefa urgente do checklist. `2026-09-13`
 - [[wiki/fontes/decisao-paris|Decisão sobre Paris e corte de Zermatt/Piemonte]] — Paris ganha os 3 compromissos (Disney, Versalhes, Louvre); destinos italianos/suíços fechados. `2026-09-13`
+- [[wiki/fontes/decisao-16-dias|Decisão — duração de 16 dias]] — viagem estica de 14 para 16 dias para não apertar Paris; +R$ 3.600 no custo-alvo realista. `2026-09-13`
 
 ## Consultas arquivadas
 
