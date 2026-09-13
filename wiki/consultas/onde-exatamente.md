@@ -2,20 +2,23 @@
 tipo: consulta
 titulo: Onde Exatamente — o veredito de destinos
 criado: 2026-09-02
-atualizado: 2026-09-02
+atualizado: 2026-09-13
 tags: [destinos, decisao, roteiro, italia, suica, trem-cenico, neve]
-fontes: ["[[decisoes-italia-suica]]", "[[briefing-completo]]", "[[melhor-epoca]]", "[[rota-mestra]]"]
-confianca: media
+fontes: ["[[decisoes-italia-suica]]", "[[briefing-completo]]", "[[melhor-epoca]]", "[[rota-mestra]]", "[[decisao-paris]]"]
+confianca: alta
 status: ativo
 ---
 
 # Onde Exatamente — o veredito de destinos
 
+> [!success] Decisão fechada em 13/09/2026
+> O Fabio aceitou a recomendação abaixo: **Zermatt e Piemonte estão cortados.** O Arranjo A (14 dias) é a rota oficial. Ver [[decisao-paris]]. A única lacuna que resta é o detalhamento de Paris — ver [[paris]].
+
 > **Resumo em quatro linhas.**
-> 1. **Não cabe tudo.** Cinque Terre + Verona + Piemonte + Jungfrau + Zermatt + Paris em 12–15 dias é uma corrida de trem, não uma viagem.
-> 2. **O corte é o Piemonte e o Zermatt.** A colheita de uva muda para o **Valpolicella**, ao lado de Verona; a Suíça fica só na **região Jungfrau**.
+> 1. **Não cabia tudo.** Cinque Terre + Verona + Piemonte + Jungfrau + Zermatt + Paris em 12–15 dias era uma corrida de trem, não uma viagem.
+> 2. **O corte, decidido: Piemonte e Zermatt.** A colheita de uva muda para o **Valpolicella**, ao lado de Verona; a Suíça fica só na **região Jungfrau**.
 > 3. **O trenó na neve existe e está confirmado:** Snow Fun Park do Jungfraujoch, temporada de **4/mai a 18/out**, CHF 15 para a Zoe.
-> 4. **O trem cênico entra sem custar dia:** a linha do **Bernina** liga a Itália à Suíça *dentro* do trajeto, e a linha do **Brünig** (Lucerna–Interlaken) vem de graça no caminho.
+> 4. **O trem cênico entra sem custar dia:** a linha do **Bernina** liga a Itália à Suíça *dentro* do trajeto, e a linha do **Brünig** (Lucerna–Interlaken) vem de graça no caminho. **O trecho Suíça→Paris também é de trem** (Basel→Paris, TGV Lyria) — atende o pedido explícito do Fabio de 13/09.
 
 Câmbio usado em toda a página: **EUR 1 = R$ 5,97** e **CHF 1 = R$ 6,33**, cotação de 2026-09-02 ([Wise EUR](https://wise.com/br/currency-converter/euro-hoje), [Wise CHF](https://wise.com/br/currency-converter/franco-suico-hoje)).
 
@@ -101,11 +104,14 @@ Milão é o centro; os três destinos italianos apontam para três direções di
 | 10 | Grindelwald: **rodelbahn de Pfingstegg**, Trümmelbach, Wengen | Lauterbrunnen | curto |
 | 11 | → Basel → Paris | Marne-la-Vallée | ~5h30 |
 | 12 | **Disneyland Park** | Disney | — |
-| 13 | **Walt Disney Studios** ou Paris | Paris | — |
+| 13 | ⚠️ Louvre (manhã, versão essencial) + Versalhes (tarde, versão condensada) — **ver tensão abaixo** | Paris | — |
 | 14 | CDG → GIG | — | — |
 
-**O que entrega:** Cinque Terre ✅ · Verona ✅ · colheita de uva ✅ (Valpolicella) · trem cênico ✅✅ (Bernina UNESCO + Brünig) · pasto verde com neve ao fundo ✅ · **trenó na neve ✅** · Disneyland ✅
+**O que entrega:** Cinque Terre ✅ · Verona ✅ · colheita de uva ✅ (Valpolicella) · trem cênico ✅✅ (Bernina UNESCO + Brünig) · pasto verde com neve ao fundo ✅ · **trenó na neve ✅** · Disneyland ✅ · Louvre ✅ · Versalhes ✅
 **O que sacrifica:** Zermatt e o Matterhorn; Piemonte e a trufa.
+
+> [!warning] Tensão adicionada em 13/09/2026 — ver [[paris]]
+> O pedido do Fabio (Disney + Versalhes + Louvre, cada um merecendo ao menos meio dia) não cabe com folga nos 2 dias de Paris deste arranjo. A linha D13 acima é uma **primeira tentativa condensada**, não uma solução testada — falta verificar tempo de RER até Versalhes e horários de entrada do Louvre. Se não couber, o Arranjo A vira **15 dias** em vez de 14. Trabalho do [[arquiteto-roteiro]].
 **Dias com mais de 4h sentado:** 5 dos 14 (D2, D4, D6, D7, D11). É bastante — mas dois deles (D7 e D8) *são* o passeio.
 
 ### Arranjo B — "Os dois alpinos" · **15 dias / 14 noites**

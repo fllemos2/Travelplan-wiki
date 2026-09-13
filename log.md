@@ -269,3 +269,12 @@ isso — só o extrato dele.
 - Criadas: [[wiki/consultas/relatorio-mensal-2026-09]] (a página tinha se perdido no incidente de push anterior — recriada aqui)
 - Atualizadas: `index.md`
 - Artifact republicado na mesma URL: https://claude.ai/code/artifact/6f84004b-752c-42c9-9ec3-944a5aa8072f
+
+## [2026-09-13] decisao | Paris fechado; Zermatt e Piemonte cortados
+
+- Fonte: `raw/2026-09-13-decisao-paris.md` (duas mensagens do Fabio, verbatim) → [[wiki/fontes/decisao-paris|página de fonte]]
+- Criadas: [[wiki/fontes/decisao-paris]], [[wiki/destinos/paris]]
+- Atualizadas: [[wiki/consultas/onde-exatamente]] (decisão de Zermatt/Piemonte marcada como fechada; dia 13 do Arranjo A ajustado para Louvre+Versalhes, com tensão de tempo sinalizada), [[wiki/roteiros/rota-mestra]] (destinos fechados movidos de "não decidido" para "decidido"), [[wiki/logistica/checklist-prazos]] (itens de reserva Louvre/Versalhes), `index.md` (também corrigida a seção Destinos, que estava vazia desde o incidente de push de 13/09 — as 6 páginas de destino já existiam mas nunca foram listadas)
+- Pontos-chave: (1) Fabio aceita cortar Zermatt e Piemonte, conforme recomendação de [[onde-exatamente]] desde 02/09; (2) Paris precisa acomodar Disneyland + Versalhes + Louvre; (3) trecho Suíça→Paris de trem já era o plano (Basel→Paris, TGV Lyria) — requisito atendido sem mudança
+- Contradições: nenhuma
+- Questões novas: os 3 compromissos de Paris cabem em 2 dias do Arranjo A (14 dias), ou a viagem precisa esticar para 15? `[não verificado]` — depende de tempo de RER até Versalhes e regras de horário do Louvre. Registrado em [[wiki/destinos/paris]] e sinalizado para o `arquiteto-roteiro`.

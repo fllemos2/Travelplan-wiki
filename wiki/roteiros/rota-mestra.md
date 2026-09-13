@@ -2,9 +2,9 @@
 tipo: sintese
 titulo: A Rota Mestra — três sonhos, uma linha reta
 criado: 2026-09-01
-atualizado: 2026-09-01
+atualizado: 2026-09-13
 tags: [roteiro, rota, decisao-estrutural]
-fontes: ["[[briefing-completo]]"]
+fontes: ["[[briefing-completo]]", "[[decisao-paris]]", "[[onde-exatamente]]"]
 confianca: alta
 status: ativo
 ---
@@ -47,12 +47,17 @@ Distâncias reais de trem, todas curtas e cênicas:
 
 **Milão como entrada, Paris como saída.** Isso exige uma passagem *open-jaw* (multi-destino): entra por um aeroporto, sai por outro. Custa parecido com ida-e-volta simples e economiza um dia inteiro de retorno mais o preço do trem de volta. É a decisão de compra mais importante da viagem — ver [[historico-de-precos]].
 
+## Decidido em 13/09/2026 — ver [[decisao-paris]]
+
+- ✅ **Norte da Itália:** Cinque Terre + Verona (com desvio de 25 min ao Valpolicella para a colheita de uva). **Piemonte cortado.**
+- ✅ **Suíça:** região Jungfrau (Lauterbrunnen/Grindelwald), via linha do Bernina + linha do Brünig. **Zermatt cortado.**
+- ✅ **Trem × carro:** trem venceu — confirmado em toda a rota, inclusive o trecho Suíça→Paris (Basel→Paris, TGV Lyria, ~3h03 desse trecho / ~5h30 desde Interlaken).
+- ✅ **Rota oficial:** [[onde-exatamente|Arranjo A]], 14 dias / 13 noites.
+
 ## O que ainda não está decidido
 
-- **Onde exatamente no norte da Itália.** Milão é a porta, não necessariamente o destino. As candidatas: Lago de Como (paisagem), Langhe/Piemonte (colheita de uva e trufa — ver [[melhor-epoca]]), Verona, Cinque Terre. Trabalho do `curador-destinos`.
-- **Onde exatamente na Suíça.** Região de Jungfrau (Interlaken/Grindelwald/Lauterbrunnen) é a candidata natural pela neve garantida no alto. Lucerna e Zermatt são alternativas.
-- **Trem × carro.** Preferência declarada é trem, e para esta rota o trem quase certamente ganha: os trechos são longos, as cidades têm pedágio/ZTL e estacionamento caro, e a paisagem alpina de trem é atração em si. Carro só faria sentido para explorar as Langhe. Análise pendente.
-- **Quantas noites em cada trecho.** Depende dos 10–15 dias finais.
+- **Paris — encaixe de Disney + Versalhes + Louvre.** O Fabio pediu os três; o Arranjo A só reserva 2 dias cheios em Paris. Pode exigir esticar para 15 dias. Ver [[paris]] e a tensão registrada em [[onde-exatamente]] §3.
+- **Quantas noites exatas em cada trecho** dentro do Arranjo A — grade dia a dia formal é trabalho do [[arquiteto-roteiro]].
 
 ## Relacionadas
 

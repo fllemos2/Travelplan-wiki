@@ -2,7 +2,7 @@
 
 Catálogo de tudo que existe no cofre. Atualizado a cada ingest. Primeira parada de toda query.
 
-**Estado:** 5 fontes · 21 páginas · 6 funcionários · atualizado em 2026-09-13
+**Estado:** 6 fontes · 28 páginas · 6 funcionários · atualizado em 2026-09-13
 **Domínio:** Agência de Viagem Particular — viabilizar a viagem de família dos Lemos
 **🎯 A viagem:** Itália · Suíça · Disneyland Paris — **set/2028** (janela 10/set–15/out) — ~R$ 55.800
 
@@ -16,7 +16,8 @@ Catálogo de tudo que existe no cofre. Atualizado a cada ingest. Primeira parada
 ## A missão
 
 - [[wiki/sintese/o-sonho|O Sonho]] — **a página central.** Quem viaja, para onde, quando e por quanto. A tese v1: a viagem é setembro de 2028. `confianca: media`
-- [[wiki/roteiros/rota-mestra|A Rota Mestra]] — a descoberta que define a viagem: os três sonhos formam uma linha reta, Milão → Suíça → Paris. `alta`
+- [[wiki/roteiros/rota-mestra|A Rota Mestra]] — a descoberta que define a viagem: os três sonhos formam uma linha reta, Milão → Suíça → Paris. **Destinos fechados** em 13/09: Zermatt e Piemonte cortados. `alta`
+- [[wiki/consultas/onde-exatamente|Onde Exatamente — o veredito de destinos]] — **decisão fechada**: Arranjo A, 14 dias, corta Zermatt e Piemonte. Detalhe dia a dia, trens cênicos, e a tensão nova de Paris (Disney+Versalhes+Louvre em só 2 dias). `alta`
 - [[wiki/consultas/melhor-epoca|A Melhor Época]] — por que fim de setembro, critério por critério. Inclui o que a flexibilidade do homeschooling compra em dinheiro. `media`
 
 ## Financeiro
@@ -35,12 +36,19 @@ Catálogo de tudo que existe no cofre. Atualizado a cada ingest. Primeira parada
 
 ## Destinos
 
-*(vazio — próximo trabalho do `curador-destinos`: onde exatamente no norte da Itália e na Suíça)*
+- [[wiki/destinos/cinque-terre|Cinque Terre]] — pedido fundamental. **Entra.** `media`
+- [[wiki/destinos/verona|Verona]] — pedido fundamental, com desvio ao Valpolicella (colheita de uva). **Entra.** `media`
+- [[wiki/destinos/jungfrau-interlaken|Jungfrau / Interlaken]] — o coração alpino, com o trenó na neve confirmado (Snow Fun Park). **Entra — é o coração.** `media`
+- [[wiki/destinos/engadina-st-moritz|Engadina / St. Moritz]] — conector via linha do Bernina (Tirano→Chur). **Entra como conector.** `media`
+- [[wiki/destinos/zermatt|Zermatt]] — o Matterhorn. **Cortado** em 13/09/2026 (decisão do Fabio). `media`
+- [[wiki/destinos/piemonte-langhe|Piemonte / Langhe]] — colheita de uva e trufa. **Cortado** em 13/09/2026 — a colheita muda para o Valpolicella. `media`
+- [[wiki/destinos/paris|Paris — Eurodisney, Versalhes, Louvre]] — destino final. Pedido de 13/09: os três programas mínimos. **Tensão em aberto:** só 2 dias reservados no Arranjo A. `media`
 
 ## Roteiros
 
-- [[wiki/roteiros/rota-mestra|A Rota Mestra]] — o corredor Milão → Suíça → Paris e por que a ordem é essa.
-- *Dia a dia e as 3 variações: pendentes, dependem da definição das cidades.*
+- [[wiki/roteiros/rota-mestra|A Rota Mestra]] — o corredor Milão → Suíça → Paris e por que a ordem é essa. Destinos fechados em 13/09.
+- [[wiki/consultas/onde-exatamente|Onde Exatamente]] — o Arranjo A completo, dia a dia (14 dias), com os trens cênicos e o veredito de cada destino.
+- *Grade dia a dia formal com traslados: pendente, trabalho do `arquiteto-roteiro`.*
 
 ## Conceitos — metodologia
 
@@ -59,6 +67,7 @@ Catálogo de tudo que existe no cofre. Atualizado a cada ingest. Primeira parada
 - **Briefing completo** — `raw/2026-09-01-briefing-completo.md`: família, origem, poupança, destinos, janela e padrão de viagem. *(fonte lida direto; conteúdo compilado em [[wiki/sintese/o-sonho|O Sonho]])* `2026-09-01`
 - [[wiki/fontes/llm-wiki-padrao|LLM Wiki — Um Padrão para Bases de Conhecimento Pessoais]] — documento fundador do método. `2026-09-01`
 - [[wiki/fontes/extrato-livelo|Extrato Livelo — 13/09/2026]] — saldo real 79.479 pts, sem expiração; resolve a tarefa urgente do checklist. `2026-09-13`
+- [[wiki/fontes/decisao-paris|Decisão sobre Paris e corte de Zermatt/Piemonte]] — Paris ganha os 3 compromissos (Disney, Versalhes, Louvre); destinos italianos/suíços fechados. `2026-09-13`
 
 ## Consultas arquivadas
 

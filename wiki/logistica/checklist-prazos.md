@@ -4,7 +4,7 @@ titulo: Checklist de Prazos
 criado: 2026-09-01
 atualizado: 2026-09-13
 tags: [logistica, prazos, documentos]
-fontes: ["[[extrato-livelo]]"]
+fontes: ["[[extrato-livelo]]", "[[decisao-paris]]"]
 confianca: alta
 status: ativo
 ---
@@ -33,6 +33,8 @@ Prazos são contados **regressivamente a partir da data de embarque**. O item ma
 | D-60 | Vacinas exigidas (febre amarela vale após 10 dias) | | | ⬜ |
 | D-45 | Contratar seguro viagem | | | ⬜ |
 | D-30 | **Disneyland Paris** — ingressos com data marcada | | | ⬜ |
+| D-30 | **Louvre** — verificar se exige ingresso com horário marcado (padrão do museu) `[não verificado]` | | | ⬜ |
+| D-30 | **Palácio de Versalhes** — verificar ingresso com horário marcado e horário de RER C `[não verificado]` | | | ⬜ |
 | D-30 | **Jungfraujoch / passe suíço** — verificar gratuidade da Zoe (Swiss Family Card) | | | ⬜ |
 | D-30 | Trens Milão→Suíça e Suíça→Paris (tarifa antecipada é bem mais barata) | | | ⬜ |
 | D-30 | Reservar translado aeroporto→hospedagem | | | ⬜ |
