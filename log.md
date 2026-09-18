@@ -288,3 +288,14 @@ isso — só o extrato dele.
 - Correção adicional, fora da wiki: o título do Artifact "Sonho Lemos" dizia "Zoe vai pisar na neve... num pasto verde dos Alpes" — logicamente incoerente (o trenó é na geleira do Jungfraujoch, a 3.454 m; o pasto verde é o vale de Lauterbrunnen, lugares e experiências diferentes). Corrigido, junto com a duração e a seção de decisão (Zermatt/Piemonte/Paris), agora marcada como fechada em vez de pendente. Artifact republicado na mesma URL.
 - Contradições: nenhuma nova
 - Questões novas: `[a verificar]` se o Swiss Travel Pass muda de faixa de dias com a duração maior — impacto no bloco de trens ainda não avaliado
+
+## [2026-09-18] query | Caçador de Ofertas — coleta autônoma agendada
+
+- Execução autônoma agendada, sem o Fabio no circuito. Estratégia: já que set/2028 ainda não abriu venda (~330 dias de antecedência, abertura esperada out/2027), buscar a janela equivalente de **ago–set/2027** nas rotas do open-jaw para começar a estabelecer linha de base.
+- Rotas-alvo: GIG→MXP (Milão), CDG→GIG (Paris, perna de volta), GIG→FCO (Roma) e GIG→VCE (Veneza) como alternativas de entrada. 3 pax (2 adultos + 1 criança de 8), bagagem despachada.
+- **Falha estrutural:** todas as tentativas de `WebFetch` (KAYAK, Google Flights, Skyscanner, Kiwi.com, Mundi, eSky, site da LATAM) retornaram `EGRESS_BLOCKED`, inclusive um domínio de controle neutro (`en.wikipedia.org`) — confirma bloqueio sistêmico do proxy de rede desta execução, não específico de site de viagem. Sem `WebFetch`, não há como inserir datas específicas, 3 passageiros ou bagagem em nenhum buscador.
+- `WebSearch` funcionou, mas só devolveu snippets agregados/cacheados ("a partir de", sem data confirmada, 1 pax, sem bagagem) — logados em [[historico-de-precos]] como âncoras adicionais de baixa confiança para GIG-MIL, GIG-FCO, GIG-VCE e CDG-GIG, **não como linha de base de ago–set/2027**. Buscas explícitas por "agosto 2027"/"setembro 2027" confirmaram que os buscadores não têm cobertura de preço tão distante.
+- Nenhum dado de setembro/2028 foi encontrado nem buscado (não faria sentido antes de out/2027) — sem alerta de abertura antecipada.
+- Atualizadas: [[historico-de-precos]] (9 novas linhas de âncora + bloco de falha sistêmica documentado + linha de base por rota ampliada com 3 rotas novas, ainda sem os ~5 pontos necessários).
+- Veredito: **PASSA** — nenhum preço comparável ao teto de referência (R$ 4.457/pessoa) com confiança suficiente para decisão. Gatilho #1 continua ⏸️ pausado.
+- Pendente: (1) linha de base real de ago–set/2027 continua em aberto — só se resolve com acesso direto a site de busca (WebFetch) ou nova ronda quando o proxy permitir; (2) avaliar com o Fabio alerta de tarifa nativo (Google Flights/KAYAK) como caminho alternativo que não depende de `WebFetch`, ver [[regras-de-compra]].
