@@ -27,7 +27,7 @@ Catálogo de tudo que existe no cofre. Atualizado a cada ingest. Primeira parada
 
 ## Ofertas
 
-- [[wiki/ofertas/historico-de-precos|Histórico de Preços]] — primeiras âncoras da rota GIG–Milão. Gatilho nº 1 criado, janela ampliada, **pausado até out/2027** (cias vendem ~330 dias à frente).
+- [[wiki/ofertas/historico-de-precos|Histórico de Preços]] — âncoras de baixa confiança das rotas GIG–Milão/Roma/Veneza/Paris (2 rondas: 09-18 e 09-19, ambas com `WebFetch` bloqueado por política de rede do ambiente). Gatilho nº 1 criado, janela ampliada, **pausado até out/2027** (cias vendem ~330 dias à frente).
 
 ## Logística
 
