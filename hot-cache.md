@@ -96,6 +96,17 @@ Propagar as decisões de 02/09 para essas páginas assim que os agentes entregar
 - Obsidian: Templates → `meta/templates/`; anexos → `raw/assets/`; instalar Dataview
 - Vigilância automática via `/schedule` — só faz sentido a partir de out/2027
 
+### 🚫 Coleta autônoma de preços — bloqueio de rede estrutural (confirmado 3x: 09-18, 09-19, 09-20)
+
+O `cacador-ofertas` roda em agendamento autônomo diário, mas **`WebFetch` e `curl` direto estão
+sistematicamente bloqueados** (`EGRESS_BLOCKED` / proxy 403) para qualquer domínio externo, não só
+sites de viagem — testado com domínio de controle neutro (`en.wikipedia.org`) nas três rondas.
+Só `WebSearch` funciona, e devolve snippets agregados/cacheados de baixíssima confiança (sem data
+específica, 1 passageiro, sem bagagem) — **não serve para montar a linha de base real de ago–set/2027**.
+Decisão pendente do Fabio: (a) reduzir a frequência do agendamento, (b) montar alerta de tarifa nativo
+(Google Flights/KAYAK, fora deste agente), ou (c) pedir liberação de egress para sites de passagem
+especificamente. Detalhe completo em [[historico-de-precos]], nota de 2026-09-20.
+
 ---
 
 ## Janela Literal — últimas 500 palavras do Fabio
