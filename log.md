@@ -324,3 +324,15 @@ isso — só o extrato dele.
 - Veredito: **PASSA** — mesmo motivo estrutural das duas rondas anteriores. Gatilho #1 continua ⏸️ pausado.
 - Issue GitHub criada via `mcp__github__issue_write`: caso A (sem-dados).
 - Pendente: decisão do Fabio sobre a recomendação de frequência/alerta nativo — três rondas seguidas sem ganho de informação justificam mudar a estratégia de coleta.
+
+## [2026-09-21] query | Caçador de Ofertas — quarta coleta autônoma agendada (bloqueio confirmado pela 4ª vez)
+
+- Quarta execução autônoma agendada, sem o Fabio no circuito. Antes de repetir o roteiro, consultei `$HTTPS_PROXY/__agentproxy/status` — proxy segue ativo e não seletivo por domínio, confirmando de novo que o bloqueio é política geral de rede, não específica de sites de viagem.
+- `WebFetch` para KAYAK com datas explícitas (2027-08-20/2027-09-03, 3 pax) → `EGRESS_BLOCKED`, idêntico às três rodadas anteriores.
+- `WebSearch` trouxe 7 novas linhas de âncora (GIG-FCO, GIG-VCE, CDG-GIG, GIG-PAR). Achado do dia: âncora da TAP para GIG-FCO (R$ 4.574) veio com par de datas de calendário explícito ("14–27 de agosto") pela primeira vez — mas sem ano confirmado, então não promovida a linha de base. Outra âncora (Air France CDG-GIG, R$ 3.457) contradiz diretamente valores de R$ 6.463/6.954 vistos em 09-19/09-20 na mesma rota/fonte, reforçando que o índice do buscador é inconsistente.
+- Busca explícita por set/2028 não trouxe evidência em nenhuma direção — buscador confundiu de novo MXP (Milão) com Cidade do México (mesmo erro de 09-20). **Sem alerta de janela aberta.**
+- Nenhum preço abaixo do teto de referência R$ 4.457/pessoa com confiança suficiente.
+- Atualizadas: [[historico-de-precos]] (7 novas linhas de âncora + nova seção de falha sistêmica 09-21 + linha de base por rota recalculada com 4 rodadas).
+- Veredito: **PASSA** — mesmo motivo estrutural das três rodadas anteriores. Gatilho #1 continua ⏸️ pausado.
+- Issue GitHub criada via `mcp__github__issue_write`: caso A (sem-dados).
+- Pendente: recomendação de 09-20 (reduzir frequência / alerta nativo / liberar egress) segue sem decisão do Fabio — quatro rodadas seguidas sem ganho de informação real.
