@@ -336,3 +336,15 @@ isso — só o extrato dele.
 - Veredito: **PASSA** — mesmo motivo estrutural das três rodadas anteriores. Gatilho #1 continua ⏸️ pausado.
 - Issue GitHub criada via `mcp__github__issue_write`: caso A (sem-dados).
 - Pendente: recomendação de 09-20 (reduzir frequência / alerta nativo / liberar egress) segue sem decisão do Fabio — quatro rodadas seguidas sem ganho de informação real.
+
+## [2026-09-22] query | Caçador de Ofertas — quinta coleta autônoma agendada (bloqueio confirmado pela 5ª vez)
+
+- Quinta execução autônoma agendada, sem o Fabio no circuito. Consultei `$HTTPS_PROXY/__agentproxy/status` de novo — proxy ativo, não seletivo por domínio, mesmo diagnóstico estrutural das quatro rodadas anteriores.
+- `WebFetch` para KAYAK com datas explícitas (2027-08-20/2027-09-03, 3 pax) e para domínio de controle neutro (`en.wikipedia.org`) → `EGRESS_BLOCKED` em ambos, idêntico às quatro rodadas anteriores.
+- `WebSearch` trouxe 5 novas linhas de âncora (GIG-MXP, GIG-FCO, GIG-VCE, CDG-GIG). Boa parte repete dígito por dígito valores já vistos em rodadas anteriores (mesmo índice cacheado); uma âncora nova de GIG-FCO (TAP/Delta) diverge das âncoras de rodadas anteriores sem explicação, reforçando ruído de agregador.
+- Busca explícita por set/2028 (`LATAM GIG Milão MXP setembro 2028 passagens venda aberta compra`) não retornou nenhuma evidência de venda aberta, desta vez sem o erro de confundir MXP com Cidade do México das duas rodadas anteriores. **Sem alerta de janela aberta.**
+- Nenhum preço abaixo do teto de referência R$ 4.457/pessoa com confiança suficiente.
+- Atualizadas: [[historico-de-precos]] (5 novas linhas de âncora + nova seção de falha sistêmica 09-22 + linha de base por rota recalculada com 5 rodadas).
+- Veredito: **PASSA** — mesmo motivo estrutural das quatro rodadas anteriores. Gatilho #1 continua ⏸️ pausado.
+- Issue GitHub criada via `mcp__github__issue_write`: caso A (sem-dados).
+- Pendente: recomendação de 09-20 (reduzir frequência / alerta nativo / liberar egress) segue sem decisão do Fabio — cinco rodadas seguidas sem ganho de informação real. Vale insistir com o Fabio nesta issue: a coleta diária no estado atual não está produzindo linha de base.

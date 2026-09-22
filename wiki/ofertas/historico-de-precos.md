@@ -2,7 +2,7 @@
 tipo: conceito
 titulo: Histórico de Preços
 criado: 2026-09-01
-atualizado: 2026-09-21
+atualizado: 2026-09-22
 tags: [ofertas, precos, vigilancia]
 fontes: []
 confianca: alta
@@ -57,6 +57,10 @@ Alimentado pelo [[cacador-ofertas]] em **toda** consulta, inclusive quando o pre
 | 2026-09-21 | GIG–VCE (Veneza) | i/v, sem data específica | 1 | KAYAK (teaser de rota) | GIG-VCE a partir de R$ 3.246 / VCE-GIG a partir de R$ 2.310 | não apurado | não apurado | [KAYAK](https://www.kayak.com.br/voos/Rio-de-Janeiro-Galeao-Internacional-GIG/Veneza-Marco-Polo-VCE) — via WebSearch, WebFetch bloqueado |
 | 2026-09-21 | CDG–GIG (Paris→Rio, perna de volta) | i/v, sem data específica | 1 | Air France | R$ 3.457 (RT, explícito — **contradiz** R$ 6.463/R$ 6.954 vistos em 09-19/09-20 na mesma rota/fonte, reforça ruído do buscador) | não apurado | não apurado | Air France Brasil (snippet) — via WebSearch, WebFetch bloqueado |
 | 2026-09-21 | GIG–PAR (Paris, referência p/ CDG) | i/v, sem data específica | 1 | Delta / Iberia | Delta a partir de R$ 5.266 (RT) / Iberia a partir de R$ 5.277 (RT) | não apurado | não apurado | Google Flights (snippet agregado) — via WebSearch, WebFetch bloqueado |
+| 2026-09-22 | GIG–MXP (Milão) | i/v, sem data específica (busca agregada) | — | resumo agregado do WebSearch, sem site único | faixa "R$ 3.500–R$ 7.500", ago/set citados como mais caros ("até R$ 9.000+"), sem valor pontual | não apurado | não apurado | resumo agregado WebSearch — baixíssima confiança, não é cotação de site específico |
+| 2026-09-22 | GIG–FCO (Roma) | i/v, sem data específica | 1 | TAP Air Portugal / Delta | "últimos 5 dias": TAP R$ 3.758 / Delta R$ 3.763 (ambos divergem das âncoras de 09-18 a 09-21 na mesma rota, reforça ruído/cache do buscador) | não apurado | não apurado | KAYAK (snippet agregado) — via WebSearch, WebFetch bloqueado |
+| 2026-09-22 | GIG–VCE (Veneza) | i/v, sem data específica | 1 | KAYAK (teaser de rota) | GIG-VCE a partir de R$ 3.246 / VCE-GIG a partir de R$ 2.310 (idêntico a 09-21 — mesmo índice cacheado) | não apurado | não apurado | [KAYAK](https://www.kayak.com.br/voos/Rio-de-Janeiro-Galeao-Internacional-GIG/Veneza-Marco-Polo-VCE) — via WebSearch, WebFetch bloqueado |
+| 2026-09-22 | CDG–GIG (Paris→Rio, perna de volta) | i/v, sem data específica | 1 | KAYAK (teaser de rota) | a partir de R$ 3.147 (idêntico a 09-18/09-21 — mesmo índice cacheado) | não apurado | não apurado | [KAYAK](https://www.kayak.com.br/voos/Paris-Charles-de-Gaulle-CDG/Rio-de-Janeiro-Galeao-Internacional-GIG) — via WebSearch, WebFetch bloqueado |
 
 > ⚠️ As linhas acima são **âncoras de dimensionamento**, não ofertas: são preços "a partir de", sem taxas, sem bagagem e sem data específica. Servem só para calibrar o orçamento em [[plano-de-viabilidade]]. Ninguém compra com base nelas.
 >
@@ -125,6 +129,20 @@ Quarta execução autônoma agendada seguida (09-18 a 09-21). Antes de repetir o
 
 **Quatro rodadas seguidas (09-18 a 09-21)** confirmam que nada mudou desde o diagnóstico de 09-20. As três recomendações permanecem em aberto e não foram implementadas — vale o Fabio decidir uma delas para a próxima janela de execuções, em vez de manter a cadência diária atual.
 
+### 🚫 Tentativa de coleta 2026-09-22 — quinta rodada, bloqueio confirmado de novo
+
+Quinta execução autônoma agendada seguida (09-18 a 09-22). Consultei `$HTTPS_PROXY/__agentproxy/status` de novo: proxy ativo, `"selective": false` — mesmo diagnóstico estrutural das quatro rodadas anteriores, não é bloqueio específico de site de viagem.
+
+- `WebFetch` para KAYAK com datas explícitas na URL (2027-08-20/2027-09-03, 3 pax) → `EGRESS_BLOCKED`.
+- `WebFetch` para domínio de controle neutro (`en.wikipedia.org`) → também `EGRESS_BLOCKED`, confirma de novo que é política geral de egress do ambiente, não lista negra de viagem.
+- `WebSearch` trouxe 5 âncoras novas (GIG-MXP, GIG-FCO, GIG-VCE, CDG-GIG — ver tabela acima). Nenhuma com data de calendário confirmada para ago–set/2027; a maioria repete, dígito por dígito, valores já vistos em rodadas anteriores (GIG-VCE R$ 3.246/R$ 2.310 idêntico a 09-21; CDG-GIG R$ 3.147 idêntico a 09-18/09-21) — reforça que é o mesmo índice cacheado do buscador, não uma nova cotação em tempo real.
+- Uma âncora nova de GIG-FCO (TAP R$ 3.758 / Delta R$ 3.763, "últimos 5 dias") diverge das âncoras de 09-18 a 09-21 na mesma rota sem explicação — mais ruído de agregador, não sinal de queda real de tarifa.
+- **Setembro/2028:** busca explícita (`LATAM GIG Milão MXP setembro 2028 passagens venda aberta compra`) não retornou nenhuma evidência de venda aberta. Desta vez o resumo do buscador não confundiu o código MXP com Cidade do México (erro visto em 09-20 e 09-21), mas ainda assim não há dado de preço para set/2028 — esperado, pois a venda só deve abrir a partir de ~out/2027. **Sem alerta de janela aberta.**
+- Nenhum preço com confiança suficiente abaixo do teto de R$ 4.457/pessoa.
+- **Veredito da sessão: PASSA.** Quinto "sem dados de linha de base" seguido, mesmo motivo estrutural. Gatilho #1 continua ⏸️ pausado.
+
+**Cinco rodadas seguidas (09-18 a 09-22)** confirmam que o bloqueio de rede não se resolveu sozinho em uma semana de execuções diárias. As três recomendações da nota de 09-20 continuam em aberto — a mais acionável no momento é reduzir a cadência para semanal ou configurar um alerta de tarifa nativo (Google Flights/KAYAK) fora deste agente, já que a coleta diária via `WebSearch` só reempilha os mesmos valores cacheados sem ganho de informação.
+
 ## Hospedagem
 
 | Data/hora | Cidade | Local | Diária | Noites | Total | Cancelamento | Cozinha | Fonte |
@@ -138,12 +156,12 @@ Preencher quando houver ~5 observações. É o resumo que se consulta na hora da
 | Rota | Mín. visto | Mediana | Máx. visto | Melhor mês | "É oferta abaixo de" |
 |---|---|---|---|---|---|
 | **GIG→MXP / CDG→GIG** *(open-jaw, a rota da viagem)* | — | — | — | set/out (a confirmar) | — |
-| GIG–MIL/MXP (i/v simples, referência) | R$ 2.010 *(teaser, provável ida isolada)* | — *(11 obs. de baixa confiança, 3 rodadas — mediana não calculada, ver nota abaixo)* | R$ 6.954 | — | — |
-| GIG–FCO (Roma, alternativa de entrada) | R$ 1.908 *(teaser, provável ida isolada)* | — *(8 obs., 4 rodadas)* | R$ 5.173 | — | — |
-| GIG–VCE (Veneza, alternativa de entrada) | R$ 2.310 *(teaser, provável ida isolada)* | — *(8 obs., 4 rodadas)* | R$ 4.825 | — | — |
+| GIG–MIL/MXP (i/v simples, referência) | R$ 2.010 *(teaser, provável ida isolada)* | — *(12 obs. de baixa confiança, 4 rodadas — mediana não calculada, ver nota abaixo)* | R$ 6.954 | — | — |
+| GIG–FCO (Roma, alternativa de entrada) | R$ 1.908 *(teaser, provável ida isolada)* | — *(9 obs., 5 rodadas)* | R$ 5.173 | — | — |
+| GIG–VCE (Veneza, alternativa de entrada) | R$ 2.310 *(teaser, provável ida isolada)* | — *(9 obs., 5 rodadas)* | R$ 4.825 | — | — |
 | CDG–GIG (Paris, referência p/ perna de volta) | R$ 3.147 *(unidades e período inconsistentes entre rodadas)* | — | US$ 882 / R$ 6.954 | — | — |
 
-*Quatro rodadas (09-18 a 09-21) ainda não são linha de base. Precisamos de ~5 rodadas independentes com data de viagem real (ago–set/2027), e nenhuma rodada registrada até 2026-09-21 tem isso — todas são preço genérico "a partir de", 1 passageiro, capturado por snippet de buscador, e boa parte dos valores se repete entre rodadas (mesmo índice cacheado) ou até se contradiz na mesma rota/fonte (ver CDG-GIG Air France em 09-21). Ver notas de falha em 2026-09-18 a 2026-09-21 acima. A "mediana" e o "mín./máx." acima são apenas estatística descritiva dessas âncoras de baixa confiança — não usar para calibrar gatilho de compra. **O bloqueio de rede já foi confirmado estrutural em quatro execuções seguidas — ver recomendação na nota de 09-21.***
+*Cinco rodadas (09-18 a 09-22) ainda não são linha de base. Precisamos de ~5 rodadas independentes com data de viagem real (ago–set/2027), e nenhuma rodada registrada até 2026-09-22 tem isso — todas são preço genérico "a partir de", 1 passageiro, capturado por snippet de buscador, e boa parte dos valores se repete entre rodadas (mesmo índice cacheado) ou até se contradiz na mesma rota/fonte (ver CDG-GIG Air France em 09-21, GIG-FCO TAP/Delta em 09-22). Ver notas de falha em 2026-09-18 a 2026-09-22 acima. A "mediana" e o "mín./máx." acima são apenas estatística descritiva dessas âncoras de baixa confiança — não usar para calibrar gatilho de compra. **O bloqueio de rede já foi confirmado estrutural em cinco execuções seguidas — ver recomendação na nota de 09-22.***
 
 ## Gatilhos armados
 

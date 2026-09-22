@@ -1,6 +1,6 @@
 ---
 tipo: hot-cache
-atualizado: 2026-09-21
+atualizado: 2026-09-22
 janela_palavras: 302
 limite: 500
 ---
@@ -96,20 +96,19 @@ Propagar as decisões de 02/09 para essas páginas assim que os agentes entregar
 - Obsidian: Templates → `meta/templates/`; anexos → `raw/assets/`; instalar Dataview
 - Vigilância automática via `/schedule` — só faz sentido a partir de out/2027
 
-### 🚫 Coleta autônoma de preços — bloqueio de rede estrutural (confirmado 4x: 09-18 a 09-21)
+### 🚫 Coleta autônoma de preços — bloqueio de rede estrutural (confirmado 5x: 09-18 a 09-22)
 
 O `cacador-ofertas` roda em agendamento autônomo diário, mas **`WebFetch` e `curl` direto estão
 sistematicamente bloqueados** (`EGRESS_BLOCKED` / proxy 403) para qualquer domínio externo, não só
 sites de viagem — testado com domínio de controle neutro (`en.wikipedia.org`) e reconfirmado em
-09-21 via `$HTTPS_PROXY/__agentproxy/status` (`"selective": false`).
+09-22 via `$HTTPS_PROXY/__agentproxy/status` (`"selective": false`).
 Só `WebSearch` funciona, e devolve snippets agregados/cacheados de baixíssima confiança (sem data
 específica confirmada, 1 passageiro, sem bagagem) — **não serve para montar a linha de base real de
-ago–set/2027**. Em 09-21 apareceu pela primeira vez uma âncora com par de datas explícito (TAP
-GIG-FCO, R$ 4.574, "14–27/ago"), mas sem ano confirmado — ainda baixa confiança.
-Decisão pendente do Fabio, agora com 4 rodadas seguidas sem ganho de informação: (a) reduzir a
+ago–set/2027**. Nenhuma âncora nova ganhou ano confirmado nesta rodada.
+Decisão pendente do Fabio, agora com 5 rodadas seguidas sem ganho de informação: (a) reduzir a
 frequência do agendamento, (b) montar alerta de tarifa nativo (Google Flights/KAYAK, fora deste
 agente), ou (c) pedir liberação de egress para sites de passagem especificamente. Detalhe completo em
-[[historico-de-precos]], nota de 2026-09-21.
+[[historico-de-precos]], nota de 2026-09-22.
 
 ---
 
