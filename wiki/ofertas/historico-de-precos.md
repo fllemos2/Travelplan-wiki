@@ -2,7 +2,7 @@
 tipo: conceito
 titulo: Histórico de Preços
 criado: 2026-09-01
-atualizado: 2026-09-22
+atualizado: 2026-09-23
 tags: [ofertas, precos, vigilancia]
 fontes: []
 confianca: alta
@@ -61,6 +61,11 @@ Alimentado pelo [[cacador-ofertas]] em **toda** consulta, inclusive quando o pre
 | 2026-09-22 | GIG–FCO (Roma) | i/v, sem data específica | 1 | TAP Air Portugal / Delta | "últimos 5 dias": TAP R$ 3.758 / Delta R$ 3.763 (ambos divergem das âncoras de 09-18 a 09-21 na mesma rota, reforça ruído/cache do buscador) | não apurado | não apurado | KAYAK (snippet agregado) — via WebSearch, WebFetch bloqueado |
 | 2026-09-22 | GIG–VCE (Veneza) | i/v, sem data específica | 1 | KAYAK (teaser de rota) | GIG-VCE a partir de R$ 3.246 / VCE-GIG a partir de R$ 2.310 (idêntico a 09-21 — mesmo índice cacheado) | não apurado | não apurado | [KAYAK](https://www.kayak.com.br/voos/Rio-de-Janeiro-Galeao-Internacional-GIG/Veneza-Marco-Polo-VCE) — via WebSearch, WebFetch bloqueado |
 | 2026-09-22 | CDG–GIG (Paris→Rio, perna de volta) | i/v, sem data específica | 1 | KAYAK (teaser de rota) | a partir de R$ 3.147 (idêntico a 09-18/09-21 — mesmo índice cacheado) | não apurado | não apurado | [KAYAK](https://www.kayak.com.br/voos/Paris-Charles-de-Gaulle-CDG/Rio-de-Janeiro-Galeao-Internacional-GIG) — via WebSearch, WebFetch bloqueado |
+| 2026-09-23 | GIG–MIL/MXP | i/v, sem data específica | 1 | LATAM (Google Voos, snippet) | a partir de R$ 4.457 (idêntico à âncora original de 09-01) | não apurado | não apurado | Google Voos (snippet agregado) — via WebSearch, WebFetch bloqueado |
+| 2026-09-23 | GIG–MIL/MXP | i/v, sem data específica | 1 | Air France | R$ 5.383 (RT, idêntico a 09-20) | não apurado | não apurado | Air France Brasil (snippet) — via WebSearch, WebFetch bloqueado |
+| 2026-09-23 | GIG–MXP (Milão) | resgate de milhas, sem data específica | 1 | LATAM Pass | 62.476 milhas ou R$ 1.485 + taxas — **unidade não comparável ao teto de R$ 4.457/pax em dinheiro; não é tarifa paga** | não apurado | não apurado | [passageirodeprimeira.com](https://passageirodeprimeira.com/alerta-de-disponibilidade-milao-a-partir-de-62-mil-milhas-latam-pass-ou-r-r-1-485-taxas/) — via WebSearch, WebFetch bloqueado |
+| 2026-09-23 | GIG–PAR (Paris, referência p/ CDG) | i/v, sem data específica | 1 | Air France | R$ 6.463 (RT, idêntico a 09-19) | não apurado | não apurado | Air France Brasil (snippet) — via WebSearch, WebFetch bloqueado |
+| 2026-09-23 | GIG–PAR (Paris, referência p/ CDG) | i/v, sem data específica | 1 | Skyscanner (teaser de rota) | a partir de R$ 2.009 (provável ida isolada, não i/v) | não apurado | não apurado | [Skyscanner](https://www.skyscanner.com/routes/rioa/pari/rio-de-janeiro-to-paris.html) — via WebSearch, WebFetch bloqueado |
 
 > ⚠️ As linhas acima são **âncoras de dimensionamento**, não ofertas: são preços "a partir de", sem taxas, sem bagagem e sem data específica. Servem só para calibrar o orçamento em [[plano-de-viabilidade]]. Ninguém compra com base nelas.
 >
@@ -143,6 +148,21 @@ Quinta execução autônoma agendada seguida (09-18 a 09-22). Consultei `$HTTPS_
 
 **Cinco rodadas seguidas (09-18 a 09-22)** confirmam que o bloqueio de rede não se resolveu sozinho em uma semana de execuções diárias. As três recomendações da nota de 09-20 continuam em aberto — a mais acionável no momento é reduzir a cadência para semanal ou configurar um alerta de tarifa nativo (Google Flights/KAYAK) fora deste agente, já que a coleta diária via `WebSearch` só reempilha os mesmos valores cacheados sem ganho de informação.
 
+### 🚫 Tentativa de coleta 2026-09-23 — sexta rodada, bloqueio confirmado de novo (uma semana completa)
+
+Sexta execução autônoma agendada seguida (09-18 a 09-23). Consultei `$HTTPS_PROXY/__agentproxy/status` de novo: proxy ativo, `"selective": false` — mesmo diagnóstico estrutural das cinco rodadas anteriores.
+
+- `WebFetch` para KAYAK (GIG-MXP, datas 2027-08-20/2027-09-03, 3 pax) → `EGRESS_BLOCKED`.
+- `curl` direto via `Bash` para domínio de controle neutro (`en.wikipedia.org`) → `CONNECT tunnel failed, response 403` ("connect_rejected — organization policy"), idêntico às rodadas anteriores.
+- `WebSearch` trouxe 5 âncoras novas (ver tabela acima). Quatro repetem, dígito por dígito, valores já vistos em rodadas anteriores (LATAM GIG-MIL R$ 4.457 idêntico à âncora original de 01/09; Air France GIG-MIL R$ 5.383 idêntico a 09-20; Air France GIG-PAR R$ 6.463 idêntico a 09-19; Skyscanner GIG-PAR R$ 2.009 provável ida isolada) — confirma de novo o mesmo índice cacheado, sem ganho de informação real.
+- **Achado incidental, não uma âncora de linha de base:** uma busca por disponibilidade em set/2028 devolveu um snippet de resgate de milhas LATAM Pass (62.476 milhas ou R$ 1.485 + taxas) para GIG-MXP, sem data específica. Unidade e forma de pagamento diferentes do teto de R$ 4.457/pax em dinheiro — **não comparável**, registrado só por completude.
+- A mesma busca de set/2028 também retornou, pela primeira vez, a própria Issue #2 deste agente (09-19) como resultado — confirma que o índice de busca já está indexando as issues públicas deste repositório, sem relação com preço de passagem.
+- **Setembro/2028:** busca explícita (`LATAM GIG Milão setembro 2028 passagens venda aberta compra`) não retornou nenhuma evidência de venda aberta. Esperado, pois a venda só deve abrir a partir de ~out/2027. **Sem alerta de janela aberta.**
+- Nenhum preço com confiança suficiente abaixo do teto de R$ 4.457/pessoa.
+- **Veredito da sessão: PASSA.** Sexto "sem dados de linha de base" seguido, mesmo motivo estrutural. Gatilho #1 continua ⏸️ pausado.
+
+**Seis rodadas seguidas (09-18 a 09-23) fecham uma semana corrida de execuções diárias idênticas.** O bloqueio de rede é permanente nesta infraestrutura — não há mais valor incremental em repetir o mesmo teste de três camadas (WebFetch/curl/WebSearch) todo dia; o diagnóstico já está estabelecido desde 09-20. Recomendação reforçada para o Fabio: a decisão sobre cadência/alerta nativo/liberação de egress (ver opções na nota de 09-20) está pendente há uma semana sem resposta. Sugestão concreta enquanto isso: reduzir a frequência do agendamento para semanal — a coleta diária via `WebSearch` não muda o resultado e só reempilha as mesmas âncoras cacheadas.
+
 ## Hospedagem
 
 | Data/hora | Cidade | Local | Diária | Noites | Total | Cancelamento | Cozinha | Fonte |
@@ -161,7 +181,7 @@ Preencher quando houver ~5 observações. É o resumo que se consulta na hora da
 | GIG–VCE (Veneza, alternativa de entrada) | R$ 2.310 *(teaser, provável ida isolada)* | — *(9 obs., 5 rodadas)* | R$ 4.825 | — | — |
 | CDG–GIG (Paris, referência p/ perna de volta) | R$ 3.147 *(unidades e período inconsistentes entre rodadas)* | — | US$ 882 / R$ 6.954 | — | — |
 
-*Cinco rodadas (09-18 a 09-22) ainda não são linha de base. Precisamos de ~5 rodadas independentes com data de viagem real (ago–set/2027), e nenhuma rodada registrada até 2026-09-22 tem isso — todas são preço genérico "a partir de", 1 passageiro, capturado por snippet de buscador, e boa parte dos valores se repete entre rodadas (mesmo índice cacheado) ou até se contradiz na mesma rota/fonte (ver CDG-GIG Air France em 09-21, GIG-FCO TAP/Delta em 09-22). Ver notas de falha em 2026-09-18 a 2026-09-22 acima. A "mediana" e o "mín./máx." acima são apenas estatística descritiva dessas âncoras de baixa confiança — não usar para calibrar gatilho de compra. **O bloqueio de rede já foi confirmado estrutural em cinco execuções seguidas — ver recomendação na nota de 09-22.***
+*Seis rodadas (09-18 a 09-23) ainda não são linha de base. Precisamos de rodadas independentes com data de viagem real (ago–set/2027), e nenhuma rodada registrada até 2026-09-23 tem isso — todas são preço genérico "a partir de", 1 passageiro, capturado por snippet de buscador, e boa parte dos valores se repete entre rodadas (mesmo índice cacheado) ou até se contradiz na mesma rota/fonte (ver CDG-GIG Air France em 09-21, GIG-FCO TAP/Delta em 09-22). Ver notas de falha em 2026-09-18 a 2026-09-23 acima. A "mediana" e o "mín./máx." acima são apenas estatística descritiva dessas âncoras de baixa confiança — não usar para calibrar gatilho de compra. **O bloqueio de rede já foi confirmado estrutural em seis execuções seguidas (uma semana corrida) — decisão do Fabio pendente desde 09-20, ver recomendação na nota de 09-23.***
 
 ## Gatilhos armados
 

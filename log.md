@@ -348,3 +348,15 @@ isso — só o extrato dele.
 - Veredito: **PASSA** — mesmo motivo estrutural das quatro rodadas anteriores. Gatilho #1 continua ⏸️ pausado.
 - Issue GitHub criada via `mcp__github__issue_write`: caso A (sem-dados).
 - Pendente: recomendação de 09-20 (reduzir frequência / alerta nativo / liberar egress) segue sem decisão do Fabio — cinco rodadas seguidas sem ganho de informação real. Vale insistir com o Fabio nesta issue: a coleta diária no estado atual não está produzindo linha de base.
+
+## [2026-09-23] query | Caçador de Ofertas — sexta coleta autônoma agendada (bloqueio confirmado pela 6ª vez, semana completa)
+
+- Sexta execução autônoma agendada, sem o Fabio no circuito. Consultei `$HTTPS_PROXY/__agentproxy/status` de novo — proxy ativo, não seletivo por domínio, mesmo diagnóstico estrutural das cinco rodadas anteriores.
+- `WebFetch` para KAYAK com datas explícitas (2027-08-20/2027-09-03, 3 pax) → `EGRESS_BLOCKED`. `curl` direto via `Bash` para domínio de controle neutro (`en.wikipedia.org`) → `CONNECT tunnel failed, response 403`, idêntico às cinco rodadas anteriores.
+- `WebSearch` trouxe 5 novas linhas de âncora (GIG-MIL, GIG-PAR). Quatro repetem dígito por dígito valores já vistos em rodadas anteriores (mesmo índice cacheado, sem ganho de informação). Um achado incidental (resgate de milhas LATAM Pass, GIG-MXP, 62.476 milhas ou R$ 1.485 + taxas) foi registrado só por completude — unidade não comparável ao teto de R$ 4.457/pax em dinheiro.
+- Busca explícita por set/2028 não retornou nenhuma evidência de venda aberta — esperado, pois a venda só deve abrir a partir de ~out/2027. **Sem alerta de janela aberta.**
+- Nenhum preço abaixo do teto de referência R$ 4.457/pessoa com confiança suficiente.
+- Atualizadas: [[historico-de-precos]] (5 novas linhas de âncora + nova seção de falha sistêmica 09-23 + linha de base por rota recalculada com 6 rodadas).
+- Veredito: **PASSA** — mesmo motivo estrutural das cinco rodadas anteriores. Gatilho #1 continua ⏸️ pausado.
+- Issue GitHub criada via `mcp__github__issue_write`: caso A (sem-dados).
+- Pendente: recomendação de 09-20 (reduzir frequência / alerta nativo / liberar egress) segue sem decisão do Fabio — **uma semana corrida (6 rodadas) sem ganho de informação real.** O diagnóstico está fechado desde 09-20; repetir o mesmo teste diariamente não vai mudar o resultado. Recomendo ao Fabio reduzir a cadência para semanal até que ele decida uma das três opções.
