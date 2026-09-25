@@ -373,3 +373,15 @@ isso — só o extrato dele.
 - Veredito: **PASSA** — mesmo motivo estrutural das seis rodadas anteriores. Gatilho #1 continua ⏸️ pausado.
 - Issue GitHub criada via `curl` + API REST (`api.github.com`), caso A (sem-dados).
 - Pendente: recomendação de 09-20 (reduzir frequência / alerta nativo / liberar egress) segue sem decisão do Fabio — sete rodadas seguidas, mais de uma semana corrida, sem ganho de informação real sobre a linha de base de ago-set/2027.
+
+## [2026-09-25] query | Caçador de Ofertas — oitava coleta autônoma agendada (bloqueio confirmado pela 8ª vez)
+
+- Oitava execução autônoma agendada seguida (09-18 a 09-25), sem o Fabio no circuito. Consultei `$HTTPS_PROXY/__agentproxy/status` (respondeu normalmente desta vez) — proxy ativo, não seletivo por domínio, mesmo diagnóstico estrutural das sete rodadas anteriores.
+- `WebFetch` para KAYAK com datas explícitas (GIG→MXP, 2027-08-20/2027-09-03, 3adults) → `EGRESS_BLOCKED`. `curl` direto via `Bash` para `www.kayak.com.br` → `CONNECT tunnel failed, response 403`. `WebFetch` para domínio de controle neutro (`en.wikipedia.org`) → também `EGRESS_BLOCKED`. Confirma pela oitava vez que o bloqueio é política geral de egress do ambiente, não lista negra de sites de viagem.
+- `WebSearch` trouxe 5 linhas novas de âncora agregada (GIG-FCO, GIG-VCE, GIG-MXP), mas os valores de ago-FCO (R$ 6.978) e set-VCE (R$ 6.793) vieram idênticos dígito por dígito aos de 09-24 — confirma que o índice do buscador está cacheado. Um achado de resgate de milhas LATAM Pass (62.476 milhas / R$ 1.485 + taxas) repetiu o valor de 09-23. Nenhuma cotação real com data de calendário, 3 passageiros e bagagem despachada.
+- Busca explícita por set/2028 não retornou nenhuma evidência de venda aberta — esperado, pois a venda só deve abrir a partir de ~out/2027. **Sem alerta de janela aberta.**
+- Nenhum preço abaixo do teto de referência R$ 4.457/pessoa com confiança suficiente.
+- Atualizadas: [[historico-de-precos]] (5 novas linhas de âncora + nova seção de falha sistêmica 09-25 + linha de base por rota atualizada para 8 rodadas).
+- Veredito: **PASSA** — mesmo motivo estrutural das sete rodadas anteriores. Gatilho #1 continua ⏸️ pausado.
+- Issue GitHub criada para esta rodada, caso A (sem-dados).
+- Pendente: recomendação de 09-20 (reduzir frequência / alerta nativo / liberar egress) segue sem decisão do Fabio — oito rodadas seguidas sem ganho de informação real sobre a linha de base de ago-set/2027.
