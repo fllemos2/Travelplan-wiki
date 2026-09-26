@@ -385,3 +385,16 @@ isso — só o extrato dele.
 - Veredito: **PASSA** — mesmo motivo estrutural das sete rodadas anteriores. Gatilho #1 continua ⏸️ pausado.
 - Issue GitHub criada para esta rodada, caso A (sem-dados).
 - Pendente: recomendação de 09-20 (reduzir frequência / alerta nativo / liberar egress) segue sem decisão do Fabio — oito rodadas seguidas sem ganho de informação real sobre a linha de base de ago-set/2027.
+
+## [2026-09-26] query | Caçador de Ofertas — nona coleta autônoma agendada (bloqueio confirmado pela 9ª vez)
+
+- Nona execução autônoma agendada seguida (09-18 a 09-26), sem o Fabio no circuito. Consultei `$HTTPS_PROXY/__agentproxy/status` — proxy ativo, não seletivo por domínio, mesmo diagnóstico estrutural das oito rodadas anteriores.
+- `curl` direto via `Bash` para `www.kayak.com.br` → `CONNECT tunnel failed, response 403`. `WebFetch` para KAYAK (GIG-MXP, datas explícitas 2027-08-20/2027-09-03, 3 pax) → `EGRESS_BLOCKED`. `WebFetch` para domínio de controle neutro (`en.wikipedia.org`) → também `EGRESS_BLOCKED`.
+- `WebSearch` trouxe 7 linhas novas de âncora agregada (GIG-MXP, GIG-PAR, CDG-GIG). Três valores vieram idênticos dígito por dígito a rodadas anteriores (LATAM GIG-MXP R$ 4.457, Air France GIG-MXP R$ 5.383, Air France GIG-PAR R$ 6.463), confirmando de novo o índice cacheado do buscador. Achados incidentais sem valor de linha de base: teasers CDG-GIG em dólar e resgate de milhas LATAM Pass para trecho GIG-PAR (56.313 milhas + taxas).
+- `gh` CLI indisponível nesta sessão; issue criada via API/MCP do GitHub com `GH_TOKEN` do ambiente.
+- Nenhum dado de setembro/2028 encontrado (esperado). **Sem alerta de abertura antecipada.**
+- Nenhum preço abaixo do teto de referência R$ 4.457/pessoa com confiança suficiente.
+- Atualizadas: [[historico-de-precos]] (7 novas linhas de âncora + nova seção de falha sistêmica 09-26 + linha de base por rota atualizada para 9 rodadas).
+- Veredito: **PASSA** — mesmo motivo estrutural das oito rodadas anteriores. Gatilho #1 continua ⏸️ pausado.
+- Issue GitHub criada para esta rodada, caso A (sem-dados).
+- Pendente: recomendação de 09-20 (reduzir frequência / alerta nativo / liberar egress) segue sem decisão do Fabio — **nove rodadas seguidas, seis dias corridos de pendência sobre a recomendação.** Sinalizando de forma mais explícita ao Fabio nesta issue, dado o tempo decorrido.

@@ -2,7 +2,7 @@
 tipo: conceito
 titulo: Histórico de Preços
 criado: 2026-09-01
-atualizado: 2026-09-25
+atualizado: 2026-09-26
 tags: [ofertas, precos, vigilancia]
 fontes: []
 confianca: alta
@@ -78,6 +78,15 @@ Alimentado pelo [[cacador-ofertas]] em **toda** consulta, inclusive quando o pre
 > ⚠️ As linhas acima são **âncoras de dimensionamento**, não ofertas: são preços "a partir de", sem taxas, sem bagagem e sem data específica. Servem só para calibrar o orçamento em [[plano-de-viabilidade]]. Ninguém compra com base nelas.
 >
 > **Nota de 2026-09-24:** as três médias mensais específicas para GIG-FCO (ago R$ 6.978 / set R$ 6.967) e GIG-VCE (set R$ 6.793) são o primeiro dado que sugere que, **para as rotas alternativas de entrada (Roma, Veneza)**, agosto/setembro podem ser meses caros, não baratos — ao contrário do que [[melhor-epoca]] assume para a rota principal GIG–Milão. Isto é uma média de agregador (sem página-fonte única, sem ano confirmado, sem garantia de que "setembro" se refere a 2026, 2027 ou uma média histórica genérica) — **não promovido a linha de base**, mas registrado como algo a verificar quando o WebFetch voltar a funcionar ou quando a janela de ago-set/2027 abrir de fato para busca direta.
+| 2026-09-26 | GIG–MXP (Milão) | i/v, sem data específica | 1 | LATAM (Google Voos, snippet) | a partir de R$ 4.457 (idêntico à âncora original de 09-01/09-23) | não apurado | não apurado | Google Voos (snippet agregado) — via WebSearch, WebFetch bloqueado |
+| 2026-09-26 | GIG–MXP (Milão) | i/v, sem data específica | 1 | Air France | R$ 5.383 (RT, idêntico a 09-20/09-23) | não apurado | não apurado | Air France Brasil (snippet) — via WebSearch, WebFetch bloqueado |
+| 2026-09-26 | GIG–PAR (Paris, referência p/ CDG) | i/v, sem data específica | 1 | Air France | R$ 6.463 (RT, idêntico a 09-19/09-23) | não apurado | não apurado | Air France Brasil (snippet) — via WebSearch, WebFetch bloqueado |
+| 2026-09-26 | GIG–PAR (Paris, referência p/ CDG) | i/v, sem data específica | 1 | Skyscanner (teaser de rota) | a partir de R$ 1.964 (variação pequena vs. R$ 2.009 em 09-23, provável ida isolada) | não apurado | não apurado | [Skyscanner](https://www.skyscanner.com/routes/rioa/pari/rio-de-janeiro-to-paris.html) — via WebSearch, WebFetch bloqueado |
+| 2026-09-26 | CDG–GIG (Paris→Rio, perna de volta) | i/v, sem data específica | 1 | Skyscanner / KAYAK (teasers de rota) | Skyscanner a partir de US$ 472 / KAYAK a partir de US$ 448 (unidades diferentes das rodadas anteriores em BRL, não comparável diretamente) | não apurado | não apurado | Skyscanner/KAYAK (snippets) — via WebSearch, WebFetch bloqueado |
+| 2026-09-26 | CDG–GIG (Paris→Rio, perna de volta) | i/v, sem data específica | 1 | Travelocity/LATAM | a partir de US$ 586 (one-way) | não apurado | não apurado | Travelocity (snippet) — via WebSearch, WebFetch bloqueado |
+| 2026-09-26 | GIG–PAR (Paris, referência a CDG) | resgate de milhas, sem data específica | 1 | LATAM Pass | 56.313 milhas + taxas (trecho p/ Paris — diferente do achado de milhas para Milão em 09-23/09-25, unidade não comparável ao teto em dinheiro) | não apurado | não apurado | [passageirodeprimeira.com](https://passageirodeprimeira.com/partiu-europa-trecho-para-paris-a-partir-de-56-mil-milhas-latam-pass-taxas/) — via WebSearch, WebFetch bloqueado |
+>
+> **Nota de 2026-09-26 (nona rodada):** valores de GIG-MXP, GIG-PAR e CDG-GIG voltaram a repetir dígito por dígito âncoras de 09-19/09-20/09-23 (LATAM R$ 4.457, Air France R$ 5.383 e R$ 6.463) — mesmo índice cacheado do buscador, nono dia seguido sem cotação real com data de calendário, 3 passageiros e bagagem despachada. Busca explícita por set/2028 não retornou evidência de venda aberta ou fechada. **Sem alerta de janela aberta.**
 >
 > **Nota de 2026-09-19:** várias linhas repetem, dígito por dígito, valores já vistos em 2026-09-18 (ITA GIG-MIL R$ 4.577, ITA GIG-VCE R$ 4.800, SWISS GIG-VCE R$ 4.606, Lufthansa GIG-MIL R$ 4.750 igual à âncora original de 09-01). Isso é evidência de que o `WebSearch` está devolvendo o **mesmo índice cacheado**, não uma nova consulta em tempo real — o que reforça que estas linhas não servem para detectar tendência ou variação de preço, só para registrar a ordem de grandeza. Uma linha mudou sem explicação aparente (ITA GIG-FCO: R$ 4.727 → R$ 4.106), o que é mais um sinal de ruído do agregador do que de queda real de tarifa.
 
@@ -202,6 +211,21 @@ Oitava execução autônoma agendada seguida (09-18 a 09-25). Consultei `$HTTPS_
 
 **Oito rodadas seguidas (09-18 a 09-25), a sétima e a oitava trazendo dados essencialmente idênticos entre si.** O bloqueio de rede é permanente nesta infraestrutura — não há diagnóstico novo a extrair repetindo o mesmo teste de três camadas diariamente. As três recomendações da nota de 09-20 (reduzir cadência / alerta nativo / liberar egress) seguem pendentes de decisão do Fabio há cinco dias corridos sem resposta. Reforço a recomendação: reduzir a frequência do agendamento para semanal traria o mesmo ganho de informação com um quinto do esforço de execução.
 
+### 🚫 Tentativa de coleta 2026-09-26 — nona rodada, bloqueio confirmado de novo (nono dia corrido)
+
+Nona execução autônoma agendada seguida (09-18 a 09-26), sem o Fabio no circuito. Consultei `$HTTPS_PROXY/__agentproxy/status` — proxy ativo, `"selective": false`, mesmo diagnóstico estrutural das oito rodadas anteriores.
+
+- `curl` direto via `Bash` para `www.kayak.com.br` (User-Agent de navegador real, datas explícitas GIG-MXP 2027-08-20/2027-09-03, 3 pax na URL) → `CONNECT tunnel failed, response 403` ("connect_rejected — organization policy").
+- `WebFetch` para KAYAK (mesma URL/datas) → `EGRESS_BLOCKED`.
+- `WebFetch` para domínio de controle neutro (`en.wikipedia.org`) → também `EGRESS_BLOCKED`, confirma de novo que é política geral de egress do ambiente, não específica de sites de viagem.
+- `WebSearch` trouxe 7 linhas novas (ver tabela acima): LATAM GIG-MXP R$ 4.457, Air France GIG-MXP R$ 5.383 e Air France GIG-PAR R$ 6.463 vieram **idênticos, dígito por dígito**, a âncoras de 09-19/09-20/09-23 — nono dia seguido confirmando o mesmo índice cacheado. Achados novos de baixa relevância: teasers CDG-GIG em dólar (Skyscanner US$ 472 / KAYAK US$ 448 / Travelocity US$ 586, one-way), e um resgate de milhas LATAM Pass para o trecho GIG-PAR (56.313 milhas + taxas — trecho e valor diferentes do achado de milhas para Milão em 09-23/09-25).
+- `gh` CLI não disponível nesta sessão (como em 09-24); `GH_TOKEN` presente no ambiente — issue desta rodada será criada via API/MCP do GitHub.
+- **Setembro/2028:** busca explícita não retornou nenhuma evidência de venda aberta ou fechada — esperado, consistente com as oito rodadas anteriores. **Sem alerta de janela aberta.**
+- Nenhum preço com confiança suficiente abaixo do teto de referência R$ 4.457/pessoa — nenhuma cotação desta rodada tem data de calendário real, 3 passageiros e bagagem despachada.
+- **Veredito da sessão: PASSA.** Nono "sem dados de linha de base real" seguido, mesmo motivo estrutural. Gatilho #1 continua ⏸️ pausado.
+
+**Nove rodadas seguidas (09-18 a 09-26) — mais de uma semana e meia corrida.** O bloqueio de rede segue sem solução própria e sem decisão do Fabio sobre a recomendação registrada em 09-20 (reduzir cadência / configurar alerta nativo / liberar egress para sites de passagem), agora pendente há **seis dias corridos**. Repetir o mesmo teste de rede diariamente não está gerando diagnóstico novo desde 09-20 — o valor residual de cada execução está só nas âncoras agregadas de baixíssima confiança do `WebSearch`.
+
 ## Hospedagem
 
 | Data/hora | Cidade | Local | Diária | Noites | Total | Cancelamento | Cozinha | Fonte |
@@ -220,7 +244,7 @@ Preencher quando houver ~5 observações. É o resumo que se consulta na hora da
 | GIG–VCE (Veneza, alternativa de entrada) | R$ 2.310 *(teaser, provável ida isolada)* | — *(9 obs., 5 rodadas)* | R$ 4.825 | — | — |
 | CDG–GIG (Paris, referência p/ perna de volta) | R$ 3.147 *(unidades e período inconsistentes entre rodadas)* | — | US$ 882 / R$ 6.954 | — | — |
 
-*Oito rodadas (09-18 a 09-25) ainda não são linha de base. Precisamos de rodadas independentes com data de viagem real (ago–set/2027), e nenhuma rodada registrada até 2026-09-25 tem isso — todas são preço genérico "a partir de" ou média mensal agregada, capturado por snippet de buscador, e boa parte dos valores se repete entre rodadas (mesmo índice cacheado) ou até se contradiz na mesma rota/fonte (ver CDG-GIG Air France em 09-21, GIG-FCO TAP/Delta em 09-22). Ver notas de falha em 2026-09-18 a 2026-09-25 acima. A "mediana" e o "mín./máx." acima são apenas estatística descritiva dessas âncoras de baixa confiança — não usar para calibrar gatilho de compra. **O bloqueio de rede já foi confirmado estrutural em oito execuções seguidas — decisão do Fabio pendente desde 09-20 (cinco dias corridos sem resposta), ver recomendação na nota de 09-25.***
+*Nove rodadas (09-18 a 09-26) ainda não são linha de base. Precisamos de rodadas independentes com data de viagem real (ago–set/2027), e nenhuma rodada registrada até 2026-09-26 tem isso — todas são preço genérico "a partir de" ou média mensal agregada, capturado por snippet de buscador, e boa parte dos valores se repete entre rodadas (mesmo índice cacheado) ou até se contradiz na mesma rota/fonte (ver CDG-GIG Air France em 09-21, GIG-FCO TAP/Delta em 09-22). Ver notas de falha em 2026-09-18 a 2026-09-26 acima. A "mediana" e o "mín./máx." acima são apenas estatística descritiva dessas âncoras de baixa confiança — não usar para calibrar gatilho de compra. **O bloqueio de rede já foi confirmado estrutural em nove execuções seguidas — decisão do Fabio pendente desde 09-20 (seis dias corridos sem resposta), ver recomendação na nota de 09-26.***
 
 ## Gatilhos armados
 
