@@ -398,3 +398,16 @@ isso — só o extrato dele.
 - Veredito: **PASSA** — mesmo motivo estrutural das oito rodadas anteriores. Gatilho #1 continua ⏸️ pausado.
 - Issue GitHub criada para esta rodada, caso A (sem-dados).
 - Pendente: recomendação de 09-20 (reduzir frequência / alerta nativo / liberar egress) segue sem decisão do Fabio — **nove rodadas seguidas, seis dias corridos de pendência sobre a recomendação.** Sinalizando de forma mais explícita ao Fabio nesta issue, dado o tempo decorrido.
+
+## [2026-09-27] query | Caçador de Ofertas — décima coleta autônoma agendada (bloqueio confirmado pela 10ª vez)
+
+- Décima execução autônoma agendada seguida (09-18 a 09-27), sem o Fabio no circuito. **Achado de higiene de repositório:** a branch local `master` estava 3 commits atrás de `origin/master` (as rodadas de 09-24/09-25/09-26 haviam sido commitadas com `HEAD` *detached*, nunca mescladas na branch local, embora já estivessem no remoto). Corrigido com fast-forward de `master` para o commit da nona rodada antes de iniciar o trabalho — sem perda de dado, mas registrado para a próxima execução tomar cuidado de sempre operar a partir de `master`.
+- Consultei `$HTTPS_PROXY/__agentproxy/status` — proxy ativo, não seletivo por domínio, mesmo diagnóstico estrutural das nove rodadas anteriores.
+- `curl` direto via `Bash` para `www.kayak.com.br` (datas explícitas GIG-MXP 2027-08-20/2027-09-03, 3 pax) → `CONNECT tunnel failed, response 403`. `WebFetch` para a mesma URL → `EGRESS_BLOCKED`. `curl`/`WebFetch` para domínio de controle neutro (`en.wikipedia.org`) → também bloqueado. `curl` para `api.github.com` com `GH_TOKEN` → **HTTP 200** (canal viável para a issue).
+- `WebSearch` trouxe 9 linhas novas de âncora agregada (GIG-MXP, CDG-GIG, GIG-PAR, GIG-FCO, GIG-VCE). Várias repetem dígito por dígito valores de rodadas anteriores (CDG-GIG R$ 3.147, Air France GIG-PAR R$ 6.463, média GIG-FCO agosto R$ 6.978, média GIG-VCE setembro R$ 6.793) — confirma de novo o índice cacheado do buscador. Um novo máximo de baixa confiança para GIG-VCE (R$ 5.115, sem fonte única).
+- Nenhum dado de setembro/2028 encontrado (esperado, estamos antes de out/2027). **Sem alerta de abertura antecipada.**
+- Nenhum preço abaixo do teto de referência R$ 4.457/pessoa com confiança suficiente.
+- Atualizadas: [[historico-de-precos]] (9 novas linhas de âncora + nova seção de falha sistêmica 09-27 + linha de base por rota atualizada para 10 rodadas).
+- Veredito: **PASSA** — mesmo motivo estrutural das nove rodadas anteriores. Gatilho #1 continua ⏸️ pausado.
+- Issue GitHub criada para esta rodada, caso A (sem-dados).
+- Pendente: recomendação de 09-20 (reduzir frequência / alerta nativo / liberar egress) segue sem decisão do Fabio — **dez rodadas seguidas, sete dias corridos de pendência sobre a recomendação.**
