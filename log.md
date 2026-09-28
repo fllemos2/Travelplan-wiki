@@ -411,3 +411,15 @@ isso — só o extrato dele.
 - Veredito: **PASSA** — mesmo motivo estrutural das nove rodadas anteriores. Gatilho #1 continua ⏸️ pausado.
 - Issue GitHub criada para esta rodada, caso A (sem-dados).
 - Pendente: recomendação de 09-20 (reduzir frequência / alerta nativo / liberar egress) segue sem decisão do Fabio — **dez rodadas seguidas, sete dias corridos de pendência sobre a recomendação.**
+
+## [2026-09-28] query | Caçador de Ofertas — décima primeira coleta autônoma agendada (bloqueio confirmado pela 11ª vez)
+
+- Décima primeira execução autônoma agendada seguida (09-18 a 09-28), sem o Fabio no circuito. **Achado de higiene de repositório, de novo:** `HEAD` local estava *detached* no commit da décima rodada (09-27), enquanto a branch local `master` ainda apontava para o commit de 09-23. `git fetch` confirmou que `origin/master` já tinha o commit certo (o push da sessão anterior funcionou); resolvido com `git checkout master && git merge --ff-only origin/master`, sem perda de dado.
+- `curl` direto via `Bash` para `www.kayak.com.br` (datas explícitas GIG-MXP 2027-08-20/2027-09-03, 3 pax) → `CONNECT tunnel failed, response 403`. `WebFetch` para a mesma URL e para três domínios de controle (`en.wikipedia.org`, Skyscanner, Google Flights) → `EGRESS_BLOCKED` em todos. Consulta ao status do proxy via `curl` foi negada pelo classificador de permissões do ambiente ("Exfil Scouting"), como em 09-24 — não impediu o diagnóstico.
+- `WebSearch` trouxe 9 linhas novas de âncora agregada (GIG-MXP, CDG-GIG, GIG-PAR, GIG-FCO, GIG-VCE). Várias repetem dígito por dígito valores de rodadas anteriores (CDG-GIG R$ 3.147, GIG-FCO agosto R$ 6.978, GIG-VCE setembro R$ 6.793) — confirma de novo o índice cacheado. **Achado do dia:** primeira vez que o agregador deu uma média mensal específica de agosto para a rota CDG-GIG (R$ 8.200, citado como mês caro) — soma-se aos sinais fracos já vistos para GIG-FCO e GIG-VCE de que ago-set pode ser caro nas rotas alternativas/pernas de volta, ao contrário da premissa da rota principal.
+- Nenhum dado de setembro/2028 encontrado (esperado, estamos antes de out/2027). **Sem alerta de abertura antecipada.**
+- Nenhum preço abaixo do teto de referência R$ 4.457/pessoa com confiança suficiente.
+- Atualizadas: [[historico-de-precos]] (9 novas linhas de âncora + nova seção de falha sistêmica 09-28 + linha de base por rota atualizada para 11 rodadas).
+- Veredito: **PASSA** — mesmo motivo estrutural das dez rodadas anteriores. Gatilho #1 continua ⏸️ pausado.
+- Issue GitHub criada para esta rodada, caso A (sem-dados).
+- Pendente: recomendação de 09-20 (reduzir frequência / alerta nativo / liberar egress) segue sem decisão do Fabio — **onze rodadas seguidas, oito dias corridos de pendência sobre a recomendação.**
