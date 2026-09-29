@@ -423,3 +423,15 @@ isso — só o extrato dele.
 - Veredito: **PASSA** — mesmo motivo estrutural das dez rodadas anteriores. Gatilho #1 continua ⏸️ pausado.
 - Issue GitHub criada para esta rodada, caso A (sem-dados).
 - Pendente: recomendação de 09-20 (reduzir frequência / alerta nativo / liberar egress) segue sem decisão do Fabio — **onze rodadas seguidas, oito dias corridos de pendência sobre a recomendação.**
+
+## [2026-09-29] query | Caçador de Ofertas — décima segunda coleta autônoma agendada (bloqueio confirmado pela 12ª vez)
+
+- Décima segunda execução autônoma agendada seguida (09-18 a 09-29), sem o Fabio no circuito. **Achado de higiene de repositório, de novo:** `HEAD` local estava *detached* no commit da décima primeira rodada (09-28), branch local `master` três commits atrás de `origin/master`. Resolvido com `git checkout master && git merge --ff-only origin/master`, sem perda de dado — quarto round seguido (09-27 a 09-29 e este) com o mesmo problema de higiene.
+- Teste de camada única (diagnóstico de três camadas já fechado desde 09-20): `curl` direto via `Bash` para `www.kayak.com.br` → `CONNECT tunnel failed, response 403`. `curl` para domínio de controle neutro (`en.wikipedia.org`) → idêntico. `curl` para `api.github.com` → **HTTP 200**. Mesmo padrão estrutural das onze rodadas anteriores.
+- `WebSearch` trouxe 6 linhas novas de âncora agregada (GIG-MXP, GIG-PAR, CDG-GIG). **Achado do dia:** primeira vez nesta série com par de datas e ano explicitamente confirmados (CDG-GIG, saída 01/jul/2027, volta 14/jul/2027, R$ 9.149/pessoa) — é julho, não ago-set, e valor muito acima de qualquer âncora anterior da rota; sinal isolado, não promovido a linha de base. Também dois novos mínimos "a partir de" para GIG-MXP (Lufthansa R$ 3.689, ITA R$ 3.987).
+- Nenhum dado de setembro/2028 encontrado (esperado, estamos antes de out/2027). **Sem alerta de abertura antecipada.**
+- Nenhum preço abaixo do teto de referência R$ 4.457/pessoa com confiança suficiente.
+- Atualizadas: [[historico-de-precos]] (6 novas linhas de âncora + nova seção de falha sistêmica 09-29 + linha de base por rota atualizada para 12 rodadas).
+- Veredito: **PASSA** — mesmo motivo estrutural das onze rodadas anteriores. Gatilho #1 continua ⏸️ pausado.
+- Issue GitHub criada para esta rodada, caso A (sem-dados).
+- Pendente: recomendação de 09-20 (reduzir frequência / alerta nativo / liberar egress) segue sem decisão do Fabio — **doze rodadas seguidas, nove dias corridos de pendência sobre a recomendação.**
