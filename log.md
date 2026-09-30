@@ -435,3 +435,15 @@ isso — só o extrato dele.
 - Veredito: **PASSA** — mesmo motivo estrutural das onze rodadas anteriores. Gatilho #1 continua ⏸️ pausado.
 - Issue GitHub criada para esta rodada, caso A (sem-dados).
 - Pendente: recomendação de 09-20 (reduzir frequência / alerta nativo / liberar egress) segue sem decisão do Fabio — **doze rodadas seguidas, nove dias corridos de pendência sobre a recomendação.**
+
+## [2026-09-30] query | Caçador de Ofertas — décima terceira coleta autônoma agendada (bloqueio confirmado pela 13ª vez)
+
+- Décima terceira execução autônoma agendada seguida (09-18 a 09-30), sem o Fabio no circuito. Higiene de git de novo: `HEAD` local estava *detached* na décima segunda rodada (09-29), branch local seis commits atrás de `origin/master` — quinto round seguido com o mesmo problema. Resolvido com `git checkout master && git merge --ff-only origin/master`, sem perda de dado.
+- Teste de camada única (diagnóstico de três camadas fechado desde 09-20): `curl` para `www.kayak.com.br` → `CONNECT tunnel failed, response 403`. `curl` para domínio de controle neutro (`en.wikipedia.org`) → idêntico. `curl` para `api.github.com` → **HTTP 200**. Mesmo padrão estrutural das doze rodadas anteriores.
+- `WebSearch` trouxe 6 linhas novas de âncora (GIG-PAR/CDG-GIG via Viajanet, GIG-MXP milhas/executiva LATAM Pass, GIG-FCO Air France/Lufthansa/agregado mensal). **Achado do dia:** a média mensal agregada de GIG-FCO mudou de "ago/set R$ 6.978/R$ 6.967" (idêntica de 09-24 a 09-28) para "set/jul R$ 6.670/R$ 6.239" nesta rodada — mais uma prova de que o índice do agregador não é estável nem confiável entre consultas repetidas.
+- Nenhum dado de setembro/2028 encontrado (esperado, estamos antes de out/2027). **Sem alerta de abertura antecipada.**
+- Nenhum preço abaixo do teto de referência R$ 4.457/pessoa com confiança suficiente.
+- Atualizadas: [[historico-de-precos]] (6 novas linhas de âncora + nova seção de falha sistêmica 09-30 + linha de base por rota atualizada para 13 rodadas).
+- Veredito: **PASSA** — mesmo motivo estrutural das doze rodadas anteriores. Gatilho #1 continua ⏸️ pausado.
+- Issue GitHub criada para esta rodada, caso A (sem-dados).
+- Pendente: recomendação de 09-20 (reduzir frequência / alerta nativo / liberar egress) segue sem decisão do Fabio — **treze rodadas seguidas, dez dias corridos de pendência sobre a recomendação.**

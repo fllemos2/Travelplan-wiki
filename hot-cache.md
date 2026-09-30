@@ -1,6 +1,6 @@
 ---
 tipo: hot-cache
-atualizado: 2026-09-29
+atualizado: 2026-09-30
 janela_palavras: 302
 limite: 500
 ---
@@ -96,23 +96,24 @@ Propagar as decisões de 02/09 para essas páginas assim que os agentes entregar
 - Obsidian: Templates → `meta/templates/`; anexos → `raw/assets/`; instalar Dataview
 - Vigilância automática via `/schedule` — só faz sentido a partir de out/2027
 
-### 🚫 Coleta autônoma de preços — bloqueio de rede estrutural (confirmado 12x seguidas: 09-18 a 09-29, doze dias corridos)
+### 🚫 Coleta autônoma de preços — bloqueio de rede estrutural (confirmado 13x seguidas: 09-18 a 09-30, treze dias corridos)
 
 O `cacador-ofertas` roda em agendamento autônomo diário, mas **`WebFetch` e `curl` direto estão
 sistematicamente bloqueados** (`EGRESS_BLOCKED` / proxy 403) para qualquer domínio externo, não só
-sites de viagem — testado de novo em 09-29 contra domínio de controle neutro (`en.wikipedia.org`),
-mesmo resultado das onze rodadas anteriores. `api.github.com` continua sendo o único canal externo
+sites de viagem — testado de novo em 09-30 contra domínio de controle neutro (`en.wikipedia.org`),
+mesmo resultado das doze rodadas anteriores. `api.github.com` continua sendo o único canal externo
 estável (HTTP 200), por isso a issue de cada rodada sai por ali.
 Só `WebSearch` funciona, e devolve snippets agregados/cacheados de baixíssima confiança (sem data
 específica confirmada, 1 passageiro, sem bagagem) — **não serve para montar a linha de base real de
-ago–set/2027**. Achado de 09-29: primeira âncora com par de datas e ano confirmados nesta série
-inteira (CDG-GIG, jul/2027, R$ 9.149/pessoa) — mas é julho, fora da janela-alvo, sinal isolado.
-**Decisão do Fabio pendente desde 09-20, agora com 12 rodadas seguidas (nove dias corridos) sem
+ago–set/2027**. Achado de 09-30: a própria média mensal agregada de GIG-FCO mudou de valor entre
+rodadas (R$ 6.978/R$ 6.967 em 09-24–09-28 → R$ 6.670/R$ 6.239 em 09-30) sem explicação — evidência
+de que o índice do buscador não é nem estável, reforçando a baixa confiança.
+**Decisão do Fabio pendente desde 09-20, agora com 13 rodadas seguidas (dez dias corridos) sem
 resposta:** (a) reduzir a frequência do agendamento, (b) montar alerta de tarifa nativo (Google
 Flights/KAYAK, fora deste agente), ou (c) pedir liberação de egress para sites de passagem
 especificamente. O diagnóstico está fechado desde 09-20 — repetir o mesmo teste diariamente não vai
 mudar o resultado; a ausência de decisão já está funcionando, na prática, como a decisão de manter
-a cadência atual. Detalhe completo em [[historico-de-precos]], nota de 2026-09-29.
+a cadência atual. Detalhe completo em [[historico-de-precos]], nota de 2026-09-30.
 
 ---
 
