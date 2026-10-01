@@ -447,3 +447,15 @@ isso — só o extrato dele.
 - Veredito: **PASSA** — mesmo motivo estrutural das doze rodadas anteriores. Gatilho #1 continua ⏸️ pausado.
 - Issue GitHub criada para esta rodada, caso A (sem-dados).
 - Pendente: recomendação de 09-20 (reduzir frequência / alerta nativo / liberar egress) segue sem decisão do Fabio — **treze rodadas seguidas, dez dias corridos de pendência sobre a recomendação.**
+
+## [2026-10-01] query | Caçador de Ofertas — décima quarta coleta autônoma agendada (bloqueio confirmado pela 14ª vez)
+
+- Décima quarta execução autônoma agendada seguida (09-18 a 10-01), sem o Fabio no circuito. Git limpo desta vez: `HEAD` já em `master`, sincronizado com `origin/master`, sem problema de higiene a corrigir (primeira rodada sem esse problema desde 09-27).
+- `WebFetch` para KAYAK (GIG-MXP, datas explícitas 2027-08-20/2027-09-03) → `EGRESS_BLOCKED`. `curl` direto via `Bash` para `www.kayak.com.br` e para domínio de controle neutro (`en.wikipedia.org`) → `CONNECT tunnel failed, response 403` em ambos. `curl` para `api.github.com` → HTTP 200. Status do proxy confirmou `"selective": false` — décimo quarto dia do mesmo diagnóstico estrutural.
+- `WebSearch` trouxe 6 linhas novas de âncora (GIG-MXP, CDG-GIG, GIG-FCO, GIG-VCE). **Achado do dia:** uma busca por CDG→GIG retornou pela primeira vez datas de calendário explícitas dentro da janela-alvo ("27 de agosto a 12 de setembro", US$ 1.022/pessoa i/v) via ferramenta de "datas flexíveis" de agregador — mas sem ano confirmado, e o padrão típico dessas ferramentas é mostrar o período mais próximo disponível (provável 2026, não 2027). Tratado como sinal de baixíssima confiança, não promovido a linha de base.
+- Nenhum dado de setembro/2028 encontrado (esperado, estamos antes de out/2027). **Sem alerta de abertura antecipada.**
+- Nenhum preço com confiança suficiente abaixo do teto de referência R$ 4.457/pessoa.
+- Atualizadas: [[historico-de-precos]] (6 novas linhas de âncora + nova seção de falha sistêmica 10-01 + linha de base por rota atualizada para 14 rodadas).
+- Veredito: **PASSA** — mesmo motivo estrutural das treze rodadas anteriores. Gatilho #1 continua ⏸️ pausado.
+- Issue GitHub criada para esta rodada, caso A (sem-dados).
+- Pendente: recomendação de 09-20 (reduzir frequência / alerta nativo / liberar egress) segue sem decisão do Fabio — **quatorze rodadas seguidas, onze dias corridos de pendência sobre a recomendação.**
