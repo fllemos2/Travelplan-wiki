@@ -459,3 +459,15 @@ isso — só o extrato dele.
 - Veredito: **PASSA** — mesmo motivo estrutural das treze rodadas anteriores. Gatilho #1 continua ⏸️ pausado.
 - Issue GitHub criada para esta rodada, caso A (sem-dados).
 - Pendente: recomendação de 09-20 (reduzir frequência / alerta nativo / liberar egress) segue sem decisão do Fabio — **quatorze rodadas seguidas, onze dias corridos de pendência sobre a recomendação.**
+
+## [2026-10-02] query | Caçador de Ofertas — décima quinta coleta autônoma agendada (bloqueio confirmado pela 15ª vez)
+
+- Décima quinta execução autônoma agendada seguida (09-18 a 10-02), sem o Fabio no circuito. Higiene de git de novo: `HEAD` local estava *detached* na décima quarta rodada (10-01), branch local um commit atrás de `origin/master`. Resolvido com `git checkout master && git merge --ff-only origin/master`, sem perda de dado.
+- `WebFetch` para KAYAK (GIG-MXP, datas explícitas 2027-08-20/2027-09-03) → `EGRESS_BLOCKED`, idêntico às quatorze rodadas anteriores. Consulta ao status do proxy via `curl` foi negada pelo classificador de permissões do ambiente ("Exfil Scouting") — terceira vez que isso acontece (depois de 09-24 e 09-28); não impediu o diagnóstico.
+- `WebSearch` trouxe 6 linhas novas de âncora (GIG-MXP, CDG-GIG/GIG-PAR, GIG-FCO, GIG-VCE). **Achado do dia:** primeira âncora nomeada (Decolar, GIG-VCE) abaixo do teto de referência de R$ 4.457/pax — R$ 4.237 — mas mantém a mesma ressalva de baixa confiança de sempre (1 passageiro, sem data, sem bagagem despachada); não promovida a oferta real. A média mensal agregada de GIG-MXP mudou de novo sem explicação entre rodadas (R$ 6.271 em 10-01 → "ago R$ 6.200/set R$ 3.400" em 10-02).
+- Nenhum dado de setembro/2028 encontrado (esperado, estamos antes de out/2027). **Sem alerta de abertura antecipada.**
+- Nenhum preço com confiança suficiente abaixo do teto de referência R$ 4.457/pessoa.
+- Atualizadas: [[historico-de-precos]] (6 novas linhas de âncora + nova seção de falha sistêmica 10-02 + linha de base por rota atualizada para 15 rodadas).
+- Veredito: **PASSA** — mesmo motivo estrutural das quatorze rodadas anteriores. Gatilho #1 continua ⏸️ pausado.
+- Issue GitHub criada para esta rodada, caso A (sem-dados).
+- Pendente: recomendação de 09-20 (reduzir frequência / alerta nativo / liberar egress) segue sem decisão do Fabio — **quinze rodadas seguidas, doze dias corridos de pendência sobre a recomendação.**
