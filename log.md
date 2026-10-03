@@ -471,3 +471,16 @@ isso — só o extrato dele.
 - Veredito: **PASSA** — mesmo motivo estrutural das quatorze rodadas anteriores. Gatilho #1 continua ⏸️ pausado.
 - Issue GitHub criada para esta rodada, caso A (sem-dados).
 - Pendente: recomendação de 09-20 (reduzir frequência / alerta nativo / liberar egress) segue sem decisão do Fabio — **quinze rodadas seguidas, doze dias corridos de pendência sobre a recomendação.**
+
+## [2026-10-03] oferta | Caçador de Ofertas — décima sexta coleta autônoma agendada (bloqueio confirmado pela 16ª vez)
+
+- Décima sexta execução autônoma agendada seguida (09-18 a 10-03), sem o Fabio no circuito. Higiene de git: `HEAD` local estava *detached* duas rodadas atrás (10-01); `git checkout master && git merge --ff-only origin/master` realinhou sem perda de dado.
+- `WebFetch` para KAYAK (GIG-MXP, datas explícitas 2027-08-20/2027-09-03) → `EGRESS_BLOCKED`. `curl` para `www.kayak.com.br` e para domínio de controle neutro (`en.wikipedia.org`) → `CONNECT tunnel failed, response 403` em ambos. `curl` para `api.github.com` → HTTP 200. Status do proxy confirmou `"selective": false` — décimo sexto dia do mesmo diagnóstico estrutural.
+- **Achado de infraestrutura:** `gh auth status`/`gh issue list`/`gh repo view` falharam (token inválido / GraphQL bloqueado para sessões Claude Code), mas `gh api` (REST) funcionou normalmente — usado para checar labels e criar a issue desta rodada.
+- `WebSearch` trouxe 5 linhas novas de âncora (GIG-MXP, CDG-GIG/GIG-PAR, GIG-FCO, GIG-VCE). **Achado do dia:** a média de setembro atribuída a GIG-FCO nesta rodada (R$ 6.793) é idêntica, dígito por dígito, ao valor que rodadas anteriores atribuíam a GIG-VCE — primeira evidência de que o índice do agregador cruza valores entre rotas diferentes, não só cacheia. Duas novas âncoras "a partir de" (GIG-MXP R$ 4.244, GIG-FCO R$ 4.612) ficaram abaixo do teto de referência, mas na mesma categoria de baixa confiança já descartada em achados anteriores (sem data, sem 3 pax, sem bagagem).
+- Nenhum dado de setembro/2028 encontrado (esperado, estamos antes de out/2027). **Sem alerta de abertura antecipada.**
+- Nenhum preço com confiança suficiente abaixo do teto de referência R$ 4.457/pessoa.
+- Atualizadas: [[historico-de-precos]] (5 novas linhas de âncora + nova seção de falha sistêmica 10-03 + linha de base por rota atualizada para 16 rodadas), [[index.md|index]] (resumo da entrada de histórico de preços atualizado para refletir as 16 rodadas).
+- Veredito: **PASSA** — mesmo motivo estrutural das quinze rodadas anteriores. Gatilho #1 continua ⏸️ pausado.
+- Issue GitHub criada para esta rodada, caso A (sem-dados).
+- Pendente: recomendação de 09-20 (reduzir frequência / alerta nativo / liberar egress) segue sem decisão do Fabio — **dezesseis rodadas seguidas, treze dias corridos de pendência sobre a recomendação.**
