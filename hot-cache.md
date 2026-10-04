@@ -1,6 +1,6 @@
 ---
 tipo: hot-cache
-atualizado: 2026-10-02
+atualizado: 2026-10-04
 janela_palavras: 302
 limite: 500
 ---
@@ -96,20 +96,21 @@ Propagar as decisões de 02/09 para essas páginas assim que os agentes entregar
 - Obsidian: Templates → `meta/templates/`; anexos → `raw/assets/`; instalar Dataview
 - Vigilância automática via `/schedule` — só faz sentido a partir de out/2027
 
-### 🚫 Coleta autônoma de preços — bloqueio de rede estrutural (confirmado 15x seguidas: 09-18 a 10-02, quinze dias corridos)
+### 🚫 Coleta autônoma de preços — bloqueio de rede estrutural (confirmado 17x seguidas: 09-18 a 10-04, dezessete dias corridos)
 
 O `cacador-ofertas` roda em agendamento autônomo diário, mas **`WebFetch` e `curl` direto estão
 sistematicamente bloqueados** (`EGRESS_BLOCKED` / proxy 403) para qualquer domínio externo, não só
-sites de viagem — confirmado de novo em 10-02. `api.github.com`/`gh` continuam sendo o canal externo
-estável, por isso a issue de cada rodada sai por ali.
+sites de viagem — confirmado de novo em 10-04. O canal externo estável para abrir a issue de cada
+rodada já variou entre `api.github.com`/`curl`, `gh api` (REST) e, nesta rodada, as ferramentas MCP
+do GitHub — depende do que a sessão tiver disponível.
 Só `WebSearch` funciona, e devolve snippets agregados/cacheados de baixíssima confiança (sem data
 específica confirmada, 1 passageiro, sem bagagem) — **não serve para montar a linha de base real de
-ago–set/2027**. Achado de 10-02: primeira âncora nomeada (Decolar, GIG-VCE) abaixo do teto de R$ 4.457,
-em R$ 4.237 — não promovida a oferta real (mesma ressalva de baixa confiança de sempre).
-**Decisão do Fabio pendente desde 09-20, agora com 15 rodadas seguidas (doze dias corridos) sem
+ago–set/2027**. Achado de 10-04: segunda data de calendário confirmada da série (Air France CDG-GIG,
+16/jul–07/ago/2027, R$ 4.213/pessoa), mas cobre majoritariamente julho, não o núcleo ago-set.
+**Decisão do Fabio pendente desde 09-20, agora com 17 rodadas seguidas (catorze dias corridos) sem
 resposta:** (a) reduzir a frequência do agendamento, (b) montar alerta de tarifa nativo (Google
 Flights/KAYAK, fora deste agente), ou (c) pedir liberação de egress para sites de passagem
-especificamente. Detalhe completo em [[historico-de-precos]], nota de 2026-10-02.
+especificamente. Detalhe completo em [[historico-de-precos]], nota de 2026-10-04.
 
 ---
 

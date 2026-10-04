@@ -484,3 +484,16 @@ isso — só o extrato dele.
 - Veredito: **PASSA** — mesmo motivo estrutural das quinze rodadas anteriores. Gatilho #1 continua ⏸️ pausado.
 - Issue GitHub criada para esta rodada, caso A (sem-dados).
 - Pendente: recomendação de 09-20 (reduzir frequência / alerta nativo / liberar egress) segue sem decisão do Fabio — **dezesseis rodadas seguidas, treze dias corridos de pendência sobre a recomendação.**
+
+## [2026-10-04] oferta | Caçador de Ofertas — décima sétima coleta autônoma agendada (bloqueio confirmado pela 17ª vez)
+
+- Décima sétima execução autônoma agendada seguida (09-18 a 10-04), sem o Fabio no circuito. Higiene de git: `HEAD` local estava *detached* no commit da décima sexta rodada (`adf4580`, 10-03), branch local `master` três commits atrás de `origin/master`. Resolvido com `git checkout master && git merge --ff-only origin/master`, sem perda de dado.
+- `WebFetch` para KAYAK (GIG-MXP, datas explícitas 2027-08-20/2027-09-03) → `EGRESS_BLOCKED`. `WebFetch` para domínio de controle neutro (`en.wikipedia.org`) → também `EGRESS_BLOCKED`. Consulta ao status do proxy via `curl` foi negada pelo classificador de permissões do ambiente ("Exfil Scouting") — quarta vez que isso acontece. Décimo sétimo dia confirmando o mesmo diagnóstico estrutural.
+- **Mudança de canal:** esta sessão não teve `gh` CLI disponível; labels e issue desta rodada foram tratados via ferramentas MCP do GitHub (`mcp__github__issue_write`/`get_label`), não via `curl`+`GH_TOKEN` ou `gh api` como em rodadas anteriores.
+- `WebSearch` trouxe 5 linhas novas de âncora (GIG-MXP, CDG-GIG/GIG-PAR, GIG-FCO, GIG-VCE). **Achado do dia:** segunda data de calendário confirmada da série para CDG-GIG (Air France, 16/jul–07/ago/2027, R$ 4.213/pessoa) — cobre majoritariamente julho, só toca a borda inicial de agosto. Médias mensais de CDG-GIG (agosto) e GIG-MXP (setembro) mudaram de novo sem explicação entre rodadas — mais confirmação de instabilidade do índice do buscador.
+- Nenhum dado de setembro/2028 encontrado (esperado, estamos antes de out/2027). **Sem alerta de abertura antecipada.**
+- Nenhum preço com confiança suficiente abaixo do teto de referência R$ 4.457/pessoa.
+- Atualizadas: [[historico-de-precos]] (5 novas linhas de âncora + nova seção de falha sistêmica 10-04 + linha de base por rota atualizada para 17 rodadas), [[index.md|index]], [[hot-cache.md|hot-cache]] (bloco de bloqueio de rede atualizado para 17 rodadas/14 dias de pendência).
+- Veredito: **PASSA** — mesmo motivo estrutural das dezesseis rodadas anteriores. Gatilho #1 continua ⏸️ pausado.
+- Issue GitHub criada para esta rodada, caso A (sem-dados).
+- Pendente: recomendação de 09-20 (reduzir frequência / alerta nativo / liberar egress) segue sem decisão do Fabio — **dezessete rodadas seguidas, catorze dias corridos de pendência sobre a recomendação.**
