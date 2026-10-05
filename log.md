@@ -395,6 +395,19 @@ isso — só o extrato dele.
 - Nenhum dado de setembro/2028 encontrado (esperado). **Sem alerta de abertura antecipada.**
 - Nenhum preço abaixo do teto de referência R$ 4.457/pessoa com confiança suficiente.
 - Atualizadas: [[historico-de-precos]] (7 novas linhas de âncora + nova seção de falha sistêmica 09-26 + linha de base por rota atualizada para 9 rodadas).
+
+## [2026-10-05] ingest | Coleta de preços GIG-MXP / CDG-GIG (Caçador de Ofertas, 18ª rodada autônoma)
+
+- Décima oitava execução autônoma agendada seguida (09-18 a 10-05), sem o Fabio no circuito. Rotas-alvo: GIG→MXP (Milão), CDG→GIG (perna de volta do open-jaw), GIG→FCO (Roma) e GIG→VCE (Veneza) como alternativas de entrada; 3 pax (2 adultos + 1 criança de 8), bagagem despachada; janela ago–set/2027 como linha de base, já que set/2028 ainda não deve estar à venda (~330 dias de antecedência, abertura esperada out/2027).
+- Consultei `$HTTPS_PROXY/__agentproxy/status` — proxy ativo, `"selective": false`. `WebFetch` para KAYAK (datas explícitas 2027-08-20/2027-09-03), Google Flights e Skyscanner → `EGRESS_BLOCKED` em todos. `curl` direto via `Bash` para `www.kayak.com.br` e para domínio de controle neutro (`en.wikipedia.org`) → `CONNECT tunnel failed, response 403` nos dois. **Décimo oitavo dia confirmando o mesmo bloqueio estrutural de rede** — não é lista negra de sites de viagem, é política geral de egress do ambiente.
+- `WebSearch` trouxe 6 novas linhas de âncora agregada/cacheada (GIG-MXP, GIG-FCO, CDG-GIG/GIG-PAR) — nenhuma com data de calendário confirmada dentro de ago–set/2027, 3 passageiros e bagagem despachada simultaneamente. Achados do dia: primeira cifra em dólar nomeada para "setembro" na rota CDG-GIG/GIG-PAR (≈US$ 1.023 i/v, ano não confirmado); Air France apareceu nomeada com valores de agosto e setembro para GIG-FCO (R$ 5.324 / R$ 5.223); TAP trouxe novo par de datas de agosto para GIG-FCO (R$ 4.477, ano não confirmado).
+- **Setembro/2028:** busca explícita não retornou nenhuma evidência de venda aberta ou fechada — esperado, consistente com as dezessete rodadas anteriores. **Sem alerta de janela aberta.**
+- Nenhum preço com confiança suficiente abaixo do teto de referência R$ 4.457/pessoa.
+- `gh auth status` reportou token inválido e `gh issue list`/`gh repo view` falharam (GraphQL bloqueado para sessões do Claude Code); `gh label create`/`gh api` (REST) funcionaram normalmente — issue desta rodada tratada via `gh api`.
+- Atualizadas: [[historico-de-precos]] (6 novas linhas de âncora + nova seção de falha sistêmica 10-05 + linha de base por rota atualizada para 18 rodadas), `hot-cache.md`.
+- Veredito: **PASSA** — mesmo motivo estrutural das dezessete rodadas anteriores. Gatilho #1 continua ⏸️ pausado.
+- Issue GitHub: caso A (sem-dados), criada via `gh api` (REST) — ver link no corpo da issue.
+- Pendente: decisão do Fabio sobre a recomendação de 09-20 (reduzir cadência / alerta nativo / liberar egress) segue sem resposta — agora **quinze dias corridos**, dezoito execuções autônomas sem ganho de informação real sobre a linha de base de ago-set/2027.
 - Veredito: **PASSA** — mesmo motivo estrutural das oito rodadas anteriores. Gatilho #1 continua ⏸️ pausado.
 - Issue GitHub criada para esta rodada, caso A (sem-dados).
 - Pendente: recomendação de 09-20 (reduzir frequência / alerta nativo / liberar egress) segue sem decisão do Fabio — **nove rodadas seguidas, seis dias corridos de pendência sobre a recomendação.** Sinalizando de forma mais explícita ao Fabio nesta issue, dado o tempo decorrido.
