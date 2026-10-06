@@ -1,6 +1,6 @@
 ---
 tipo: hot-cache
-atualizado: 2026-10-05
+atualizado: 2026-10-06
 janela_palavras: 302
 limite: 500
 ---
@@ -96,23 +96,24 @@ Propagar as decisões de 02/09 para essas páginas assim que os agentes entregar
 - Obsidian: Templates → `meta/templates/`; anexos → `raw/assets/`; instalar Dataview
 - Vigilância automática via `/schedule` — só faz sentido a partir de out/2027
 
-### 🚫 Coleta autônoma de preços — bloqueio de rede estrutural (confirmado 18x seguidas: 09-18 a 10-05, dezoito dias corridos)
+### 🚫 Coleta autônoma de preços — bloqueio de rede estrutural (confirmado 19x seguidas: 09-18 a 10-06, dezenove dias corridos)
 
 O `cacador-ofertas` roda em agendamento autônomo diário, mas **`WebFetch` e `curl` direto estão
 sistematicamente bloqueados** (`EGRESS_BLOCKED` / proxy 403) para qualquer domínio externo, não só
-sites de viagem — confirmado de novo em 10-05. O canal externo estável para abrir a issue de cada
-rodada já variou entre `api.github.com`/`curl`, `gh api` (REST) e ferramentas MCP do GitHub —
-depende do que a sessão tiver disponível; em 10-05 `gh api` (REST) funcionou mesmo com `gh auth
-status` reportando token inválido (GraphQL bloqueado para sessões do Claude Code).
+sites de viagem — confirmado de novo em 10-06 (consulta ao status do proxy via `curl` foi negada
+pelo classificador de permissões do ambiente, "Exfil Scouting"). O canal externo estável para abrir
+a issue de cada rodada já variou entre `api.github.com`/`curl`, `gh api` (REST) e ferramentas MCP do
+GitHub — depende do que a sessão tiver disponível; em 10-06 `gh api` (REST) funcionou mesmo com `gh
+auth status` reportando token inválido (GraphQL bloqueado para sessões do Claude Code).
 Só `WebSearch` funciona, e devolve snippets agregados/cacheados de baixíssima confiança (sem data
 específica confirmada, 1 passageiro, sem bagagem) — **não serve para montar a linha de base real de
-ago–set/2027**. Achado de 10-05: primeira cifra em dólar nomeada para "setembro" na rota CDG-GIG
-(≈US$ 1.023 i/v, ano não confirmado) e Air France citada nominalmente com valores de agosto/setembro
-para GIG-FCO — ainda baixíssima confiança, nenhum avanço real.
-**Decisão do Fabio pendente desde 09-20, agora com 18 rodadas seguidas (quinze dias corridos) sem
+ago–set/2027**. Achado de 10-06: Air France citada para CDG-GIG com "a partir de R$ 5.818, sem
+escalas, partida 13–26/ago" — primeiro teaser dessa rota com intervalo inteiramente dentro de agosto,
+ainda sem ano confirmado — baixíssima confiança, nenhum avanço real.
+**Decisão do Fabio pendente desde 09-20, agora com 19 rodadas seguidas (dezesseis dias corridos) sem
 resposta:** (a) reduzir a frequência do agendamento, (b) montar alerta de tarifa nativo (Google
 Flights/KAYAK, fora deste agente), ou (c) pedir liberação de egress para sites de passagem
-especificamente. Detalhe completo em [[historico-de-precos]], nota de 2026-10-05.
+especificamente. Detalhe completo em [[historico-de-precos]], nota de 2026-10-06.
 
 ---
 
