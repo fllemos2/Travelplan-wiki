@@ -96,24 +96,25 @@ Propagar as decisões de 02/09 para essas páginas assim que os agentes entregar
 - Obsidian: Templates → `meta/templates/`; anexos → `raw/assets/`; instalar Dataview
 - Vigilância automática via `/schedule` — só faz sentido a partir de out/2027
 
-### 🚫 Coleta autônoma de preços — bloqueio de rede estrutural (confirmado 19x seguidas: 09-18 a 10-06, dezenove dias corridos)
+### 🚫 Coleta autônoma de preços — bloqueio de rede estrutural (confirmado 20x seguidas: 09-18 a 10-07, vinte dias corridos, três semanas completas)
 
 O `cacador-ofertas` roda em agendamento autônomo diário, mas **`WebFetch` e `curl` direto estão
 sistematicamente bloqueados** (`EGRESS_BLOCKED` / proxy 403) para qualquer domínio externo, não só
-sites de viagem — confirmado de novo em 10-06 (consulta ao status do proxy via `curl` foi negada
-pelo classificador de permissões do ambiente, "Exfil Scouting"). O canal externo estável para abrir
+sites de viagem — confirmado de novo em 10-07 (proxy respondeu normalmente ao diagnóstico, `"selective": false`,
+confirmando bloqueio geral de política, não lista negra de viagem). O canal externo estável para abrir
 a issue de cada rodada já variou entre `api.github.com`/`curl`, `gh api` (REST) e ferramentas MCP do
-GitHub — depende do que a sessão tiver disponível; em 10-06 `gh api` (REST) funcionou mesmo com `gh
+GitHub — depende do que a sessão tiver disponível; em 10-07 `gh api` (REST) funcionou de novo mesmo com `gh
 auth status` reportando token inválido (GraphQL bloqueado para sessões do Claude Code).
 Só `WebSearch` funciona, e devolve snippets agregados/cacheados de baixíssima confiança (sem data
 específica confirmada, 1 passageiro, sem bagagem) — **não serve para montar a linha de base real de
-ago–set/2027**. Achado de 10-06: Air France citada para CDG-GIG com "a partir de R$ 5.818, sem
-escalas, partida 13–26/ago" — primeiro teaser dessa rota com intervalo inteiramente dentro de agosto,
-ainda sem ano confirmado — baixíssima confiança, nenhum avanço real.
-**Decisão do Fabio pendente desde 09-20, agora com 19 rodadas seguidas (dezesseis dias corridos) sem
+ago–set/2027**. Achado de 10-07: pela primeira vez o índice citou setembro como mês **barato** (não caro)
+para GIG-FCO e GIG-PAR/CDG-GIG — contradiz diretamente as médias de setembro/agosto caro já vistas nas
+mesmas rotas em rodadas anteriores, mais uma prova de que o índice não converge, não um sinal de preço real.
+**Decisão do Fabio pendente desde 09-20, agora com 20 rodadas seguidas (dezessete dias corridos) sem
 resposta:** (a) reduzir a frequência do agendamento, (b) montar alerta de tarifa nativo (Google
 Flights/KAYAK, fora deste agente), ou (c) pedir liberação de egress para sites de passagem
-especificamente. Detalhe completo em [[historico-de-precos]], nota de 2026-10-06.
+especificamente. Dado o volume de Issues acumuladas sem resposta, esta rodada escalou a pendência também
+por notificação direta (push), fora do canal de Issue. Detalhe completo em [[historico-de-precos]], nota de 2026-10-07.
 
 ---
 

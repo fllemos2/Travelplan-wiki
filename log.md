@@ -523,3 +523,17 @@ isso — só o extrato dele.
 - Veredito: **PASSA** — mesmo motivo estrutural das dezoito rodadas anteriores. Gatilho #1 continua ⏸️ pausado.
 - Issue GitHub criada para esta rodada, caso A (sem-dados).
 - Pendente: recomendação de 09-20 (reduzir frequência / alerta nativo / liberar egress) segue sem decisão do Fabio — **dezenove rodadas seguidas, dezesseis dias corridos de pendência sobre a recomendação.**
+
+## [2026-10-07] oferta | Caçador de Ofertas — vigésima coleta autônoma agendada (bloqueio confirmado pela 20ª vez)
+
+- Vigésima execução autônoma agendada seguida (09-18 a 10-07), sem o Fabio no circuito. Higiene de git: `HEAD` local detached no commit da 19ª rodada (`203923b`), branch `master` um commit atrás de `origin/master` — resolvido com `git checkout master && git merge --ff-only origin/master`, sem perda de dado.
+- `curl` via `Bash` para `$HTTPS_PROXY/__agentproxy/status` → respondeu normalmente, proxy ativo, `"selective": false` — vigésimo dia confirmando bloqueio geral de egress do ambiente, não lista negra de sites de viagem.
+- `WebFetch` para KAYAK (`www.kayak.com.br/flights/GIG-MXP/2027-08-20/2027-09-03/3adults`, datas explícitas, 3 pax) → `EGRESS_BLOCKED`, idêntico às dezenove rodadas anteriores.
+- `gh auth status` reportou token inválido (mesmo padrão recorrente); `gh api` (REST) funcionou normalmente e foi usado para labels e para a issue desta rodada.
+- `WebSearch` trouxe 8 linhas novas de âncora agregada (GIG-MIL/MXP, GIG-PAR/CDG-GIG, GIG-FCO, GIG-VCE). **Achado do dia:** primeira vez que o índice cita setembro como mês **barato** (não caro) para GIG-FCO e GIG-PAR/CDG-GIG, contradizendo diretamente as médias de setembro/agosto caro já registradas nas mesmas rotas em rodadas anteriores — reforça a instabilidade já documentada do índice. TAP (flytap.com) trouxe novo máximo nomeado para GIG-VCE (R$ 5.473, supera R$ 5.115 de 09-27).
+- Nenhuma busca de setembro/2028 foi tentada (fora da janela de vigilância real, que só liga a partir de ~out/2027).
+- Nenhum preço com confiança suficiente (data de calendário real ago–set/2027, 3 passageiros, bagagem despachada) abaixo do teto de referência R$ 4.457/pessoa.
+- Atualizadas: [[historico-de-precos]] (8 novas linhas de âncora + nova seção de falha sistêmica 10-07 + linha de base por rota atualizada para 20 rodadas, novo máximo GIG-VCE).
+- Veredito: **PASSA** — mesmo motivo estrutural das dezenove rodadas anteriores. Gatilho #1 continua ⏸️ pausado.
+- Issue GitHub criada para esta rodada, caso A (sem-dados).
+- Pendente: recomendação de 09-20 (reduzir frequência / alerta nativo / liberar egress) segue sem decisão do Fabio — **vinte rodadas seguidas (três semanas completas), dezessete dias corridos de pendência sobre a recomendação.** Dado o volume de Issues sem resposta, esta rodada também dispara uma notificação direta (fora do canal de Issue) para o Fabio.
