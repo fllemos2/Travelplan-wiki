@@ -537,3 +537,17 @@ isso — só o extrato dele.
 - Veredito: **PASSA** — mesmo motivo estrutural das dezenove rodadas anteriores. Gatilho #1 continua ⏸️ pausado.
 - Issue GitHub criada para esta rodada, caso A (sem-dados).
 - Pendente: recomendação de 09-20 (reduzir frequência / alerta nativo / liberar egress) segue sem decisão do Fabio — **vinte rodadas seguidas (três semanas completas), dezessete dias corridos de pendência sobre a recomendação.** Dado o volume de Issues sem resposta, esta rodada também dispara uma notificação direta (fora do canal de Issue) para o Fabio.
+
+## [2026-10-08] oferta | Caçador de Ofertas — vigésima primeira coleta autônoma agendada (bloqueio confirmado pela 21ª vez)
+
+- Repositório limpo e sincronizado nesta sessão (sem o padrão recorrente de `HEAD` *detached*).
+- `curl` via `Bash` para `$HTTPS_PROXY/__agentproxy/status` → respondeu normalmente, proxy ativo, `"selective": false` — vigésimo primeiro dia confirmando bloqueio geral de egress do ambiente, não lista negra de sites de viagem.
+- `WebFetch` para KAYAK (`www.kayak.com.br/flights/GIG-MXP/2027-08-20/2027-09-03/3adults`, datas explícitas, 3 pax) → falhou com `getaddrinfo ENOTFOUND` (resolução DNS, não o texto `EGRESS_BLOCKED` das rodadas anteriores, mas mesmo resultado prático: nenhum acesso).
+- `gh issue list`/`gh repo view` (GraphQL) → `HTTP 403`, mesmo padrão desde 10-03; `gh api` (REST) funcionou normalmente e foi usado para a issue desta rodada.
+- `WebSearch` trouxe 11 linhas novas de âncora (GIG-MXP, GIG-FCO, GIG-VCE, CDG-GIG/GIG-PAR). **Achado do dia:** a fonte Flypass.ai é a primeira da série a declarar, na própria página, que usa base histórica 2024–2025 em vez de previsão real para 2027 — confirmação externa do diagnóstico que este histórico já fazia por inferência. TAP (flytap.com) trouxe dois pares de datas de calendário nomeados, mas ambos fora da janela ago-set (GIG-FCO em julho, GIG-VCE em fev-mar).
+- Nenhuma busca de setembro/2028 foi tentada (fora da janela de vigilância real, que só liga a partir de ~out/2027).
+- Nenhum preço com confiança suficiente (data de calendário real ago–set/2027, 3 passageiros, bagagem despachada) abaixo do teto de referência R$ 4.457/pessoa.
+- Atualizadas: [[historico-de-precos]] (11 novas linhas de âncora + nova seção de falha sistêmica 10-08 + linha de base por rota atualizada para 21 rodadas).
+- Veredito: **PASSA** — mesmo motivo estrutural das vinte rodadas anteriores. Gatilho #1 continua ⏸️ pausado.
+- Issue GitHub criada para esta rodada, caso A (sem-dados).
+- Pendente: recomendação de 09-20 segue sem decisão do Fabio — **vinte e uma rodadas seguidas, dezoito dias corridos de pendência.** A rodada de 10-07 já escalou por notificação direta (push); como só um dia se passou, esta rodada não repete a escalação — só a Issue de hoje.

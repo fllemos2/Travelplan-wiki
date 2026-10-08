@@ -96,25 +96,28 @@ Propagar as decisões de 02/09 para essas páginas assim que os agentes entregar
 - Obsidian: Templates → `meta/templates/`; anexos → `raw/assets/`; instalar Dataview
 - Vigilância automática via `/schedule` — só faz sentido a partir de out/2027
 
-### 🚫 Coleta autônoma de preços — bloqueio de rede estrutural (confirmado 20x seguidas: 09-18 a 10-07, vinte dias corridos, três semanas completas)
+### 🚫 Coleta autônoma de preços — bloqueio de rede estrutural (confirmado 21x seguidas: 09-18 a 10-08, vinte e um dias corridos, três semanas e um dia)
 
 O `cacador-ofertas` roda em agendamento autônomo diário, mas **`WebFetch` e `curl` direto estão
-sistematicamente bloqueados** (`EGRESS_BLOCKED` / proxy 403) para qualquer domínio externo, não só
-sites de viagem — confirmado de novo em 10-07 (proxy respondeu normalmente ao diagnóstico, `"selective": false`,
-confirmando bloqueio geral de política, não lista negra de viagem). O canal externo estável para abrir
-a issue de cada rodada já variou entre `api.github.com`/`curl`, `gh api` (REST) e ferramentas MCP do
-GitHub — depende do que a sessão tiver disponível; em 10-07 `gh api` (REST) funcionou de novo mesmo com `gh
-auth status` reportando token inválido (GraphQL bloqueado para sessões do Claude Code).
+sistematicamente bloqueados** para qualquer domínio externo, não só sites de viagem — confirmado de
+novo em 10-08 (proxy respondeu normalmente ao diagnóstico, `"selective": false`, confirmando bloqueio
+geral de política, não lista negra de viagem; o erro exato variou entre `EGRESS_BLOCKED` e
+`getaddrinfo ENOTFOUND`, mesmo resultado prático). O canal externo estável para abrir a issue de cada
+rodada já variou entre `api.github.com`/`curl`, `gh api` (REST) e ferramentas MCP do GitHub — depende
+do que a sessão tiver disponível; em 10-08 `gh api` (REST) funcionou de novo mesmo com GraphQL bloqueado
+(`HTTP 403` em `gh issue list`/`gh repo view`).
 Só `WebSearch` funciona, e devolve snippets agregados/cacheados de baixíssima confiança (sem data
 específica confirmada, 1 passageiro, sem bagagem) — **não serve para montar a linha de base real de
-ago–set/2027**. Achado de 10-07: pela primeira vez o índice citou setembro como mês **barato** (não caro)
-para GIG-FCO e GIG-PAR/CDG-GIG — contradiz diretamente as médias de setembro/agosto caro já vistas nas
-mesmas rotas em rodadas anteriores, mais uma prova de que o índice não converge, não um sinal de preço real.
-**Decisão do Fabio pendente desde 09-20, agora com 20 rodadas seguidas (dezessete dias corridos) sem
+ago–set/2027**. Achado de 10-08: a fonte Flypass.ai é a primeira da série a admitir, na própria página,
+que usa base histórica 2024–2025 em vez de previsão real — confirmação externa do diagnóstico que este
+cofre já fazia por inferência sobre todos os agregadores.
+**Decisão do Fabio pendente desde 09-20, agora com 21 rodadas seguidas (dezoito dias corridos) sem
 resposta:** (a) reduzir a frequência do agendamento, (b) montar alerta de tarifa nativo (Google
 Flights/KAYAK, fora deste agente), ou (c) pedir liberação de egress para sites de passagem
-especificamente. Dado o volume de Issues acumuladas sem resposta, esta rodada escalou a pendência também
-por notificação direta (push), fora do canal de Issue. Detalhe completo em [[historico-de-precos]], nota de 2026-10-07.
+especificamente. A rodada de 10-07 já escalou a pendência por notificação direta (push), fora do canal
+de Issue; a rodada de 10-08 não repetiu a escalação (só um dia se passou desde então) — se não houver
+resposta em alguns dias, a próxima rodada deve reavaliar escalar de novo. Detalhe completo em
+[[historico-de-precos]], nota de 2026-10-08.
 
 ---
 
