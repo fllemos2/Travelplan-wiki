@@ -551,3 +551,17 @@ isso — só o extrato dele.
 - Veredito: **PASSA** — mesmo motivo estrutural das vinte rodadas anteriores. Gatilho #1 continua ⏸️ pausado.
 - Issue GitHub criada para esta rodada, caso A (sem-dados).
 - Pendente: recomendação de 09-20 segue sem decisão do Fabio — **vinte e uma rodadas seguidas, dezoito dias corridos de pendência.** A rodada de 10-07 já escalou por notificação direta (push); como só um dia se passou, esta rodada não repete a escalação — só a Issue de hoje.
+
+## [2026-10-09] oferta | Caçador de Ofertas — vigésima segunda coleta autônoma agendada (bloqueio confirmado pela 22ª vez)
+
+- Repositório limpo e sincronizado nesta sessão.
+- `curl` direto via `Bash` para domínios externos (`www.kayak.com.br`, `www.google.com`) → `CONNECT tunnel failed, response 403` ("connect_rejected — organization policy") nos dois. Consulta a `$HTTPS_PROXY/__agentproxy/status` respondeu normalmente, proxy ativo, `"selective": false` — vigésimo segundo dia confirmando bloqueio geral de egress do ambiente, não lista negra de sites de viagem.
+- `WebFetch` para KAYAK (`www.kayak.com.br/voos/...`, datas explícitas ago-set/2027) → `getaddrinfo ENOTFOUND`, mesmo padrão de 10-08.
+- `gh label create` (sem `--force`) → "already exists" nos quatro labels, como esperado. `gh auth status`/`gh issue list` (GraphQL) → token inválido / `HTTP 403`, mesmo padrão desde 10-03; `gh api` (REST) funcionou normalmente e foi usado para a issue desta rodada.
+- `WebSearch` trouxe 10 linhas novas de âncora (GIG-MXP, GIG-FCO, GIG-VCE, CDG-GIG/GIG-PAR). **Achado do dia:** primeira vez que um agregador (Kayak) classifica setembro como mais barato que agosto para GIG-FCO — contradiz as médias ago=set repetidas entre 09-24 e 09-30. Também novo: dois achados com data de calendário explícita vieram com o ano errado para o lado oposto do habitual — 2026 (já passado/corrente), não 2027.
+- Nenhuma busca de setembro/2028 foi tentada (fora da janela de vigilância real, que só liga a partir de ~out/2027).
+- Nenhum preço com confiança suficiente (data de calendário real ago–set/2027, 3 passageiros, bagagem despachada) abaixo do teto de referência R$ 4.457/pessoa.
+- Atualizadas: [[historico-de-precos]] (10 novas linhas de âncora + nova seção de falha sistêmica 10-09 + linha de base por rota atualizada para 22 rodadas).
+- Veredito: **PASSA** — mesmo motivo estrutural das vinte e uma rodadas anteriores. Gatilho #1 continua ⏸️ pausado.
+- Issue GitHub criada para esta rodada, caso A (sem-dados).
+- Pendente: recomendação de 09-20 segue sem decisão do Fabio — **vinte e duas rodadas seguidas, dezenove dias corridos de pendência.** Dois dias desde a escalação por push de 10-07, ainda dentro do que a nota de 10-08 chamou de "alguns dias" — esta rodada não repete a escalação direta, mas a próxima (10-10), se ainda sem resposta, deve reavaliar escalar de novo.

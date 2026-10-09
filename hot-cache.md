@@ -1,6 +1,6 @@
 ---
 tipo: hot-cache
-atualizado: 2026-10-06
+atualizado: 2026-10-09
 janela_palavras: 302
 limite: 500
 ---
@@ -96,28 +96,30 @@ Propagar as decisões de 02/09 para essas páginas assim que os agentes entregar
 - Obsidian: Templates → `meta/templates/`; anexos → `raw/assets/`; instalar Dataview
 - Vigilância automática via `/schedule` — só faz sentido a partir de out/2027
 
-### 🚫 Coleta autônoma de preços — bloqueio de rede estrutural (confirmado 21x seguidas: 09-18 a 10-08, vinte e um dias corridos, três semanas e um dia)
+### 🚫 Coleta autônoma de preços — bloqueio de rede estrutural (confirmado 22x seguidas: 09-18 a 10-09, vinte e dois dias corridos, mais de três semanas)
 
 O `cacador-ofertas` roda em agendamento autônomo diário, mas **`WebFetch` e `curl` direto estão
 sistematicamente bloqueados** para qualquer domínio externo, não só sites de viagem — confirmado de
-novo em 10-08 (proxy respondeu normalmente ao diagnóstico, `"selective": false`, confirmando bloqueio
-geral de política, não lista negra de viagem; o erro exato variou entre `EGRESS_BLOCKED` e
-`getaddrinfo ENOTFOUND`, mesmo resultado prático). O canal externo estável para abrir a issue de cada
-rodada já variou entre `api.github.com`/`curl`, `gh api` (REST) e ferramentas MCP do GitHub — depende
-do que a sessão tiver disponível; em 10-08 `gh api` (REST) funcionou de novo mesmo com GraphQL bloqueado
-(`HTTP 403` em `gh issue list`/`gh repo view`).
+novo em 10-09 (`curl` direto devolveu `CONNECT tunnel failed, response 403` para `kayak.com.br` e
+`google.com`; proxy respondeu normalmente ao diagnóstico, `"selective": false`, confirmando bloqueio
+geral de política, não lista negra de viagem; o erro exato já variou entre `EGRESS_BLOCKED`,
+`getaddrinfo ENOTFOUND` e `403`, mesmo resultado prático). O canal externo estável para abrir a issue de
+cada rodada já variou entre `api.github.com`/`curl`, `gh api` (REST) e ferramentas MCP do GitHub —
+depende do que a sessão tiver disponível; em 10-09 `gh api` (REST) funcionou de novo mesmo com GraphQL
+bloqueado (`HTTP 403` em `gh issue list`/`gh repo view`, token inválido em `gh auth status`).
 Só `WebSearch` funciona, e devolve snippets agregados/cacheados de baixíssima confiança (sem data
 específica confirmada, 1 passageiro, sem bagagem) — **não serve para montar a linha de base real de
-ago–set/2027**. Achado de 10-08: a fonte Flypass.ai é a primeira da série a admitir, na própria página,
-que usa base histórica 2024–2025 em vez de previsão real — confirmação externa do diagnóstico que este
-cofre já fazia por inferência sobre todos os agregadores.
-**Decisão do Fabio pendente desde 09-20, agora com 21 rodadas seguidas (dezoito dias corridos) sem
+ago–set/2027**. Achado de 10-09: primeira vez que um agregador (Kayak) classifica setembro como mais
+barato que agosto para GIG-FCO, contradizendo médias ago=set repetidas entre 09-24 e 09-30; e dois
+achados vieram com data de calendário explícita mas ano 2026 (já passado/corrente), não 2027 — primeiro
+erro de ano "para trás" da série (antes só havia erros "para frente" ou de mês errado).
+**Decisão do Fabio pendente desde 09-20, agora com 22 rodadas seguidas (dezenove dias corridos) sem
 resposta:** (a) reduzir a frequência do agendamento, (b) montar alerta de tarifa nativo (Google
 Flights/KAYAK, fora deste agente), ou (c) pedir liberação de egress para sites de passagem
 especificamente. A rodada de 10-07 já escalou a pendência por notificação direta (push), fora do canal
-de Issue; a rodada de 10-08 não repetiu a escalação (só um dia se passou desde então) — se não houver
-resposta em alguns dias, a próxima rodada deve reavaliar escalar de novo. Detalhe completo em
-[[historico-de-precos]], nota de 2026-10-08.
+de Issue; dois dias se passaram sem resposta — ainda dentro de "alguns dias", então 10-09 não repetiu a
+escalação — se a rodada de 10-10 ainda não tiver resposta, deve reavaliar escalar de novo. Detalhe
+completo em [[historico-de-precos]], nota de 2026-10-09.
 
 ---
 
