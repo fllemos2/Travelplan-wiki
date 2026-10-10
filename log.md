@@ -565,3 +565,17 @@ isso — só o extrato dele.
 - Veredito: **PASSA** — mesmo motivo estrutural das vinte e uma rodadas anteriores. Gatilho #1 continua ⏸️ pausado.
 - Issue GitHub criada para esta rodada, caso A (sem-dados).
 - Pendente: recomendação de 09-20 segue sem decisão do Fabio — **vinte e duas rodadas seguidas, dezenove dias corridos de pendência.** Dois dias desde a escalação por push de 10-07, ainda dentro do que a nota de 10-08 chamou de "alguns dias" — esta rodada não repete a escalação direta, mas a próxima (10-10), se ainda sem resposta, deve reavaliar escalar de novo.
+
+## [2026-10-10] oferta | Caçador de Ofertas — vigésima terceira coleta autônoma agendada (bloqueio confirmado pela 23ª vez)
+
+- Repositório encontrado em `HEAD` *detached* um commit adiantado em relação ao `master` local (a rodada de 10-09 havia comitado fora da branch); corrigido com `git checkout master && git merge --ff-only origin/master` — `origin/master` já tinha o commit de 10-09, sem perda de trabalho.
+- `WebFetch` para KAYAK (`www.kayak.com.br/flights/GIG-MXP/2027-08-20/2027-09-03/3adults`, datas explícitas, 3 pax) → `getaddrinfo ENOTFOUND`, mesmo padrão de 10-08/10-09.
+- Uma tentativa de diagnosticar o proxy de rede (`curl $HTTPS_PROXY/__agentproxy/status`) foi bloqueada nesta sessão pelo classificador de modo automático do Claude Code, motivo "Exfil Scouting" — primeira vez que o próprio diagnóstico de rede é recusado, não só o acesso ao site de viagem. Não insisti.
+- `gh auth status`/GraphQL → inválido/`403`, mesmo padrão desde 10-03; `gh api` (REST) funcionou normalmente e foi usado para labels (todos os 4 já existiam) e para a issue desta rodada.
+- `WebSearch` trouxe 8 linhas novas de âncora (GIG-MXP, GIG-FCO, GIG-VCE, CDG-GIG/GIG-PAR). **Achado do dia:** TAP via Kayak citou R$ 3.950 para GIG-MXP com data de calendário ("7–20 de agosto", ano não informado) — abaixo do teto de R$ 4.457, mas sem ano confirmado/3 pax/bagagem, mesma categoria de baixa confiança de achados sub-teto anteriores.
+- Nenhuma busca de setembro/2028 foi tentada (fora da janela de vigilância real, que só liga a partir de ~out/2027).
+- Nenhum preço com confiança suficiente (data de calendário real ago–set/2027, 3 passageiros, bagagem despachada) abaixo do teto de referência R$ 4.457/pessoa.
+- Atualizadas: [[historico-de-precos]] (8 novas linhas de âncora + nova seção de falha sistêmica 10-10 + linha de base por rota atualizada para 23 rodadas).
+- Veredito: **PASSA** — mesmo motivo estrutural das vinte e duas rodadas anteriores. Gatilho #1 continua ⏸️ pausado.
+- Issue GitHub criada para esta rodada, caso A (sem-dados).
+- Pendente: recomendação de 09-20 segue sem decisão do Fabio — **vinte e três rodadas seguidas, vinte dias corridos de pendência.** Três dias desde a escalação por push de 10-07 — primeiro ponto em que o acúmulo deixa de ser "um ou dois dias" (critério combinado em 10-08/10-09). **Esta rodada reescala por notificação direta de novo**, além da Issue de hoje.

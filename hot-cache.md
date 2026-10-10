@@ -1,6 +1,6 @@
 ---
 tipo: hot-cache
-atualizado: 2026-10-09
+atualizado: 2026-10-10
 janela_palavras: 302
 limite: 500
 ---
@@ -96,30 +96,30 @@ Propagar as decisões de 02/09 para essas páginas assim que os agentes entregar
 - Obsidian: Templates → `meta/templates/`; anexos → `raw/assets/`; instalar Dataview
 - Vigilância automática via `/schedule` — só faz sentido a partir de out/2027
 
-### 🚫 Coleta autônoma de preços — bloqueio de rede estrutural (confirmado 22x seguidas: 09-18 a 10-09, vinte e dois dias corridos, mais de três semanas)
+### 🚫 Coleta autônoma de preços — bloqueio de rede estrutural (confirmado 23x seguidas: 09-18 a 10-10, vinte e três dias corridos, mais de três semanas)
 
 O `cacador-ofertas` roda em agendamento autônomo diário, mas **`WebFetch` e `curl` direto estão
 sistematicamente bloqueados** para qualquer domínio externo, não só sites de viagem — confirmado de
-novo em 10-09 (`curl` direto devolveu `CONNECT tunnel failed, response 403` para `kayak.com.br` e
-`google.com`; proxy respondeu normalmente ao diagnóstico, `"selective": false`, confirmando bloqueio
-geral de política, não lista negra de viagem; o erro exato já variou entre `EGRESS_BLOCKED`,
-`getaddrinfo ENOTFOUND` e `403`, mesmo resultado prático). O canal externo estável para abrir a issue de
-cada rodada já variou entre `api.github.com`/`curl`, `gh api` (REST) e ferramentas MCP do GitHub —
-depende do que a sessão tiver disponível; em 10-09 `gh api` (REST) funcionou de novo mesmo com GraphQL
-bloqueado (`HTTP 403` em `gh issue list`/`gh repo view`, token inválido em `gh auth status`).
+novo em 10-10 (`WebFetch` para KAYAK devolveu `getaddrinfo ENOTFOUND`, mesmo padrão de 10-08/10-09).
+**Novidade de 10-10:** uma tentativa de diagnosticar o próprio proxy de rede (`curl
+$HTTPS_PROXY/__agentproxy/status`) foi bloqueada pelo classificador de modo automático do Claude Code
+com o motivo "Exfil Scouting" — primeira vez que o diagnóstico de rede em si, não só o acesso ao site de
+viagem, é recusado; não insisti, e isso não muda o diagnóstico estrutural já estabelecido nas 22 rodadas
+anteriores. O canal externo estável para abrir a issue de cada rodada continua sendo `gh api` (REST):
+em 10-10, de novo GraphQL bloqueado (`gh auth status` inválido) mas REST funcionou normalmente.
 Só `WebSearch` funciona, e devolve snippets agregados/cacheados de baixíssima confiança (sem data
 específica confirmada, 1 passageiro, sem bagagem) — **não serve para montar a linha de base real de
-ago–set/2027**. Achado de 10-09: primeira vez que um agregador (Kayak) classifica setembro como mais
-barato que agosto para GIG-FCO, contradizendo médias ago=set repetidas entre 09-24 e 09-30; e dois
-achados vieram com data de calendário explícita mas ano 2026 (já passado/corrente), não 2027 — primeiro
-erro de ano "para trás" da série (antes só havia erros "para frente" ou de mês errado).
-**Decisão do Fabio pendente desde 09-20, agora com 22 rodadas seguidas (dezenove dias corridos) sem
+ago–set/2027**. Achado de 10-10: TAP via Kayak citou R$ 3.950 para GIG-MXP com data de calendário
+("7–20 de agosto", ano não informado) — abaixo do teto de R$ 4.457, mas sem ano confirmado/3 pax/bagagem,
+mesma categoria de baixa confiança de achados sub-teto anteriores (resgates de milhas, âncora Decolar de
+10-02).
+**Decisão do Fabio pendente desde 09-20, agora com 23 rodadas seguidas (vinte dias corridos) sem
 resposta:** (a) reduzir a frequência do agendamento, (b) montar alerta de tarifa nativo (Google
 Flights/KAYAK, fora deste agente), ou (c) pedir liberação de egress para sites de passagem
 especificamente. A rodada de 10-07 já escalou a pendência por notificação direta (push), fora do canal
-de Issue; dois dias se passaram sem resposta — ainda dentro de "alguns dias", então 10-09 não repetiu a
-escalação — se a rodada de 10-10 ainda não tiver resposta, deve reavaliar escalar de novo. Detalhe
-completo em [[historico-de-precos]], nota de 2026-10-09.
+de Issue; **três dias se passaram sem resposta — primeiro ponto em que o acúmulo deixa de ser "um ou
+dois dias" (critério combinado em 10-08/10-09) — esta rodada (10-10) reescala por notificação direta de
+novo**, além da Issue de hoje. Detalhe completo em [[historico-de-precos]], nota de 2026-10-10.
 
 ---
 
