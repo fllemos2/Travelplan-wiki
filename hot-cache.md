@@ -1,6 +1,6 @@
 ---
 tipo: hot-cache
-atualizado: 2026-10-10
+atualizado: 2026-10-11
 janela_palavras: 302
 limite: 500
 ---
@@ -96,30 +96,25 @@ Propagar as decisões de 02/09 para essas páginas assim que os agentes entregar
 - Obsidian: Templates → `meta/templates/`; anexos → `raw/assets/`; instalar Dataview
 - Vigilância automática via `/schedule` — só faz sentido a partir de out/2027
 
-### 🚫 Coleta autônoma de preços — bloqueio de rede estrutural (confirmado 23x seguidas: 09-18 a 10-10, vinte e três dias corridos, mais de três semanas)
+### 🚫 Coleta autônoma de preços — bloqueio de rede estrutural (confirmado 24x seguidas: 09-18 a 10-11, vinte e quatro dias corridos, mais de três semanas e meia)
 
 O `cacador-ofertas` roda em agendamento autônomo diário, mas **`WebFetch` e `curl` direto estão
 sistematicamente bloqueados** para qualquer domínio externo, não só sites de viagem — confirmado de
-novo em 10-10 (`WebFetch` para KAYAK devolveu `getaddrinfo ENOTFOUND`, mesmo padrão de 10-08/10-09).
-**Novidade de 10-10:** uma tentativa de diagnosticar o próprio proxy de rede (`curl
-$HTTPS_PROXY/__agentproxy/status`) foi bloqueada pelo classificador de modo automático do Claude Code
-com o motivo "Exfil Scouting" — primeira vez que o diagnóstico de rede em si, não só o acesso ao site de
-viagem, é recusado; não insisti, e isso não muda o diagnóstico estrutural já estabelecido nas 22 rodadas
-anteriores. O canal externo estável para abrir a issue de cada rodada continua sendo `gh api` (REST):
-em 10-10, de novo GraphQL bloqueado (`gh auth status` inválido) mas REST funcionou normalmente.
-Só `WebSearch` funciona, e devolve snippets agregados/cacheados de baixíssima confiança (sem data
-específica confirmada, 1 passageiro, sem bagagem) — **não serve para montar a linha de base real de
-ago–set/2027**. Achado de 10-10: TAP via Kayak citou R$ 3.950 para GIG-MXP com data de calendário
-("7–20 de agosto", ano não informado) — abaixo do teto de R$ 4.457, mas sem ano confirmado/3 pax/bagagem,
-mesma categoria de baixa confiança de achados sub-teto anteriores (resgates de milhas, âncora Decolar de
-10-02).
-**Decisão do Fabio pendente desde 09-20, agora com 23 rodadas seguidas (vinte dias corridos) sem
+novo em 10-11 (`WebFetch` para KAYAK devolveu `getaddrinfo ENOTFOUND`, mesmo padrão desde 10-08).
+O canal externo estável para abrir a issue de cada rodada continua sendo `gh api` (REST): em 10-11, de
+novo GraphQL bloqueado (`gh auth status` inválido, `gh repo view`/`gh label list` com `HTTP 403`) mas
+REST funcionou normalmente. Só `WebSearch` funciona, e devolve snippets agregados/cacheados de
+baixíssima confiança (sem data específica confirmada, 1 passageiro, sem bagagem) — **não serve para
+montar a linha de base real de ago–set/2027**. Achado de 10-11: primeira confirmação explícita (Kayak)
+de que não há voo direto GIG-VCE (mínimo 1 conexão) — detalhe operacional, não de preço; busca dedicada
+sobre abertura de vendas para set/2028 não achou data oficial de LATAM/TAP/ITA Airways.
+**Decisão do Fabio pendente desde 09-20, agora com 24 rodadas seguidas (vinte e um dias corridos) sem
 resposta:** (a) reduzir a frequência do agendamento, (b) montar alerta de tarifa nativo (Google
 Flights/KAYAK, fora deste agente), ou (c) pedir liberação de egress para sites de passagem
-especificamente. A rodada de 10-07 já escalou a pendência por notificação direta (push), fora do canal
-de Issue; **três dias se passaram sem resposta — primeiro ponto em que o acúmulo deixa de ser "um ou
-dois dias" (critério combinado em 10-08/10-09) — esta rodada (10-10) reescala por notificação direta de
-novo**, além da Issue de hoje. Detalhe completo em [[historico-de-precos]], nota de 2026-10-10.
+especificamente. A rodada de 10-07 escalou a pendência por notificação direta (push), fora do canal
+de Issue, e a de 10-10 reescalou de novo; **quatro dias se passaram desde 10-07 sem resposta — esta
+rodada (10-11) reescala por notificação direta mais uma vez**, além da Issue de hoje. Detalhe completo
+em [[historico-de-precos]], nota de 2026-10-11.
 
 ---
 

@@ -579,3 +579,17 @@ isso — só o extrato dele.
 - Veredito: **PASSA** — mesmo motivo estrutural das vinte e duas rodadas anteriores. Gatilho #1 continua ⏸️ pausado.
 - Issue GitHub criada para esta rodada, caso A (sem-dados).
 - Pendente: recomendação de 09-20 segue sem decisão do Fabio — **vinte e três rodadas seguidas, vinte dias corridos de pendência.** Três dias desde a escalação por push de 10-07 — primeiro ponto em que o acúmulo deixa de ser "um ou dois dias" (critério combinado em 10-08/10-09). **Esta rodada reescala por notificação direta de novo**, além da Issue de hoje.
+
+## [2026-10-11] oferta | Caçador de Ofertas — vigésima quarta coleta autônoma agendada (bloqueio confirmado pela 24ª vez)
+
+- Repositório encontrado de novo em `HEAD` *detached*, ponteiro local de `master` parado no commit de 10-05 (seis commits atrás de `origin/master`); corrigido com `git fetch origin master && git checkout master && git merge --ff-only origin/master` — `origin/master` já tinha todos os commits intermediários, sem perda de trabalho.
+- `WebFetch` para KAYAK (`www.kayak.com.br/flights/GIG-MXP/2027-08-20/2027-09-03/3adults`, datas explícitas, 3 pax) → `getaddrinfo ENOTFOUND`, mesmo padrão estrutural desde 10-08.
+- `gh auth status`/GraphQL (`gh label list`, `gh repo view`) → token inválido/`HTTP 403`, mesmo padrão desde 10-03; `gh api` (REST) funcionou normalmente e foi usado para confirmar labels (todos os 4 já existiam) e para a issue desta rodada.
+- `WebSearch` trouxe 12 linhas novas de âncora (GIG-MXP, GIG-FCO, GIG-VCE, CDG-GIG/GIG-PAR). **Achado do dia:** primeira confirmação explícita, citada pelo Kayak, de que não há voos diretos GIG–VCE (mínimo 1 conexão) — detalhe operacional, não de preço. Busca dedicada sobre abertura de vendas para set/2028 (LATAM/TAP/ITA Airways) não achou data oficial; único sinal lateral é que a ITA historicamente abre vendas do verão europeu em novembro do ano anterior.
+- Nenhuma busca de voo real para setembro/2028 foi tentada (fora da janela de vigilância real, que só liga a partir de ~out/2027).
+- Nenhum preço com confiança suficiente (data de calendário real ago–set/2027, 3 passageiros, bagagem despachada) abaixo do teto de referência R$ 4.457/pessoa.
+- Atualizadas: [[historico-de-precos]] (12 novas linhas de âncora + nova seção de falha sistêmica 10-11 + linha de base por rota atualizada para 24 rodadas).
+- Veredito: **PASSA** — mesmo motivo estrutural das vinte e três rodadas anteriores. Gatilho #1 continua ⏸️ pausado.
+- Issue GitHub criada para esta rodada, caso A (sem-dados).
+- Notificação push disparada ao Fabio nesta rodada — reescalação direta, conforme recomendado em 10-10.
+- Pendente: recomendação de 09-20 segue sem decisão do Fabio — **vinte e quatro rodadas seguidas, vinte e um dias corridos de pendência.** Quatro dias desde a escalação por push de 10-07, acúmulo maior que o anterior (três dias em 10-10) — esta rodada reescala de novo, como recomendado.
