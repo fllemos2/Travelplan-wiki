@@ -27,7 +27,7 @@ Catálogo de tudo que existe no cofre. Atualizado a cada ingest. Primeira parada
 
 ## Ofertas
 
-- [[wiki/ofertas/historico-de-precos|Histórico de Preços]] — âncoras de baixa confiança das rotas GIG–Milão/Roma/Veneza/Paris (24 rodadas: 09-18 a 10-11, mais de três semanas e meia, todas com `WebFetch`/`curl` bloqueados para sites de viagem por política de rede do ambiente; só `WebSearch` e o canal GitHub — API REST — funcionam). Nenhuma linha de base real de ago–set/2027 estabelecida ainda. Decisão do Fabio pendente desde 09-20 (21 dias); escalado duas vezes por notificação direta (10-07, 10-10, 10-11). Gatilho nº 1 criado, janela ampliada, **pausado até out/2027** (cias vendem ~330 dias à frente).
+- [[wiki/ofertas/historico-de-precos|Histórico de Preços]] — âncoras de baixa confiança das rotas GIG–Milão/Roma/Veneza/Paris (25 rodadas: 09-18 a 10-12, quase um mês corrido, todas com `WebFetch`/`curl` bloqueados para sites de viagem por política de rede do ambiente; só `WebSearch` e o canal GitHub — API REST — funcionam). Nenhuma linha de base real de ago–set/2027 estabelecida ainda. Decisão do Fabio pendente desde 09-20 (22 dias); escalado por notificação direta três vezes (10-07, 10-10, 10-11). Gatilho nº 1 criado, janela ampliada, **pausado até out/2027** (cias vendem ~330 dias à frente).
 
 ## Logística
 

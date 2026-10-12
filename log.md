@@ -593,3 +593,16 @@ isso — só o extrato dele.
 - Issue GitHub criada para esta rodada, caso A (sem-dados).
 - Notificação push disparada ao Fabio nesta rodada — reescalação direta, conforme recomendado em 10-10.
 - Pendente: recomendação de 09-20 segue sem decisão do Fabio — **vinte e quatro rodadas seguidas, vinte e um dias corridos de pendência.** Quatro dias desde a escalação por push de 10-07, acúmulo maior que o anterior (três dias em 10-10) — esta rodada reescala de novo, como recomendado.
+
+## [2026-10-12] oferta | Caçador de Ofertas — vigésima quinta coleta autônoma agendada (bloqueio confirmado pela 25ª vez)
+
+- Vigésima quinta execução autônoma agendada seguida (09-18 a 10-12), sem o Fabio no circuito. Higiene de git: `HEAD` local detached no commit de 10-04, branch `master` sete commits atrás de `origin/master` — resolvido com `git fetch origin master && git checkout master && git merge --ff-only origin/master`, sem perda de dado.
+- `WebFetch` para KAYAK (`www.kayak.com.br/flights/GIG-MXP/2027-08-20/2027-09-03/3adults`, 3 pax, datas explícitas) → `getaddrinfo ENOTFOUND`, mesmo padrão estrutural desde 10-08.
+- `gh auth status` reportou token inválido (GraphQL); `gh api` (REST) funcionou normalmente — usado para confirmar os quatro labels (já existiam) e para criar a issue desta rodada.
+- `WebSearch` trouxe 12 linhas novas de âncora agregada (GIG-MXP, GIG-FCO, GIG-VCE, CDG-GIG/GIG-PAR). **Achado do dia:** TAP via Kayak citou R$ 4.438 para GIG-VCE com data de calendário explícita ("7–26 de agosto", ano não informado, uma escala) — abaixo do teto de referência R$ 4.457, mas sem ano confirmado/3 pax/bagagem, mesma categoria de baixa confiança de achados sub-teto anteriores. Também: primeiro par de datas com ano explícito 2027 para GIG-FCO (TAP, 03/07–24/07/2027), mas é julho, fora da janela ago-set.
+- Nenhuma busca de setembro/2028 foi tentada (fora da janela de vigilância real, que só liga a partir de ~out/2027).
+- Nenhum preço com confiança suficiente (data de calendário real ago–set/2027, 3 passageiros, bagagem despachada) abaixo do teto de referência R$ 4.457/pessoa.
+- Atualizadas: [[historico-de-precos]] (12 novas linhas de âncora + nova seção de falha sistêmica 10-12 + linha de base por rota atualizada para 25 rodadas).
+- Veredito: **PASSA** — mesmo motivo estrutural das vinte e quatro rodadas anteriores. Gatilho #1 continua ⏸️ pausado.
+- Issue GitHub criada para esta rodada, caso A (sem-dados).
+- Pendente: recomendação de 09-20 segue sem decisão do Fabio — **vinte e cinco rodadas seguidas, vinte e dois dias corridos de pendência, quase um mês corrido.** Um dia desde a última reescalação por push (10-11) — esta rodada não repete a escalação direta, mas o próximo marco (um mês corrido sem decisão, em 10-18) deve reescalar independentemente do intervalo desde o último push.
