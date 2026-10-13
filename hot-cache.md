@@ -1,6 +1,6 @@
 ---
 tipo: hot-cache
-atualizado: 2026-10-12
+atualizado: 2026-10-13
 janela_palavras: 302
 limite: 500
 ---
@@ -96,26 +96,24 @@ Propagar as decisões de 02/09 para essas páginas assim que os agentes entregar
 - Obsidian: Templates → `meta/templates/`; anexos → `raw/assets/`; instalar Dataview
 - Vigilância automática via `/schedule` — só faz sentido a partir de out/2027
 
-### 🚫 Coleta autônoma de preços — bloqueio de rede estrutural (confirmado 25x seguidas: 09-18 a 10-12, vinte e cinco dias corridos, quase um mês completo)
+### 🚫 Coleta autônoma de preços — bloqueio de rede estrutural (confirmado 26x seguidas: 09-18 a 10-13, vinte e seis dias corridos)
 
 O `cacador-ofertas` roda em agendamento autônomo diário, mas **`WebFetch` e `curl` direto estão
 sistematicamente bloqueados** para qualquer domínio externo, não só sites de viagem — confirmado de
-novo em 10-12 (`WebFetch` para KAYAK devolveu `getaddrinfo ENOTFOUND`, mesmo padrão desde 10-08).
-O canal externo estável para abrir a issue de cada rodada continua sendo `gh api` (REST): em 10-12, de
+novo em 10-13 (`WebFetch` para KAYAK devolveu `getaddrinfo ENOTFOUND`, mesmo padrão desde 10-08).
+O canal externo estável para abrir a issue de cada rodada continua sendo `gh api` (REST): em 10-13, de
 novo GraphQL bloqueado (`gh auth status` inválido) mas REST funcionou normalmente. Só `WebSearch`
 funciona, e devolve snippets agregados/cacheados de baixíssima confiança (sem data específica
 confirmada, 1 passageiro, sem bagagem) — **não serve para montar a linha de base real de ago–set/2027**.
-Achado de 10-12: TAP citou R$ 4.438 para GIG-VCE com data explícita ("7–26 de agosto", ano não
-informado) — abaixo do teto de R$ 4.457, mas mesma baixa confiança de achados sub-teto anteriores;
-primeiro par de datas com ano explícito 2027 para GIG-FCO (TAP, 03/07–24/07/2027), mas é julho, fora
-da janela ago-set.
-**Decisão do Fabio pendente desde 09-20, agora com 25 rodadas seguidas (vinte e dois dias corridos) sem
+Achado de 10-13: nenhum de preço; sinal lateral de mercado — Lufthansa pode assumir até 100% da ITA
+Airways até 2028 e usar a TAP para complementar rotas Brasil/América Latina (relevante para quais
+companhias vigiar, não para o teto de referência).
+**Decisão do Fabio pendente desde 09-20, agora com 26 rodadas seguidas (vinte e três dias corridos) sem
 resposta:** (a) reduzir a frequência do agendamento, (b) montar alerta de tarifa nativo (Google
 Flights/KAYAK, fora deste agente), ou (c) pedir liberação de egress para sites de passagem
-especificamente. A rodada de 10-11 reescalou a pendência por notificação direta (push), fora do canal
-de Issue; esta rodada (10-12) não repete a escalação (só um dia se passou), mas o marco de um mês
-corrido sem decisão (10-18) deve reescalar de novo independentemente do intervalo. Detalhe completo
-em [[historico-de-precos]], nota de 2026-10-12.
+especificamente. A última reescalação por push foi em 10-11; esta rodada (10-13) não repete a
+escalação (o marco de um mês corrido sem decisão, em 10-18, ainda não chegou). Detalhe completo
+em [[historico-de-precos]], nota de 2026-10-13.
 
 ---
 

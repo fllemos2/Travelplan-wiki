@@ -606,3 +606,16 @@ isso — só o extrato dele.
 - Veredito: **PASSA** — mesmo motivo estrutural das vinte e quatro rodadas anteriores. Gatilho #1 continua ⏸️ pausado.
 - Issue GitHub criada para esta rodada, caso A (sem-dados).
 - Pendente: recomendação de 09-20 segue sem decisão do Fabio — **vinte e cinco rodadas seguidas, vinte e dois dias corridos de pendência, quase um mês corrido.** Um dia desde a última reescalação por push (10-11) — esta rodada não repete a escalação direta, mas o próximo marco (um mês corrido sem decisão, em 10-18) deve reescalar independentemente do intervalo desde o último push.
+
+## [2026-10-13] oferta | Caçador de Ofertas — vigésima sexta coleta autônoma agendada (bloqueio confirmado pela 26ª vez)
+
+- Vigésima sexta execução autônoma agendada seguida (09-18 a 10-13), sem o Fabio no circuito. Repositório encontrado limpo e sincronizado com `origin/master` nesta sessão.
+- `WebFetch` para KAYAK (`www.kayak.com.br/flights/GIG-MXP/2027-08-20/2027-09-03/3adults`, 3 pax, datas explícitas) → `getaddrinfo ENOTFOUND`, mesmo padrão estrutural desde 10-08.
+- `gh auth status` (GraphQL) → token inválido, mesmo padrão desde 10-03; `gh api` (REST) funcionou normalmente e foi usado para confirmar os quatro labels (todos já existiam) e para a issue desta rodada.
+- `WebSearch` trouxe 12 linhas novas de âncora (GIG-MXP, GIG-CDG/CDG-GIG). **Achado do dia:** nenhum de preço; achado lateral de mercado — sinal de que a Lufthansa pode assumir até 100% da ITA Airways até 2028 e usar a TAP para complementar rotas Brasil/América Latina, relevante para quais companhias vigiar, não para o teto de referência. Busca dedicada sobre abertura de vendas para set/2028 (LATAM/TAP/ITA Airways) não achou data oficial.
+- Nenhuma busca de voo real para setembro/2028 foi tentada (fora da janela de vigilância real, que só liga a partir de ~out/2027).
+- Nenhum preço com confiança suficiente (data de calendário real ago–set/2027, 3 passageiros, bagagem despachada) abaixo do teto de referência R$ 4.457/pessoa.
+- Atualizadas: [[historico-de-precos]] (12 novas linhas de âncora + nova seção de falha sistêmica 10-13 + linha de base por rota atualizada para 26 rodadas).
+- Veredito: **PASSA** — mesmo motivo estrutural das vinte e cinco rodadas anteriores. Gatilho #1 continua ⏸️ pausado.
+- Issue GitHub criada para esta rodada, caso A (sem-dados).
+- Pendente: recomendação de 09-20 segue sem decisão do Fabio — **vinte e seis rodadas seguidas, vinte e três dias corridos de pendência.** Dois dias desde a última reescalação por push (10-11) — esta rodada não repete a escalação direta; o marco de um mês corrido sem decisão (10-18) ainda não chegou, mas é o próximo ponto de reescalação combinado em 10-12.
