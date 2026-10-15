@@ -643,5 +643,5 @@ isso — só o extrato dele.
 - Criadas: [[wiki/consultas/relatorio-mensal-2026-10]].
 - Atualizadas: `index.md`.
 - Artifact publicado: https://claude.ai/artifact/CsHCdJtDq7hcBXJbkYSdm1 — "Sonho Lemos — Setembro/2028" (nova URL, artifact independente do de setembro).
-- E-mail para fabiodelimalemos@gmail.com: ver resultado registrado logo abaixo, ao final desta rotina.
+- E-mail para fabiodelimalemos@gmail.com: **sucesso** — enviado via Gmail MCP (`mcp__Gmail__send_message`), message id `1a13f7c01940c9a2`, assunto "✈️ Sonho Lemos — Relatório de Outubro/2026".
 - Decisão em destaque: política de vigilância de preços (bloqueio de rede estrutural), 25 dias pendente.
