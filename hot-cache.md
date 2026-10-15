@@ -88,29 +88,30 @@ durante a rotina do relatório mensal.
 - Obsidian: Templates → `meta/templates/`; anexos → `raw/assets/`; instalar Dataview
 - Vigilância automática via `/schedule` — só faz sentido a partir de out/2027
 
-### 🚫 Coleta autônoma de preços — bloqueio de rede estrutural (confirmado 27x seguidas: 09-18 a 10-14, vinte e sete dias corridos)
+### 🚫 Coleta autônoma de preços — bloqueio de rede estrutural (confirmado 28x seguidas: 09-18 a 10-15, vinte e oito dias corridos, exatamente quatro semanas)
 
 O `cacador-ofertas` roda em agendamento autônomo diário, mas **`WebFetch` e `curl` direto estão
 sistematicamente bloqueados** para qualquer domínio externo, não só sites de viagem — confirmado de
-novo em 10-14 (`WebFetch` para KAYAK devolveu `getaddrinfo ENOTFOUND`; `curl` direto → `CONNECT tunnel
-failed, 403`; proxy status confirma `"selective": false`, mesmo padrão desde 10-08).
-O canal externo estável para abrir a issue de cada rodada continua sendo `gh api` (REST): em 10-14, de
-novo GraphQL bloqueado (`gh auth status` inválido) mas REST funcionou normalmente. Só `WebSearch`
-funciona, e devolve snippets agregados/cacheados de baixíssima confiança (sem data específica
-confirmada, 1 passageiro, sem bagagem) — **não serve para montar a linha de base real de ago–set/2027**.
-Achado de 10-14: nenhum de preço com confiança suficiente; novo máximo nomeado para VCE-GIG (TAP,
-R$ 8.609) e terceiro mês diferente já citado como "mais barato" para GIG-MXP em rodadas distintas
-(abril, depois de maio e março) — reforça que o índice do agregador não converge.
-**Decisão do Fabio pendente desde 09-20, agora com 27 rodadas seguidas (vinte e quatro dias corridos) sem
+novo em 10-15 (`WebFetch` para KAYAK devolveu `getaddrinfo ENOTFOUND`; diagnóstico do proxy recusado
+pelo classificador de modo automático, motivo "Exfil Scouting").
+O canal externo estável para abrir a issue de cada rodada continua sendo `gh api`/`gh issue create`
+(REST). Só `WebSearch` funciona, e devolve snippets agregados/cacheados de baixíssima confiança (sem
+data específica confirmada, 1 passageiro, sem bagagem) — **não serve para montar a linha de base real
+de ago–set/2027**.
+Achado de 10-15: nenhum preço novo com confiança suficiente; a própria TAP (flytap.com) confirmou que o
+máximo histórico de R$ 8.609 para VCE-GIG (citado desde 10-07) é de **2026, não 2027** — resolve a
+ambiguidade de ano, mas esvazia o valor como referência para o ano-alvo.
+**Decisão do Fabio pendente desde 09-20, agora com 28 rodadas seguidas (vinte e cinco dias corridos) sem
 resposta:** (a) reduzir a frequência do agendamento, (b) montar alerta de tarifa nativo (Google
 Flights/KAYAK, fora deste agente), ou (c) pedir liberação de egress para sites de passagem
-especificamente. A última reescalação por push foi em 10-11; esta rodada (10-14) não repete a
-escalação (o marco de um mês corrido sem decisão, em 10-18, ainda não chegou). Detalhe completo
-em [[historico-de-precos]], nota de 2026-10-14.
+especificamente. A última reescalação por push foi em 10-11; esta rodada (10-15) não repete a
+escalação (o marco de um mês corrido sem decisão, em 10-18, ainda não chegou — faltam três dias).
+Detalhe completo em [[historico-de-precos]], nota de 2026-10-15.
 
-**Nova pendência de manutenção (10-14):** [[historico-de-precos]] passou de 650 linhas, acima do limite
-de ~400 linhas recomendado pelo `CLAUDE.md` §2 — considerar arquivar rodadas mais antigas em sub-página
-numa próxima sessão com o Fabio no circuito (fora do escopo de uma coleta diária autônoma).
+**Pendência de manutenção (desde 10-14, ainda não resolvida):** [[historico-de-precos]] passou de 650
+linhas, acima do limite de ~400 linhas recomendado pelo `CLAUDE.md` §2 — considerar arquivar rodadas
+mais antigas em sub-página numa próxima sessão com o Fabio no circuito (fora do escopo de uma coleta
+diária autônoma).
 
 ---
 
