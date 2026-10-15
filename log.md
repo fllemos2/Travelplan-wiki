@@ -632,3 +632,16 @@ isso — só o extrato dele.
 - Veredito: **PASSA** — mesmo motivo estrutural das vinte e seis rodadas anteriores. Gatilho #1 continua ⏸️ pausado.
 - Issue GitHub criada para esta rodada, caso A (sem-dados).
 - Pendente: recomendação de 09-20 segue sem decisão do Fabio — **vinte e sete rodadas seguidas, vinte e quatro dias corridos de pendência, quase um mês corrido.** Três dias desde a última reescalação por push (10-11) — esta rodada não repete a escalação direta; o marco de um mês corrido sem decisão (10-18) ainda não chegou. Nova pendência registrada: considerar arquivar as rodadas mais antigas de [[historico-de-precos]] em sub-página, já que o arquivo passou de 650 linhas.
+
+## [2026-10-15] autonomo-concierge | Relatorio mensal - Outubro/2026
+
+- Lido antes de escrever: `CLAUDE.md`, `index.md`, `hot-cache.md`, [[o-sonho]], [[plano-de-viabilidade]], [[estrategia-livelo]], todas as páginas de [[wiki/destinos|destinos]], [[rota-mestra]], [[checklist-prazos]] e as últimas 10 entradas deste log.
+- Achado que mudou o relatório: a decisão entre destinos (Cinque Terre/Verona/Piemonte/Zermatt) **já está fechada desde 13/09/2026** — não é mais a decisão pendente. O relatório deste mês celebra essa decisão (fotos reais lado a lado: Jungfrau venceu de Zermatt, Valpolicella venceu de Piemonte) e levanta a decisão genuinamente aberta hoje: o que fazer com a vigilância autônoma de preços, bloqueada em 27 rodadas seguidas desde 18/09, com a recomendação de 20/09 ainda sem resposta (25 dias corridos até hoje).
+- Achado novo, fora do escopo original do relatório: dois itens do plano de ação da [[estrategia-livelo]] §8 (qual cartão a família usa; abrir 2ª conta Livelo para a Fabiana) tinham prazo **30/09/2026** e **não têm registro de resposta no log** — estão 15 dias em atraso. Sinalizados no relatório como o próximo passo mais urgente.
+- Lacuna declarada (não estimada): o cofre não registra quanto já foi efetivamente guardado desde o início da poupança em set/2026 — só o valor planejado (R$ 2.000/mês). O relatório diz isso explicitamente em vez de supor um percentual.
+- Imagens: reaproveitadas as 3 fotos já existentes em `raw/assets/` (Lauterbrunnen, Zermatt, Piemonte/Langhe) — nenhuma nova baixada. Tentativa de buscar foto real do Valpolicella (`WebSearch` + `WebFetch` para `commons.wikimedia.org`) confirmou o mesmo bloqueio estrutural de rede já documentado 27x em [[historico-de-precos]] (`getaddrinfo ENOTFOUND`). O relatório declara essa lacuna em vez de usar uma foto de lugar errado.
+- Criadas: [[wiki/consultas/relatorio-mensal-2026-10]].
+- Atualizadas: `index.md`.
+- Artifact publicado: https://claude.ai/artifact/CsHCdJtDq7hcBXJbkYSdm1 — "Sonho Lemos — Setembro/2028" (nova URL, artifact independente do de setembro).
+- E-mail para fabiodelimalemos@gmail.com: ver resultado registrado logo abaixo, ao final desta rotina.
+- Decisão em destaque: política de vigilância de preços (bloqueio de rede estrutural), 25 dias pendente.

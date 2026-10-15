@@ -2,7 +2,7 @@
 
 Catálogo de tudo que existe no cofre. Atualizado a cada ingest. Primeira parada de toda query.
 
-**Estado:** 7 fontes · 30 páginas · 6 funcionários · atualizado em 2026-09-13
+**Estado:** 7 fontes · 31 páginas · 6 funcionários · atualizado em 2026-10-15
 **Domínio:** Agência de Viagem Particular — viabilizar a viagem de família dos Lemos
 **🎯 A viagem:** Itália · Suíça · Disneyland Paris — **set/2028** · **16 dias** (revisado 13/09) — ~R$ 59.400
 
@@ -74,6 +74,7 @@ Catálogo de tudo que existe no cofre. Atualizado a cada ingest. Primeira parada
 
 - [[wiki/consultas/melhor-epoca|A Melhor Época]] — resposta à pergunta "qual a melhor janela do ano". `2026-09-01`
 - [[wiki/consultas/relatorio-mensal-2026-09|Relatório Mensal — Setembro/2026]] — primeiro relatório visual do concierge, com fotos reais de Lauterbrunnen, Zermatt e Langhe. `2026-09-13`
+- [[wiki/consultas/relatorio-mensal-2026-10|Relatório Mensal — Outubro/2026]] — a decisão Zermatt/Piemonte celebrada como resolvida; nova decisão pendente é sobre a vigilância de preços bloqueada; dois itens Livelo vencidos desde 30/09 sinalizados. `2026-10-15`
 
 ---
 

@@ -1,6 +1,6 @@
 ---
 tipo: hot-cache
-atualizado: 2026-10-14
+atualizado: 2026-10-15
 janela_palavras: 302
 limite: 500
 ---
@@ -56,31 +56,23 @@ Pontos expiram em 24 meses; a compra das passagens é jan–abr/2028 — parte p
 Nenhuma fonte responde isso, só o extrato dele. Mitigação: Clube Livelo (pontos do assinante não
 expiram) ou cartão cujos pontos não expiram (BB Altus, BRB Dux, Bradesco Aeternum).
 
-### Propagação pendente (segurada até o curador entregar)
+### ✅ As duas tensões de 09-02 — RESOLVIDAS em 13/09/2026
 
-- `plano-de-viabilidade.md` — alavanca nº 1 → "~R$ 5.000, com aporte — ver [[estrategia-livelo]]"
-- `rota-mestra.md` — milhas anulam o prêmio de open-jaw
-- `checklist-prazos.md` — inserir a tarefa de 15/09/2026
+Ambas fechadas por decisão do Fabio, ver [[onde-exatamente]] e [[decisao-paris]]: **Piemonte e Zermatt cortados**
+(colheita de uva migra para o Valpolicella, 25 min de Verona; trenó da Zoe confirmado no Snow Fun Park do
+Jungfraujoch, CHF 15, temporada até 18/out). Rota oficial: Arranjo A, **16 dias/15 noites**
+([[decisao-16-dias]]). Esta seção ficou várias semanas desatualizada no hot cache — corrigida em 15/10/2026
+durante a rotina do relatório mensal.
 
-**Não editar enquanto rodam:** `o-sonho.md`, `plano-de-viabilidade.md`, `rota-mestra.md` (estão sendo lidos).
-Propagar as decisões de 02/09 para essas páginas assim que os agentes entregarem.
+### Próximos trabalhos
 
-### 🔺 Duas tensões abertas — o núcleo do problema agora
-
-1. **Ziguezague italiano.** Cinque Terre (sudoeste, litoral) × Verona (leste) × Piemonte (sudoeste, interior)
-   são três direções a partir de Milão. Com Suíça e Paris nos mesmos 12–15 dias, a linha reta de
-   [[rota-mestra]] quebra. **Algo vai ter que ceder** — o Fabio decide o quê, com o mapa na mão.
-2. **Trenó na neve em setembro.** Não há neve pisável em altitude normal nessa época — só glaciar.
-   Verificar: Snow Fun Park do Jungfraujoch (opera em setembro?), Matterhorn Glacier Paradise (neve o ano todo),
-   ou substituto sem neve (tobogã alpino de trilho). **Não presumir que existe.**
-
-### Próximos trabalhos, depois dos agentes
-
-1. **Decisão do Fabio** sobre o arranjo italiano, à luz do veredito do curador.
-2. **Trem × carro** — preferência é trem; análise formal pendente.
-3. **Roteiro dia a dia em 3 variações** (`arquiteto-roteiro`) — só depois de definidas as cidades.
-4. **Apresentação do sonho** (`concierge-visual`) — não é enfeite: são 24 meses de espera, e o maior risco
-   do projeto é o sonho esfriar.
+1. **Grade fina do roteiro** (`arquiteto-roteiro`) — horários de RER C para Versalhes, reserva de entrada do
+   Louvre, ainda não feita.
+2. **Responder os dois itens vencidos da [[estrategia-livelo]]** (prazo 30/09/2026, sem registro de resposta):
+   qual cartão a família usa para pontuar, e abrir 2ª conta Livelo para a Fabiana.
+3. **Decisão sobre a vigilância de preços** — ver bloco de bloqueio de rede abaixo, pendente desde 20/09.
+4. **Relatório mensal** (`concierge-visual`) — rotina mensal confirmada funcionando; 2º relatório publicado
+   em 15/10/2026: https://claude.ai/artifact/CsHCdJtDq7hcBXJbkYSdm1
 
 ### Fatos que não podem ser esquecidos
 
