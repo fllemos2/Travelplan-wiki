@@ -27,7 +27,7 @@ Catálogo de tudo que existe no cofre. Atualizado a cada ingest. Primeira parada
 
 ## Ofertas
 
-- [[wiki/ofertas/historico-de-precos|Histórico de Preços]] — âncoras de baixa confiança das rotas GIG–Milão/Roma/Veneza/Paris (28 rodadas: 09-18 a 10-15, exatamente quatro semanas, todas com `WebFetch`/`curl` bloqueados para sites de viagem por política de rede do ambiente; só `WebSearch` e o canal GitHub — API REST — funcionam). Nenhuma linha de base real de ago–set/2027 estabelecida ainda; em 10-15 confirmou-se que o próprio máximo histórico citado (TAP, R$ 8.609, VCE-GIG) é de 2026, não do ano-alvo. Decisão do Fabio pendente desde 09-20 (25 dias); escalado por notificação direta três vezes (10-07, 10-10, 10-11). Gatilho nº 1 criado, janela ampliada, **pausado até out/2027** (cias vendem ~330 dias à frente).
+- [[wiki/ofertas/historico-de-precos|Histórico de Preços]] — âncoras de baixa confiança das rotas GIG–Milão/Roma/Veneza/Paris (30 rodadas: 09-18 a 10-17, um mês corrido, todas com `WebFetch`/`curl` bloqueados para sites de viagem por política de rede do ambiente; só `WebSearch` e o canal GitHub — API REST — funcionam). Nenhuma linha de base real de ago–set/2027 estabelecida ainda; em 10-15 confirmou-se que o próprio máximo histórico citado (TAP, R$ 8.609, VCE-GIG) é de 2026, não do ano-alvo. Decisão do Fabio pendente desde 09-20 (27 dias); escalado por notificação direta quatro vezes (10-07, 10-10, 10-11, 10-17 — marco de um mês corrido). Gatilho nº 1 criado, janela ampliada, **pausado até out/2027** (cias vendem ~330 dias à frente).
 
 ## Logística
 

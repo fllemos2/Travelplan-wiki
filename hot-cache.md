@@ -1,6 +1,6 @@
 ---
 tipo: hot-cache
-atualizado: 2026-10-15
+atualizado: 2026-10-17
 janela_palavras: 302
 limite: 500
 ---
@@ -88,25 +88,25 @@ durante a rotina do relatório mensal.
 - Obsidian: Templates → `meta/templates/`; anexos → `raw/assets/`; instalar Dataview
 - Vigilância automática via `/schedule` — só faz sentido a partir de out/2027
 
-### 🚫 Coleta autônoma de preços — bloqueio de rede estrutural (confirmado 28x seguidas: 09-18 a 10-15, vinte e oito dias corridos, exatamente quatro semanas)
+### 🚫 Coleta autônoma de preços — bloqueio de rede estrutural (confirmado 30x seguidas: 09-18 a 10-17, trinta dias corridos, um mês corrido)
 
 O `cacador-ofertas` roda em agendamento autônomo diário, mas **`WebFetch` e `curl` direto estão
 sistematicamente bloqueados** para qualquer domínio externo, não só sites de viagem — confirmado de
-novo em 10-15 (`WebFetch` para KAYAK devolveu `getaddrinfo ENOTFOUND`; diagnóstico do proxy recusado
-pelo classificador de modo automático, motivo "Exfil Scouting").
+novo em 10-17 (`WebFetch` para KAYAK e Skyscanner devolveu `getaddrinfo ENOTFOUND` em ambos).
 O canal externo estável para abrir a issue de cada rodada continua sendo `gh api`/`gh issue create`
 (REST). Só `WebSearch` funciona, e devolve snippets agregados/cacheados de baixíssima confiança (sem
 data específica confirmada, 1 passageiro, sem bagagem) — **não serve para montar a linha de base real
 de ago–set/2027**.
-Achado de 10-15: nenhum preço novo com confiança suficiente; a própria TAP (flytap.com) confirmou que o
-máximo histórico de R$ 8.609 para VCE-GIG (citado desde 10-07) é de **2026, não 2027** — resolve a
-ambiguidade de ano, mas esvazia o valor como referência para o ano-alvo.
-**Decisão do Fabio pendente desde 09-20, agora com 28 rodadas seguidas (vinte e cinco dias corridos) sem
+Achado de 10-17: nenhum preço novo com confiança suficiente; nenhuma evidência de abertura de vendas
+para set/2028.
+**Decisão do Fabio pendente desde 09-20, agora com 30 rodadas seguidas (vinte e sete dias corridos) sem
 resposta:** (a) reduzir a frequência do agendamento, (b) montar alerta de tarifa nativo (Google
 Flights/KAYAK, fora deste agente), ou (c) pedir liberação de egress para sites de passagem
-especificamente. A última reescalação por push foi em 10-11; esta rodada (10-15) não repete a
-escalação (o marco de um mês corrido sem decisão, em 10-18, ainda não chegou — faltam três dias).
-Detalhe completo em [[historico-de-precos]], nota de 2026-10-15.
+especificamente. **O marco de um mês corrido sem decisão foi atingido nesta rodada (10-17) — a
+reescalação direta ao Fabio foi repetida**, ver [[historico-de-precos]], nota de 2026-10-17, e a issue
+desta execução. Também observado: repositório iniciou em `HEAD` *detached* por duas rodadas seguidas
+(10-16 e 10-17) — sem perda de trabalho até agora, mas padrão a observar.
+Detalhe completo em [[historico-de-precos]], nota de 2026-10-17.
 
 **Pendência de manutenção (desde 10-14, ainda não resolvida):** [[historico-de-precos]] passou de 650
 linhas, acima do limite de ~400 linhas recomendado pelo `CLAUDE.md` §2 — considerar arquivar rodadas

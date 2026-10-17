@@ -671,3 +671,16 @@ isso — só o extrato dele.
 - Veredito: **PASSA** — mesmo motivo estrutural das vinte e oito rodadas anteriores. Gatilho #1 continua ⏸️ pausado.
 - Issue GitHub criada para esta rodada, caso A (sem-dados).
 - Pendente: recomendação de 09-20 segue sem decisão do Fabio — **vinte e nove rodadas seguidas, vinte e seis dias corridos de pendência.** Cinco dias desde a última reescalação por push (10-11); o marco de um mês corrido sem decisão (10-18) ainda não chegou — faltam dois dias — esta rodada não repete a escalação direta, mantendo o plano de reescalar quando esse marco for atingido. Pendência de manutenção de 10-14 (arquivo [[historico-de-precos]] acima do limite de ~400 linhas do `CLAUDE.md` §2, agora ainda maior) continua não resolvida.
+
+## [2026-10-17] oferta | Caçador de Ofertas — trigésima coleta autônoma agendada (bloqueio confirmado pela 30ª vez, um mês corrido)
+
+- Trigésima execução autônoma agendada seguida (09-18 a 10-17), sem o Fabio no circuito. Repositório encontrado de novo em `HEAD` *detached* (branch local `master` seis commits atrás) — corrigido com fast-forward para o commit da 29ª coleta; `origin/master` já tinha esses seis commits (10-13 a 10-16), confirmado via `git merge-base --is-ancestor` que nenhum trabalho foi perdido, apenas o ponteiro local do branch não avançava. Segunda vez consecutiva (10-16 e 10-17) que a sessão inicia em `HEAD` *detached* — padrão a observar em rodadas futuras.
+- Labels do GitHub (`sem-dados`, `oferta`, `urgente`, `janela-aberta`) confirmados via `gh api repos/fllemos2/travelplan-wiki/labels` (REST) — os quatro já existiam.
+- `WebFetch` para KAYAK (`www.kayak.com.br/flights/GIG-MXP/2027-08-20/2027-09-03/3adults`) e Skyscanner (`www.skyscanner.com.br/transporte/voos/gig/mxp/270820/270903/`) → `getaddrinfo ENOTFOUND` em ambos — trigésima rodada seguida com o mesmo bloqueio estrutural de rede.
+- `WebSearch` trouxe 8 linhas novas de âncora (MXP-GIG, GIG-MXP, CDG-GIG, GIG-VCE, GIG-FCO). Nenhuma cotação com data de calendário real em ago-set/2027; o achado mais próximo da janela-alvo (TAP, VCE-GIG classe executiva, 18/08/2026–18/09/2026) é do ano-base 2026 e de classe executiva, mesmo padrão de descarte já visto em 10-16.
+- Busca dedicada sobre set/2028 (Expedia, Kiwi.com, Skyscanner, TAP) não encontrou data oficial de abertura de vendas nem disponibilidade real. **Sem alerta de janela aberta.**
+- Nenhum preço com confiança suficiente abaixo do teto de referência R$ 4.457/pessoa.
+- Atualizadas: [[historico-de-precos]] (8 novas linhas de âncora + nova seção narrativa 10-17 + linha de base por rota atualizada para 30 rodadas + frontmatter `atualizado: 2026-10-17`).
+- Veredito: **PASSA** — mesmo motivo estrutural das vinte e nove rodadas anteriores. Gatilho #1 continua ⏸️ pausado.
+- **Reescalação ao Fabio:** esta rodada fecha um mês corrido (09-20 a 10-17, vinte e sete dias corridos) sem decisão sobre a vigilância de preços. Conforme o plano combinado nas notas de 10-11/10-16, a recomendação direta é repetida nesta rodada — ver nota em [[historico-de-precos]] e issue desta execução.
+- Issue GitHub criada para esta rodada, caso A (sem-dados), com reescalação da pendência anexada ao corpo.
