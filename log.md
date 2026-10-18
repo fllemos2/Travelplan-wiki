@@ -684,3 +684,16 @@ isso — só o extrato dele.
 - Veredito: **PASSA** — mesmo motivo estrutural das vinte e nove rodadas anteriores. Gatilho #1 continua ⏸️ pausado.
 - **Reescalação ao Fabio:** esta rodada fecha um mês corrido (09-20 a 10-17, vinte e sete dias corridos) sem decisão sobre a vigilância de preços. Conforme o plano combinado nas notas de 10-11/10-16, a recomendação direta é repetida nesta rodada — ver nota em [[historico-de-precos]] e issue desta execução.
 - Issue GitHub criada para esta rodada, caso A (sem-dados), com reescalação da pendência anexada ao corpo.
+
+## [2026-10-18] oferta | Caçador de Ofertas — trigésima primeira coleta autônoma agendada (bloqueio confirmado pela 31ª vez)
+
+- Trigésima primeira execução autônoma agendada seguida (09-18 a 10-18), sem o Fabio no circuito. Repositório encontrado em `HEAD` *detached* (branch local `master` sete commits atrás) — corrigido com `git checkout master && git merge --ff-only origin/master`; `origin/master` já tinha os sete commits intermediários (10-13 a 10-17), sem perda de trabalho. Terceira rodada seguida (10-16 a 10-18) começando em `HEAD` *detached*.
+- Labels do GitHub (`sem-dados`, `oferta`, `urgente`, `janela-aberta`) confirmados via `gh api repos/fllemos2/travelplan-wiki/labels` (REST) — os quatro já existiam. `gh auth status` (GraphQL) continua com token inválido, mesmo padrão desde 10-03.
+- `WebFetch` para KAYAK e Skyscanner (datas explícitas, 3 pax) → `getaddrinfo ENOTFOUND` em ambos, trigésima primeira rodada seguida com o mesmo bloqueio estrutural de rede.
+- `WebSearch` trouxe 10 linhas novas de âncora (FCO-GIG, GIG-VCE, VCE-GIG, CDG-GIG, GIG-PAR). **Achado do dia:** único ponto genuinamente novo é um segundo par de datas nomeado pela TAP para FCO-GIG (10/01–02/02/2027, 882 EUR). Todo o resto repete dígito por dígito valores já vistos entre 10-07 e 10-17 — mesmo índice cacheado do buscador.
+- Busca dedicada sobre abertura de vendas de set/2028 (LATAM/TAP/ITA Airways) não encontrou data oficial nem disponibilidade real. **Sem alerta de janela aberta.**
+- Nenhum preço com confiança suficiente abaixo do teto de referência R$ 4.457/pessoa.
+- Atualizadas: [[historico-de-precos]] (10 novas linhas de âncora + nova seção narrativa 10-18 + linha de base por rota atualizada para 31 rodadas + frontmatter `atualizado: 2026-10-18`).
+- Veredito: **PASSA** — mesmo motivo estrutural das trinta rodadas anteriores. Gatilho #1 continua ⏸️ pausado.
+- Pendente: a reescalação direta ao Fabio sobre o marco de um mês corrido (feita em 10-17) continua sem resposta, agora vinte e oito dias corridos de pendência desde 09-20. Esta rodada não repete a reescalação, apenas registra a espera. Pendência de manutenção de 10-14 (arquivo acima do limite de ~400 linhas do `CLAUDE.md` §2) continua não resolvida.
+- Issue GitHub criada para esta rodada, caso A (sem-dados).
