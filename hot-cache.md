@@ -1,6 +1,6 @@
 ---
 tipo: hot-cache
-atualizado: 2026-10-19
+atualizado: 2026-10-21
 janela_palavras: 302
 limite: 500
 ---
@@ -88,28 +88,30 @@ durante a rotina do relatório mensal.
 - Obsidian: Templates → `meta/templates/`; anexos → `raw/assets/`; instalar Dataview
 - Vigilância automática via `/schedule` — só faz sentido a partir de out/2027
 
-### 🚫 Coleta autônoma de preços — bloqueio de rede estrutural (confirmado 32x seguidas: 09-18 a 10-19, trinta e dois dias corridos)
+### 🚫 Coleta autônoma de preços — bloqueio de rede estrutural (confirmado 34x seguidas: 09-18 a 10-21, trinta e quatro dias corridos)
 
 O `cacador-ofertas` roda em agendamento autônomo diário, mas **`WebFetch` e `curl` direto estão
 sistematicamente bloqueados** para qualquer domínio externo, não só sites de viagem — confirmado de
-novo em 10-19 (`WebFetch` para KAYAK e Skyscanner devolveu `getaddrinfo ENOTFOUND` em ambos; `curl`
-direto para kayak.com.br devolveu `CONNECT tunnel failed, response 403`).
+novo em 10-21 (`curl` para kayak.com.br/skyscanner.com.br/example.com devolveu `CONNECT tunnel failed,
+response 403` nos três; `WebFetch` para KAYAK, `example.com` e Google Flights devolveu `getaddrinfo
+ENOTFOUND` nos três).
 O canal externo estável para abrir a issue de cada rodada continua sendo `gh api`/`gh issue create`
 (REST). Só `WebSearch` funciona, e devolve snippets agregados/cacheados de baixíssima confiança (sem
 data específica confirmada, 1 passageiro, sem bagagem) — **não serve para montar a linha de base real
 de ago–set/2027**.
-Achado de 10-19: Trip.com deu a primeira média mensal explícita para CDG-GIG favorável à premissa de
-setembro barato (ainda sem ano confirmado); nenhum preço novo com confiança suficiente abaixo do teto;
+Achado de 10-21: TAP revelou tarifas de Paris-Orly (não CDG) por 1ª vez na série; flypass.ai mudou sua
+estimativa de setembro para CDG-GIG pela 3ª vez; novos tetos superiores nomeados (Air France GIG-CDG
+R$ 7.146, Voe Azul GIG-Paris R$ 9.563); nenhum preço novo com confiança suficiente abaixo do teto;
 nenhuma evidência de abertura de vendas para set/2028.
-**Decisão do Fabio pendente desde 09-20, agora com 32 rodadas seguidas (vinte e nove dias corridos) sem
+**Decisão do Fabio pendente desde 09-20, agora com 34 rodadas seguidas (trinta e um dias corridos) sem
 resposta:** (a) reduzir a frequência do agendamento, (b) montar alerta de tarifa nativo (Google
 Flights/KAYAK, fora deste agente), ou (c) pedir liberação de egress para sites de passagem
 especificamente. A reescalação direta mais recente foi em 10-17 (marco de um mês corrido); esta rodada
-(10-19) não repetiu a escalação, apenas registrou a espera.
-Detalhe completo em [[historico-de-precos]], nota de 2026-10-19.
+(10-21) não repetiu a escalação, por falta de fato novo relevante desde a última, apenas registrou a espera.
+Detalhe completo em [[historico-de-precos]], nota de 2026-10-21.
 
 **Pendência de manutenção (desde 10-14, ainda não resolvida):** [[historico-de-precos]] passou de 650
-linhas (agora ~790), acima do limite de ~400 linhas recomendado pelo `CLAUDE.md` §2 — considerar
+linhas (agora bem acima de 800), acima do limite de ~400 linhas recomendado pelo `CLAUDE.md` §2 — considerar
 arquivar rodadas mais antigas em sub-página numa próxima sessão com o Fabio no circuito (fora do
 escopo de uma coleta diária autônoma).
 
