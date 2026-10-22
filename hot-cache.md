@@ -1,6 +1,6 @@
 ---
 tipo: hot-cache
-atualizado: 2026-10-21
+atualizado: 2026-10-22
 janela_palavras: 302
 limite: 500
 ---
@@ -88,27 +88,31 @@ durante a rotina do relatório mensal.
 - Obsidian: Templates → `meta/templates/`; anexos → `raw/assets/`; instalar Dataview
 - Vigilância automática via `/schedule` — só faz sentido a partir de out/2027
 
-### 🚫 Coleta autônoma de preços — bloqueio de rede estrutural (confirmado 34x seguidas: 09-18 a 10-21, trinta e quatro dias corridos)
+### 🚫 Coleta autônoma de preços — bloqueio de rede estrutural (confirmado 35x seguidas: 09-18 a 10-22, trinta e cinco dias corridos)
 
 O `cacador-ofertas` roda em agendamento autônomo diário, mas **`WebFetch` e `curl` direto estão
 sistematicamente bloqueados** para qualquer domínio externo, não só sites de viagem — confirmado de
-novo em 10-21 (`curl` para kayak.com.br/skyscanner.com.br/example.com devolveu `CONNECT tunnel failed,
-response 403` nos três; `WebFetch` para KAYAK, `example.com` e Google Flights devolveu `getaddrinfo
-ENOTFOUND` nos três).
+novo em 10-22 (`curl` para example.com/kayak.com.br/skyscanner.com.br devolveu `CONNECT tunnel failed,
+response 403` nos três; `WebFetch` para `example.com` e KAYAK devolveu `getaddrinfo ENOTFOUND` nos dois).
+Detalhe novo de 10-22: o status do proxy (`$HTTPS_PROXY/__agentproxy/status`) classificou as três
+falhas como `connect_rejected`, "gateway answered 403 to CONNECT (policy denial or upstream failure)" —
+é negação de política para o destino específico, não falha genérica de DNS, mas o efeito prático
+(sem acesso a cotação real) é idêntico ao de todas as rodadas anteriores.
 O canal externo estável para abrir a issue de cada rodada continua sendo `gh api`/`gh issue create`
 (REST). Só `WebSearch` funciona, e devolve snippets agregados/cacheados de baixíssima confiança (sem
 data específica confirmada, 1 passageiro, sem bagagem) — **não serve para montar a linha de base real
 de ago–set/2027**.
-Achado de 10-21: TAP revelou tarifas de Paris-Orly (não CDG) por 1ª vez na série; flypass.ai mudou sua
-estimativa de setembro para CDG-GIG pela 3ª vez; novos tetos superiores nomeados (Air France GIG-CDG
-R$ 7.146, Voe Azul GIG-Paris R$ 9.563); nenhum preço novo com confiança suficiente abaixo do teto;
+Achado de 10-22: Air France nomeou o primeiro par de datas inteiramente dentro de ago-set (26/08–02/09)
+para GIG-FCO, novo teto superior R$ 7.855 (ano-base 2026, não ano-alvo); Momondo deu novo mínimo teaser
+para GIG-VCE (R$ 2.060); nenhum preço novo com confiança suficiente abaixo do teto de R$ 4.457/pax;
 nenhuma evidência de abertura de vendas para set/2028.
-**Decisão do Fabio pendente desde 09-20, agora com 34 rodadas seguidas (trinta e um dias corridos) sem
+**Decisão do Fabio pendente desde 09-20, agora com 35 rodadas seguidas (trinta e dois dias corridos) sem
 resposta:** (a) reduzir a frequência do agendamento, (b) montar alerta de tarifa nativo (Google
 Flights/KAYAK, fora deste agente), ou (c) pedir liberação de egress para sites de passagem
 especificamente. A reescalação direta mais recente foi em 10-17 (marco de um mês corrido); esta rodada
-(10-21) não repetiu a escalação, por falta de fato novo relevante desde a última, apenas registrou a espera.
-Detalhe completo em [[historico-de-precos]], nota de 2026-10-21.
+(10-22) não repetiu a escalação — o detalhe técnico do status do proxy confirma o mesmo bloqueio já
+conhecido, não é fato novo que justifique reescalar de novo isoladamente.
+Detalhe completo em [[historico-de-precos]], nota de 2026-10-22.
 
 **Pendência de manutenção (desde 10-14, ainda não resolvida):** [[historico-de-precos]] passou de 650
 linhas (agora bem acima de 800), acima do limite de ~400 linhas recomendado pelo `CLAUDE.md` §2 — considerar
