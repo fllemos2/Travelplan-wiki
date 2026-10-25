@@ -88,32 +88,30 @@ durante a rotina do relatório mensal.
 - Obsidian: Templates → `meta/templates/`; anexos → `raw/assets/`; instalar Dataview
 - Vigilância automática via `/schedule` — só faz sentido a partir de out/2027
 
-### 🚫 Coleta autônoma de preços — bloqueio de rede estrutural (confirmado 37x seguidas: 09-18 a 10-24, trinta e sete dias corridos)
+### 🚫 Coleta autônoma de preços — bloqueio de rede estrutural (confirmado 38x seguidas: 09-18 a 10-25, trinta e oito dias corridos)
 
 O `cacador-ofertas` roda em agendamento autônomo diário, mas **`WebFetch` e `curl` direto estão
 sistematicamente bloqueados** para qualquer domínio externo, não só sites de viagem — confirmado de
-novo em 10-24 (`curl` para example.com/kayak.com.br devolveu `CONNECT tunnel failed, response 403` em
-ambos, status do proxy classificou como `connect_rejected`/403; `WebFetch` para KAYAK devolveu
-`getaddrinfo ENOTFOUND`).
-**Mudança de canal desta rodada:** a CLI `gh` local reportou `GH_TOKEN` inválido via `gh auth status`
-(mesmo diagnóstico de rodadas anteriores desde 10-03); a issue desta rodada foi criada via servidor MCP
-do GitHub (`mcp__github__issue_write`), que respondeu normalmente (`get_me`, `get_label` confirmados) —
-canal equivalente, preferir MCP do GitHub nas próximas rodadas quando disponível. Só `WebSearch`
-funciona para preço, e devolve snippets agregados/cacheados de baixíssima confiança (sem data
-específica confirmada, 1 passageiro, sem bagagem) — **não serve para montar a linha de base real de
-ago–set/2027**.
-Achado de 10-24: a TAP nomeou, pela primeira vez na série, o par de datas 18/08–18/09/2026 inteiramente
-dentro da janela ago-set para VCE-GIG (1.101 EUR econômica) — ano-base 2026, não ano-alvo 2027; o Kayak
-classificou setembro como um dos meses mais caros para GIG-MXP (R$ 6.172), direção oposta ao achado de
-10-23 (Flypass.ai dizendo setembro barato para GIG-FCO); nenhum preço novo com confiança suficiente
+novo em 10-25 (`curl` para example.com/kayak.com.br devolveu `CONNECT tunnel failed, response 403` em
+ambos, status do proxy confirmou `"selective": false` e classificou como `connect_rejected`/403;
+`WebFetch` para KAYAK devolveu `getaddrinfo ENOTFOUND`).
+A CLI `gh` local continua reportando `GH_TOKEN` inválido via `gh auth status` (mesmo diagnóstico desde
+10-03); a issue desta rodada foi criada via servidor MCP do GitHub (`mcp__github__issue_write`), mesmo
+canal usado em 10-24. Só `WebSearch` funciona para preço, e devolve snippets agregados/cacheados de
+baixíssima confiança (sem data específica confirmada, 1 passageiro, sem bagagem) — **não serve para
+montar a linha de base real de ago–set/2027**.
+Achado de 10-25: a FlyTAP nomeou par de datas + preço executivo juntos para GIG-FCO (07/10–27/10/2026,
+R$ 4.573 econ./R$ 15.033 exec., ano-base 2026); a Air France deu o primeiro par de datas com ano-alvo
+2027 confirmado para CDG-GIG (19/02–07/03/2027, R$ 3.262) — mas fev-mar, fora da janela ago-set, mesmo
+padrão de todo achado com ano 2027 confirmado até agora; nenhum preço novo com confiança suficiente
 abaixo do teto de R$ 4.457/pax; nenhuma evidência de abertura de vendas para set/2028.
-**Decisão do Fabio pendente desde 09-20, agora com 37 rodadas seguidas (trinta e quatro dias corridos) sem
+**Decisão do Fabio pendente desde 09-20, agora com 38 rodadas seguidas (trinta e cinco dias corridos) sem
 resposta:** (a) reduzir a frequência do agendamento, (b) montar alerta de tarifa nativo (Google
 Flights/KAYAK, fora deste agente), ou (c) pedir liberação de egress para sites de passagem
 especificamente. A reescalação direta mais recente foi em 10-17 (marco de um mês corrido); esta rodada
-(10-24) não repetiu a escalação — sem fato novo relevante desde 10-23 que justifique reescalar de novo
+(10-25) não repetiu a escalação — sem fato novo relevante desde 10-24 que justifique reescalar de novo
 isoladamente.
-Detalhe completo em [[historico-de-precos]], nota de 2026-10-24.
+Detalhe completo em [[historico-de-precos]], nota de 2026-10-25.
 
 **Pendência de manutenção (desde 10-14, ainda não resolvida):** [[historico-de-precos]] passou de 650
 linhas (agora bem acima de 900), acima do limite de ~400 linhas recomendado pelo `CLAUDE.md` §2 — considerar
