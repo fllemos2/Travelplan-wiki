@@ -1,6 +1,6 @@
 ---
 tipo: hot-cache
-atualizado: 2026-10-27
+atualizado: 2026-10-28
 janela_palavras: 302
 limite: 500
 ---
@@ -88,34 +88,34 @@ durante a rotina do relatório mensal.
 - Obsidian: Templates → `meta/templates/`; anexos → `raw/assets/`; instalar Dataview
 - Vigilância automática via `/schedule` — só faz sentido a partir de out/2027
 
-### 🚫 Coleta autônoma de preços — bloqueio de rede estrutural (confirmado 40x seguidas: 09-18 a 10-27, quarenta dias corridos, seis semanas)
+### 🚫 Coleta autônoma de preços — bloqueio de rede estrutural (confirmado 41x seguidas: 09-18 a 10-28, quarenta e um dias corridos, seis semanas e um dia)
 
 O `cacador-ofertas` roda em agendamento autônomo diário, mas **`WebFetch` e `curl` direto estão
 sistematicamente bloqueados** para qualquer domínio externo, não só sites de viagem — confirmado de
-novo em 10-27 (`curl` para example.com/kayak.com.br/skyscanner.com.br devolveu `CONNECT tunnel failed,
+novo em 10-28 (`curl` para example.com/kayak.com.br/skyscanner.com.br devolveu `CONNECT tunnel failed,
 response 403` nos três, status do proxy confirmou `"selective": false` e classificou como
 `connect_rejected`/403; `WebFetch` para KAYAK com par de datas explícito devolveu `getaddrinfo ENOTFOUND`).
 A CLI `gh` local continua reportando `GH_TOKEN` inválido via `gh auth status` (mesmo diagnóstico desde
-10-03), mas `gh label create`/`gh issue create` seguiram funcionando normalmente nesta rodada. Só
+10-03), mas `gh label create`/`gh api` seguiram funcionando normalmente nesta rodada (usados em vez de
+`gh issue create`, que falhou numa rodada anterior por depender de GraphQL). Só
 `WebSearch` funciona para preço, e devolve snippets agregados/cacheados de baixíssima confiança (sem
 data específica confirmada, 1 passageiro, sem bagagem) — **não serve para montar a linha de base real
 de ago–set/2027**.
-Achado de 10-27: pela primeira vez na série, a Air France nomeou pares de datas inteiramente dentro da
-janela ago-set diretamente para as pernas CDG-GIG e GIG-VCE (não só GIG-FCO, como em 10-22) — ambos
-ano-base 2026, não ano-alvo 2027; o próprio Kayak se contradisse dentro do mesmo resumo para GIG-MXP
-(duas faixas típicas diferentes na mesma busca); nenhum preço novo com confiança suficiente abaixo do
-teto de R$ 4.457/pax; nenhuma evidência de abertura de vendas para set/2028.
-**Decisão do Fabio pendente desde 09-20, agora com 40 rodadas seguidas (trinta e sete dias corridos) sem
+Achado de 10-28: a ITA Airways reconfirmou o par mar/2027 para PAR-GIG (€903) — sétimo achado "ano
+certo, mês errado" da série; o Kayak repetiu a contradição interna já vista em 10-27 para GIG-MXP;
+nenhum preço novo com confiança suficiente abaixo do teto de R$ 4.457/pax; nenhuma evidência de
+abertura de vendas para set/2028.
+**Decisão do Fabio pendente desde 09-20, agora com 41 rodadas seguidas (trinta e oito dias corridos) sem
 resposta:** (a) reduzir a frequência do agendamento, (b) montar alerta de tarifa nativo (Google
 Flights/KAYAK, fora deste agente), ou (c) pedir liberação de egress para sites de passagem
-especificamente. A reescalação direta mais recente foi em 10-17 (marco de um mês corrido), doze dias
-atrás, seguida pela notificação push de 10-26 (um dia atrás); esta rodada (10-27) não repetiu a
-escalação em texto no histórico do cofre — sem fato novo relevante desde 10-26 que mude o diagnóstico
-estrutural —, apenas registra o marco de seis semanas corridas.
-Detalhe completo em [[historico-de-precos]], nota de 2026-10-27.
+especificamente. A reescalação direta mais recente foi em 10-17 (marco de um mês corrido), onze dias
+atrás, seguida pela notificação push de 10-26 (dois dias atrás); esta rodada (10-28) não repetiu a
+escalação em texto no histórico do cofre — sem fato novo relevante desde 10-27 que mude o diagnóstico
+estrutural.
+Detalhe completo em [[historico-de-precos]], nota de 2026-10-28.
 
 **Pendência de manutenção (desde 10-14, ainda não resolvida):** [[historico-de-precos]] passou de 650
-linhas (agora bem acima de 970), acima do limite de ~400 linhas recomendado pelo `CLAUDE.md` §2 — considerar
+linhas (agora bem acima de 990), acima do limite de ~400 linhas recomendado pelo `CLAUDE.md` §2 — considerar
 arquivar rodadas mais antigas em sub-página numa próxima sessão com o Fabio no circuito (fora do
 escopo de uma coleta diária autônoma).
 
