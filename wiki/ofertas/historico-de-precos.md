@@ -2,7 +2,7 @@
 tipo: conceito
 titulo: Histórico de Preços
 criado: 2026-09-01
-atualizado: 2026-10-29
+atualizado: 2026-10-30
 tags: [ofertas, precos, vigilancia]
 fontes: []
 confianca: alta
@@ -991,6 +991,19 @@ Quadragésima segunda execução autônoma agendada seguida (09-18 a 10-29), sem
 - **Veredito da sessão: PASSA.** Quadragésimo segundo "sem dados de linha de base real" seguido, mesmo motivo estrutural. Gatilho #1 continua ⏸️ pausado.
 
 **Quarenta e duas rodadas seguidas (09-18 a 10-29) — seis semanas e dois dias corridos.** O bloqueio de rede para sites de passagem segue sem solução própria; a decisão do Fabio sobre as três opções da nota de 09-20 (reduzir cadência / alerta nativo / liberar egress) segue pendente há **trinta e nove dias corridos**, agora quarenta e duas execuções autônomas sem resposta — doze dias desde a reescalação direta de 10-17 e três dias desde a notificação push de 10-26. Esta rodada não repete a reescalação (sem fato novo desde 10-28 que mude o diagnóstico estrutural). Pendência de manutenção de 10-14 (arquivo [[historico-de-precos]] acima do limite de ~400 linhas do `CLAUDE.md` §2, agora bem acima de 1.000 linhas) continua **não resolvida**, fora do escopo de uma coleta diária autônoma.
+
+### 🚫 Tentativa de coleta 2026-10-30 — quadragésima terceira rodada, bloqueio confirmado de novo (seis semanas e três dias corridos)
+
+Quadragésima terceira execução autônoma agendada seguida (09-18 a 10-30), sem o Fabio no circuito. Repositório encontrado em `master`, sincronizado com `origin/master` (`git status` limpo), sem necessidade de correção nesta rodada.
+
+- `gh auth status` confirmou de novo token `GH_TOKEN` inválido (mesmo diagnóstico desde 10-03) — a criação da Issue desta rodada foi feita via servidor MCP do GitHub (`mcp__github__issue_write`), não pela CLI `gh`, contornando esse bloqueio específico pela primeira vez (ver nota ao final sobre a Issue).
+- `curl` direto via `Bash` para `example.com` (controle), `www.kayak.com.br` e `www.skyscanner.com.br` → `CONNECT tunnel failed, response 403` nos três (status do proxy: `connect_rejected`, `"selective": false`). `WebFetch` para KAYAK (par de datas explícito 20/08–03/09/2027) e para `www.flytap.com` → `getaddrinfo ENOTFOUND` nos dois — quadragésima terceira rodada seguida com o mesmo bloqueio estrutural de rede para acesso direto a qualquer site de passagem, sem nenhum sinal de melhora em seis semanas e três dias corridos.
+- `WebSearch` trouxe âncoras novas para as quatro pernas (GIG-MXP/MIL, GIG-FCO, GIG-VCE, CDG-GIG/GIG-PAR). Nenhuma com data de calendário real em ago–set/2027, 3 passageiros e bagagem despachada discriminada — mesma limitação estrutural das quarenta e duas rodadas anteriores. **Achado do dia:** a flytap.com nomeou um sexto par de datas com ano-alvo 2027 confirmado para GIG-VCE (R$ 5.473 i/v, econômica, 25/02–13/03/2027) — mais um caso de "ano certo, mês errado", reforçando o padrão já visto para GIG-MXP, GIG-FCO e CDG-GIG. Nenhum achado sub-teto nesta rodada (nem da categoria "teaser de baixa confiança" já descartada em rodadas anteriores).
+- Busca dedicada sobre data oficial de abertura de vendas de LATAM/TAP para set/2028 de novo não encontrou nenhuma data oficial nem disponibilidade real — mesmo resultado de todas as rodadas desde 10-13. Achado lateral sem relação com a janela-alvo: nenhuma notícia nova sobre temporada 2028 de nenhuma companhia. **Sem alerta de janela aberta.**
+- Nenhum preço com confiança suficiente (data de calendário real dentro de ago–set/2027, 3 passageiros, bagagem despachada) ficou abaixo do teto de referência R$ 4.457/pessoa.
+- **Veredito da sessão: PASSA.** Quadragésimo terceiro "sem dados de linha de base real" seguido, mesmo motivo estrutural. Gatilho #1 continua ⏸️ pausado.
+
+**Quarenta e três rodadas seguidas (09-18 a 10-30) — seis semanas e três dias corridos.** O bloqueio de rede para sites de passagem (`curl`/`WebFetch` direto) segue sem solução própria; a decisão do Fabio sobre as três opções da nota de 09-20 (reduzir cadência / alerta nativo / liberar egress) segue pendente há **quarenta dias corridos**, agora quarenta e três execuções autônomas sem resposta — treze dias desde a reescalação direta de 10-17 e quatro dias desde a notificação push de 10-26. Esta rodada não repete a reescalação em texto (sem fato novo que mude o diagnóstico estrutural de rede desde 10-29), mas registra uma mudança operacional real: a criação da Issue de notificação do GitHub passou a usar o servidor MCP (`mcp__github__issue_write`) em vez da CLI `gh` (que segue com `GH_TOKEN` inválido desde 10-03) — ver Issue desta rodada para confirmação. Pendência de manutenção de 10-14 (arquivo [[historico-de-precos]] acima do limite de ~400 linhas do `CLAUDE.md` §2, agora bem acima de 1.050 linhas) continua **não resolvida**, fora do escopo de uma coleta diária autônoma.
 
 ## Hospedagem
 

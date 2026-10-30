@@ -1,6 +1,6 @@
 ---
 tipo: hot-cache
-atualizado: 2026-10-29
+atualizado: 2026-10-30
 janela_palavras: 302
 limite: 500
 ---
@@ -88,35 +88,35 @@ durante a rotina do relatório mensal.
 - Obsidian: Templates → `meta/templates/`; anexos → `raw/assets/`; instalar Dataview
 - Vigilância automática via `/schedule` — só faz sentido a partir de out/2027
 
-### 🚫 Coleta autônoma de preços — bloqueio de rede estrutural (confirmado 42x seguidas: 09-18 a 10-29, trinta e nove dias corridos, seis semanas e dois dias)
+### 🚫 Coleta autônoma de preços — bloqueio de rede estrutural (confirmado 43x seguidas: 09-18 a 10-30, quarenta dias corridos, seis semanas e três dias)
 
 O `cacador-ofertas` roda em agendamento autônomo diário, mas **`WebFetch` e `curl` direto estão
 sistematicamente bloqueados** para qualquer domínio externo, não só sites de viagem — confirmado de
-novo em 10-29 (`curl` para example.com/kayak.com.br/skyscanner.com.br devolveu `CONNECT tunnel failed,
+novo em 10-30 (`curl` para example.com/kayak.com.br/skyscanner.com.br devolveu `CONNECT tunnel failed,
 response 403` nos três, status do proxy confirmou `"selective": false` e classificou como
-`connect_rejected`/403; `WebFetch` para KAYAK com par de datas explícito devolveu `getaddrinfo ENOTFOUND`).
-A CLI `gh` local continua reportando `GH_TOKEN` inválido via `gh auth status` (mesmo diagnóstico desde
-10-03), mas `gh label create`/`gh api` seguem funcionando normalmente. Só
-`WebSearch` funciona para preço, e devolve snippets agregados/cacheados de baixíssima confiança (sem
-data específica confirmada, 1 passageiro, sem bagagem) — **não serve para montar a linha de base real
-de ago–set/2027**.
-Achado de 10-29: o par FCO-GIG jul/2027 (ano-alvo já confirmado) mudou de valor pela terceira vez
-(1.081→1.112 EUR) — a instabilidade do índice atinge até pares com data correta, não só estimativas
-agregadas; Momondo deu teaser sub-teto para GIG-VCE (R$ 3.828, 1 pax, ano-base 2026, não promovido);
-nenhum preço com confiança suficiente abaixo do teto de R$ 4.457/pax; nenhuma evidência de abertura de
-vendas para set/2028. Quarta ocorrência de `HEAD` detached ao abrir a sessão (10-24, 10-25, 10-26,
-10-29), sempre corrigida sem perda de trabalho via `git fetch` + `merge --ff-only`.
-**Decisão do Fabio pendente desde 09-20, agora com 42 rodadas seguidas (trinta e nove dias corridos) sem
+`connect_rejected`/403; `WebFetch` para KAYAK com par de datas explícito e para flytap.com devolveu
+`getaddrinfo ENOTFOUND` nos dois). A CLI `gh` local continua reportando `GH_TOKEN` inválido via `gh
+auth status` (mesmo diagnóstico desde 10-03). **Novidade de 10-30:** a criação da Issue de notificação
+passou a usar o servidor MCP do GitHub (`mcp__github__issue_write`, autenticado com sucesso via
+`mcp__github__get_me` como `fllemos2`) em vez da CLI `gh` — contorna o bloqueio da CLI de forma mais
+direta que o workaround via `gh api` usado em 10-27/10-28/10-29. Só `WebSearch` funciona para preço, e
+devolve snippets agregados/cacheados de baixíssima confiança (sem data específica confirmada, 1
+passageiro, sem bagagem) — **não serve para montar a linha de base real de ago–set/2027**.
+Achado de 10-30: flytap.com nomeou um sexto par de datas com ano-alvo 2027 confirmado para GIG-VCE (R$
+5.473 i/v, econômica, 25/02–13/03/2027) — mais um caso de "ano certo, mês errado"; nenhum preço com
+confiança suficiente abaixo do teto de R$ 4.457/pax; nenhuma evidência de abertura de vendas para
+set/2028.
+**Decisão do Fabio pendente desde 09-20, agora com 43 rodadas seguidas (quarenta dias corridos) sem
 resposta:** (a) reduzir a frequência do agendamento, (b) montar alerta de tarifa nativo (Google
 Flights/KAYAK, fora deste agente), ou (c) pedir liberação de egress para sites de passagem
-especificamente. A reescalação direta mais recente foi em 10-17 (marco de um mês corrido), doze dias
-atrás, seguida pela notificação push de 10-26 (três dias atrás); esta rodada (10-29) não repetiu a
-escalação em texto no histórico do cofre — sem fato novo relevante desde 10-28 que mude o diagnóstico
+especificamente. A reescalação direta mais recente foi em 10-17 (marco de um mês corrido), treze dias
+atrás, seguida pela notificação push de 10-26 (quatro dias atrás); esta rodada (10-30) não repetiu a
+escalação em texto no histórico do cofre — sem fato novo relevante desde 10-29 que mude o diagnóstico
 estrutural.
-Detalhe completo em [[historico-de-precos]], nota de 2026-10-29.
+Detalhe completo em [[historico-de-precos]], nota de 2026-10-30.
 
 **Pendência de manutenção (desde 10-14, ainda não resolvida):** [[historico-de-precos]] passou de 650
-linhas (agora bem acima de 1.000), acima do limite de ~400 linhas recomendado pelo `CLAUDE.md` §2 — considerar
+linhas (agora bem acima de 1.050), acima do limite de ~400 linhas recomendado pelo `CLAUDE.md` §2 — considerar
 arquivar rodadas mais antigas em sub-página numa próxima sessão com o Fabio no circuito (fora do
 escopo de uma coleta diária autônoma).
 
