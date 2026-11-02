@@ -1,6 +1,6 @@
 ---
 tipo: hot-cache
-atualizado: 2026-11-01
+atualizado: 2026-11-02
 janela_palavras: 302
 limite: 500
 ---
@@ -88,38 +88,40 @@ durante a rotina do relatório mensal.
 - Obsidian: Templates → `meta/templates/`; anexos → `raw/assets/`; instalar Dataview
 - Vigilância automática via `/schedule` — só faz sentido a partir de out/2027
 
-### 🚫 Coleta autônoma de preços — bloqueio de rede estrutural (confirmado 45x seguidas: 09-18 a 11-01, quarenta e quatro dias corridos, seis semanas e dois dias)
+### 🚫 Coleta autônoma de preços — bloqueio de rede estrutural (confirmado 46x seguidas: 09-18 a 11-02, quarenta e cinco dias corridos, seis semanas e cinco dias)
 
 O `cacador-ofertas` roda em agendamento autônomo diário, mas **`WebFetch` e `curl` direto estão
 sistematicamente bloqueados** para qualquer domínio externo, não só sites de viagem — confirmado de
-novo em 11-01 (`curl` para `www.kayak.com.br`/`example.com`/`www.google.com` devolveu `CONNECT tunnel
-failed, response 403` nos três, status do proxy confirmou `"selective": false`/`connect_rejected`;
-`WebFetch` tentado na ordem de prioridade pedida — Kayak, Kiwi.com, Skyscanner, Google Flights e
-`flytap.com` — devolveu `getaddrinfo ENOTFOUND` nos cinco). A CLI `gh` local continua reportando
-`GH_TOKEN` inválido via `gh auth status` (mesmo diagnóstico desde 10-03), **mas `gh api` (REST) funciona
-normalmente** mesmo assim (confirmado lendo issues e criando a Issue #45 via
-`gh api .../issues -X POST --input payload.json`) — a falha de `gh auth status` não bloqueia tudo, só
-alguns fluxos (provável GraphQL). O servidor MCP do GitHub usado em 10-30/10-31 **não estava disponível
-no toolset desta sessão**; o canal usado foi `gh api` REST direto. Só `WebSearch` funciona para preço,
-e devolve snippets agregados/cacheados de baixíssima confiança (sem data específica confirmada, 1
+novo em 11-02 (`curl` para `www.kayak.com.br`/`example.com` devolveu `CONNECT tunnel failed, response
+403` nos dois, status do proxy confirmou `"selective": false`/`connect_rejected`; `WebFetch` tentado na
+ordem de prioridade pedida — Kayak, Kiwi.com, Skyscanner e Google Flights — devolveu `getaddrinfo
+ENOTFOUND` nos quatro). A CLI `gh` local continua reportando `GH_TOKEN` inválido via `gh auth status`
+(mesmo diagnóstico desde 10-03), **mas `gh api` (REST) funciona normalmente** mesmo assim (confirmado
+lendo labels). O servidor MCP do GitHub **estava disponível nesta sessão** e foi usado para criar a
+Issue #46 via `mcp__github__issue_write` — primeira vez desde 10-31 que o canal MCP volta a estar
+acessível (alterna com `gh api` REST dependendo da sessão). Só `WebSearch` funciona para preço, e
+devolve snippets agregados/cacheados de baixíssima confiança (sem data específica confirmada, 1
 passageiro, sem bagagem) — **não serve para montar a linha de base real de ago–set/2027**.
-Achado de 11-01: nenhuma âncora materialmente nova — os valores (TAP GIG-FCO jul/2027 1.081 EUR,
-flytap.com "Itália" R$ 4.604, Trip.com CDG-GIG €843) repetem o índice já cacheado de 10-25/10-26/10-31,
-palavra por palavra na faixa de valor. Nenhum preço com confiança suficiente abaixo do teto de
-R$ 4.457/pax; nenhuma evidência de abertura de vendas para set/2028.
-**Achado operacional de 11-01:** sessão iniciou em `HEAD` *detached* no commit da 44ª coleta (`a5ad509`,
-10-31), que já estava em `origin/master` mas cujo ponteiro local de `master` não tinha avançado —
-corrigido com `git merge --ff-only`, sem perda de trabalho (mesmo padrão de 10-16/10-17).
-**Decisão do Fabio pendente desde 09-20, agora com 45 rodadas seguidas (quarenta e dois dias corridos) sem
+Achado de 11-02: nenhuma âncora materialmente nova — flytap.com repetiu a faixa "Itália" com variação
+de R$ 3 (R$ 4.604 → R$ 4.607, mesmo índice cacheado); Kayak citou R$ 5.178 i/v para GIG–PAR via
+Avianca, sem data de calendário. Nenhum preço com confiança suficiente abaixo do teto de R$ 4.457/pax;
+nenhuma evidência de abertura de vendas para set/2028 (único achado lateral foi a política de
+*remarcação* da LATAM — 330 dias para remarcar uma passagem já comprada —, não confundir com abertura
+de vendas).
+**Achado operacional de 11-02:** sessão iniciou em `HEAD` *detached* no commit da 45ª coleta (`fad361e`,
+11-01), que já estava em `origin/master` mas cujo ponteiro local de `master` não tinha avançado —
+corrigido com `git merge --ff-only`, sem perda de trabalho (sexta ocorrência do mesmo padrão:
+10-16/10-17/10-24/10-25/10-26/11-01/agora 11-02).
+**Decisão do Fabio pendente desde 09-20, agora com 46 rodadas seguidas (quarenta e três dias corridos) sem
 resposta:** (a) reduzir a frequência do agendamento, (b) montar alerta de tarifa nativo (Google
 Flights/KAYAK, fora deste agente), ou (c) pedir liberação de egress para sites de passagem
 especificamente. A reescalação direta mais recente continua sendo a de 10-17 (marco de um mês corrido),
-seguida pela notificação push de 10-26; esta rodada (11-01) não repetiu a escalação em texto no
-histórico do cofre — sem fato novo relevante desde 10-31 que mude o diagnóstico estrutural.
-Detalhe completo em [[historico-de-precos]], nota de 2026-11-01.
+seguida pela notificação push de 10-26; esta rodada (11-02) não repetiu a escalação em texto no
+histórico do cofre — sem fato novo relevante desde 11-01 que mude o diagnóstico estrutural.
+Detalhe completo em [[historico-de-precos]], nota de 2026-11-02.
 
 **Pendência de manutenção (desde 10-14, ainda não resolvida):** [[historico-de-precos]] passou de 650
-linhas (agora bem acima de 1.080), acima do limite de ~400 linhas recomendado pelo `CLAUDE.md` §2 — considerar
+linhas (agora bem acima de 1.090), acima do limite de ~400 linhas recomendado pelo `CLAUDE.md` §2 — considerar
 arquivar rodadas mais antigas em sub-página numa próxima sessão com o Fabio no circuito (fora do
 escopo de uma coleta diária autônoma).
 
