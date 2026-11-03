@@ -1,6 +1,6 @@
 ---
 tipo: hot-cache
-atualizado: 2026-11-02
+atualizado: 2026-11-03
 janela_palavras: 302
 limite: 500
 ---
@@ -88,40 +88,44 @@ durante a rotina do relatório mensal.
 - Obsidian: Templates → `meta/templates/`; anexos → `raw/assets/`; instalar Dataview
 - Vigilância automática via `/schedule` — só faz sentido a partir de out/2027
 
-### 🚫 Coleta autônoma de preços — bloqueio de rede estrutural (confirmado 46x seguidas: 09-18 a 11-02, quarenta e cinco dias corridos, seis semanas e cinco dias)
+### 🚫 Coleta autônoma de preços — bloqueio de rede estrutural (confirmado 47x seguidas: 09-18 a 11-03, quarenta e seis dias corridos, seis semanas e seis dias)
 
 O `cacador-ofertas` roda em agendamento autônomo diário, mas **`WebFetch` e `curl` direto estão
 sistematicamente bloqueados** para qualquer domínio externo, não só sites de viagem — confirmado de
-novo em 11-02 (`curl` para `www.kayak.com.br`/`example.com` devolveu `CONNECT tunnel failed, response
-403` nos dois, status do proxy confirmou `"selective": false`/`connect_rejected`; `WebFetch` tentado na
-ordem de prioridade pedida — Kayak, Kiwi.com, Skyscanner e Google Flights — devolveu `getaddrinfo
-ENOTFOUND` nos quatro). A CLI `gh` local continua reportando `GH_TOKEN` inválido via `gh auth status`
-(mesmo diagnóstico desde 10-03), **mas `gh api` (REST) funciona normalmente** mesmo assim (confirmado
-lendo labels). O servidor MCP do GitHub **estava disponível nesta sessão** e foi usado para criar a
-Issue #46 via `mcp__github__issue_write` — primeira vez desde 10-31 que o canal MCP volta a estar
-acessível (alterna com `gh api` REST dependendo da sessão). Só `WebSearch` funciona para preço, e
-devolve snippets agregados/cacheados de baixíssima confiança (sem data específica confirmada, 1
-passageiro, sem bagagem) — **não serve para montar a linha de base real de ago–set/2027**.
-Achado de 11-02: nenhuma âncora materialmente nova — flytap.com repetiu a faixa "Itália" com variação
-de R$ 3 (R$ 4.604 → R$ 4.607, mesmo índice cacheado); Kayak citou R$ 5.178 i/v para GIG–PAR via
-Avianca, sem data de calendário. Nenhum preço com confiança suficiente abaixo do teto de R$ 4.457/pax;
-nenhuma evidência de abertura de vendas para set/2028 (único achado lateral foi a política de
-*remarcação* da LATAM — 330 dias para remarcar uma passagem já comprada —, não confundir com abertura
-de vendas).
-**Achado operacional de 11-02:** sessão iniciou em `HEAD` *detached* no commit da 45ª coleta (`fad361e`,
-11-01), que já estava em `origin/master` mas cujo ponteiro local de `master` não tinha avançado —
-corrigido com `git merge --ff-only`, sem perda de trabalho (sexta ocorrência do mesmo padrão:
-10-16/10-17/10-24/10-25/10-26/11-01/agora 11-02).
-**Decisão do Fabio pendente desde 09-20, agora com 46 rodadas seguidas (quarenta e três dias corridos) sem
+novo em 11-03 (`curl` para `example.com`/`www.kayak.com.br`/`www.kiwi.com` devolveu `CONNECT tunnel
+failed, response 403` nos três, status do proxy confirmou `"selective": false`/`connect_rejected`;
+`WebFetch` para Kayak devolveu `getaddrinfo ENOTFOUND`). **Diagnóstico refinado em 11-03:** `gh auth
+status` e `gh label list` falham com `HTTP 403: GitHub GraphQL is not available from Claude Code
+sessions; use the REST API` — não é credencial inválida (apesar do diagnóstico antigo desde 10-03), é
+bloqueio deliberado do ambiente CCR a chamadas GraphQL da CLI `gh`; `gh api` (REST) continua funcionando
+normalmente (confirmado lendo labels). Só `WebSearch` funciona para preço, e devolve snippets
+agregados/cacheados de baixíssima confiança (sem data específica confirmada, 1 passageiro, sem
+bagagem) — **não serve para montar a linha de base real de ago–set/2027**.
+Achado de 11-03: nenhuma âncora materialmente nova — os mesmos valores cacheados de rodadas entre
+10-26 e 11-02 se repetiram ponto a ponto (TAP GIG-FCO 1.081 EUR jul/2027, TAP GIG-VCE R$ 5.473
+fev-mar/2027, Kayak CDG-GIG/GIG-PAR teaser R$ 5.178 i/v). Nenhum preço com confiança suficiente abaixo
+do teto de R$ 4.457/pax; nenhuma evidência de abertura de vendas para set/2028 (único achado lateral
+foi notícia de 2025 sobre o codeshare LATAM-TAP, sem relação com 2028).
+**Achado operacional de 11-03 (novo, importante):** sessão iniciou em `HEAD` *detached* no commit da
+46ª coleta (`838cab3`, 11-02) — oitava ocorrência do padrão de ponteiro de `master` desatualizado
+(10-16/10-17/10-24/10-25/10-26/11-01/11-02/agora 11-03), corrigido com `git merge --ff-only`. Mas
+desta vez `git log origin/master` **antes** de um `git fetch` mostrou uma ref desatualizada (três
+commits atrás, na 43ª coleta) — por um instante pareceu que as coletas 44ª-46ª nunca tinham sido
+enviadas ao remoto. Um `git fetch origin master` explícito resolveu a ref corretamente e confirmou
+**nenhum trabalho perdido**. **Lição para as próximas rodadas: sempre rodar `git fetch origin master`
+antes de confiar em `git log origin/master` para diagnosticar o estado do remoto** — a ref local pode
+estar desatualizada mesmo sem HEAD detached.
+**Decisão do Fabio pendente desde 09-20, agora com 47 rodadas seguidas (quarenta e quatro dias corridos) sem
 resposta:** (a) reduzir a frequência do agendamento, (b) montar alerta de tarifa nativo (Google
 Flights/KAYAK, fora deste agente), ou (c) pedir liberação de egress para sites de passagem
 especificamente. A reescalação direta mais recente continua sendo a de 10-17 (marco de um mês corrido),
-seguida pela notificação push de 10-26; esta rodada (11-02) não repetiu a escalação em texto no
-histórico do cofre — sem fato novo relevante desde 11-01 que mude o diagnóstico estrutural.
-Detalhe completo em [[historico-de-precos]], nota de 2026-11-02.
+seguida pela notificação push de 10-26; esta rodada (11-03) não repetiu a escalação em texto no
+histórico do cofre sobre o bloqueio de rede em si — sem fato novo relevante desde 11-02 que mude o
+diagnóstico estrutural (o achado novo é operacional/git, não de rede).
+Detalhe completo em [[historico-de-precos]], nota de 2026-11-03.
 
 **Pendência de manutenção (desde 10-14, ainda não resolvida):** [[historico-de-precos]] passou de 650
-linhas (agora bem acima de 1.090), acima do limite de ~400 linhas recomendado pelo `CLAUDE.md` §2 — considerar
+linhas (agora bem acima de 1.100), acima do limite de ~400 linhas recomendado pelo `CLAUDE.md` §2 — considerar
 arquivar rodadas mais antigas em sub-página numa próxima sessão com o Fabio no circuito (fora do
 escopo de uma coleta diária autônoma).
 
