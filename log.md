@@ -933,4 +933,4 @@ isso — só o extrato dele.
 - Atualizadas: [[historico-de-precos]] (nova seção narrativa "quadragésima nona rodada" + resumo "quarenta e nove rodadas" + frontmatter `atualizado: 2026-11-05`); `log.md` (esta entrada); `hot-cache.md` (bloco de bloqueio de rede atualizado).
 - Veredito: **PASSA** — mesmo motivo estrutural das quarenta e oito rodadas anteriores. Gatilho #1 continua ⏸️ pausado. Caso A (sem-dados).
 - Pendente: decisão do Fabio sobre as três opções da nota de 09-20 (reduzir cadência / alerta nativo / liberar egress) completa quarenta e seis dias corridos sem resposta — dezenove dias desde a reescalação de 10-17 e dez dias desde a notificação push de 10-26. Pendência de manutenção ([[historico-de-precos]] acima do limite de ~400 linhas do `CLAUDE.md` §2, agora bem acima de 1.150 linhas) continua não resolvida, fora do escopo de uma coleta diária autônoma.
-- Issue GitHub criada via `mcp__github__issue_write`, caso A (sem-dados): [AGUARDANDO URL]
+- Issue GitHub criada via `mcp__github__issue_write`, caso A (sem-dados): https://github.com/fllemos2/Travelplan-wiki/issues/49
