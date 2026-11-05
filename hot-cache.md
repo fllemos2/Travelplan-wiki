@@ -1,6 +1,6 @@
 ---
 tipo: hot-cache
-atualizado: 2026-11-03
+atualizado: 2026-11-05
 janela_palavras: 302
 limite: 500
 ---
@@ -88,37 +88,34 @@ durante a rotina do relatório mensal.
 - Obsidian: Templates → `meta/templates/`; anexos → `raw/assets/`; instalar Dataview
 - Vigilância automática via `/schedule` — só faz sentido a partir de out/2027
 
-### 🚫 Coleta autônoma de preços — bloqueio de rede estrutural (confirmado 48x seguidas: 09-18 a 11-04, quarenta e sete dias corridos, seis semanas e seis dias)
+### 🚫 Coleta autônoma de preços — bloqueio de rede estrutural (confirmado 49x seguidas: 09-18 a 11-05, quarenta e oito dias corridos, sete semanas)
 
 O `cacador-ofertas` roda em agendamento autônomo diário, mas **`WebFetch` e `curl` direto estão
 sistematicamente bloqueados** para qualquer domínio externo, não só sites de viagem — confirmado de
-novo em 11-04 (`curl` para `example.com`/`www.kayak.com.br`/`www.kiwi.com` devolveu `CONNECT tunnel
-failed, response 403` nos três, status do proxy confirmou `"selective": false`). `gh auth status`/`gh
-label list` falharam de novo com `HTTP 403: GitHub GraphQL is not available...` (mesmo diagnóstico
-refinado em 11-03: bloqueio deliberado do ambiente CCR a GraphQL via CLI `gh`, não credencial inválida);
-`gh api` (REST) continua funcionando normalmente. Só `WebSearch` funciona para preço, e devolve snippets
-agregados/cacheados de baixíssima confiança (sem data específica confirmada, 1 passageiro, sem
-bagagem) — **não serve para montar a linha de base real de ago–set/2027**.
-Achado de 11-04: Air France nomeou, pela primeira vez nesta série, par de datas explícito para
-**CDG-GIG** dentro do mês certo (17-23/08 e 27/08-24/09, a partir de €760/€816 i/v), mas no ano-base
-2026, não no ano-alvo 2027 — mesmo padrão "mês certo, ano errado" já visto em rodadas anteriores para
-outras rotas. Nenhum preço com confiança suficiente abaixo do teto de R$ 4.457/pax; nenhuma evidência
-de abertura de vendas para set/2028 (único achado lateral foi promoção da Air Europa com janela de
-viagem em 2026).
-Rotina operacional desta rodada: sessão iniciou em `HEAD` *detached* no commit da 47ª coleta
-(`4dd910e`, 11-03) — nona ocorrência do padrão de ponteiro de `master` desatualizado. Seguida a lição
-da rodada anterior: `git fetch origin master` antes de `git checkout master && git merge --ff-only
-origin/master` — fast-forward limpo de 5 commits, **nenhum trabalho perdido**.
-**Decisão do Fabio pendente desde 09-20, agora com 48 rodadas seguidas (quarenta e cinco dias corridos) sem
+novo em 11-05 (`curl` para `example.com`/`www.kayak.com.br` devolveu `CONNECT tunnel failed, response
+403` nos dois, status do proxy confirmou `"selective": false`; `WebFetch` para KAYAK com par de datas
+explícito → `getaddrinfo ENOTFOUND`). `gh auth status` falhou com token `GH_TOKEN` inválido; `gh api`
+(REST) continua funcionando normalmente e confirmou os quatro labels já existentes. Só `WebSearch`
+funciona para preço, e devolve snippets agregados/cacheados de baixíssima confiança (sem data
+específica confirmada, 1 passageiro, sem bagagem) — **não serve para montar a linha de base real de
+ago–set/2027**.
+Rodada de 11-05 sem achado novo: os valores retornados repetem, ponto a ponto, o mesmo índice cacheado
+de rodadas anteriores. Nenhum par de data real em ago-set/2027 apareceu; nenhuma evidência de abertura
+de vendas para set/2028.
+Rotina operacional desta rodada: sessão iniciou em `HEAD` *detached* no commit da 48ª coleta
+(`3330084`, 11-04) — décima ocorrência do padrão de ponteiro de `master` desatualizado. `git fetch
+origin master` antes de `git checkout master && git merge --ff-only origin/master` — fast-forward
+limpo de 6 commits, **nenhum trabalho perdido**.
+**Decisão do Fabio pendente desde 09-20, agora com 49 rodadas seguidas (quarenta e seis dias corridos) sem
 resposta:** (a) reduzir a frequência do agendamento, (b) montar alerta de tarifa nativo (Google
 Flights/KAYAK, fora deste agente), ou (c) pedir liberação de egress para sites de passagem
-especificamente. A reescalação direta mais recente continua sendo a de 10-17 (dezoito dias corridos),
-seguida pela notificação push de 10-26 (nove dias corridos); esta rodada (11-04) não repetiu a
-escalação em texto — sem fato novo que mude o diagnóstico estrutural de rede desde 11-03.
-Detalhe completo em [[historico-de-precos]], nota de 2026-11-04.
+especificamente. A reescalação direta mais recente continua sendo a de 10-17 (dezenove dias corridos),
+seguida pela notificação push de 10-26 (dez dias corridos); esta rodada (11-05) não repetiu a
+escalação em texto — sem fato novo que mude o diagnóstico estrutural de rede desde 11-04.
+Detalhe completo em [[historico-de-precos]], nota de 2026-11-05.
 
 **Pendência de manutenção (desde 10-14, ainda não resolvida):** [[historico-de-precos]] passou de 650
-linhas (agora bem acima de 1.140), acima do limite de ~400 linhas recomendado pelo `CLAUDE.md` §2 — considerar
+linhas (agora bem acima de 1.150), acima do limite de ~400 linhas recomendado pelo `CLAUDE.md` §2 — considerar
 arquivar rodadas mais antigas em sub-página numa próxima sessão com o Fabio no circuito (fora do
 escopo de uma coleta diária autônoma).
 

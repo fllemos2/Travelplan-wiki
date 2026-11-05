@@ -2,7 +2,7 @@
 tipo: conceito
 titulo: Histórico de Preços
 criado: 2026-09-01
-atualizado: 2026-11-04
+atualizado: 2026-11-05
 tags: [ofertas, precos, vigilancia]
 fontes: []
 confianca: alta
@@ -1094,6 +1094,18 @@ Quadragésima oitava execução autônoma agendada seguida (09-18 a 11-04), sem 
 - **Veredito da sessão: PASSA.** Quadragésimo oitavo "sem dados de linha de base real" seguido, mesmo motivo estrutural. Gatilho #1 continua ⏸️ pausado.
 
 **Quarenta e oito rodadas seguidas (09-18 a 11-04) — quarenta e sete dias corridos.** O bloqueio de rede para sites de passagem (`curl`/`WebFetch` direto) segue sem solução própria; a decisão do Fabio sobre as três opções da nota de 09-20 (reduzir cadência / alerta nativo / liberar egress) segue pendente há **quarenta e cinco dias corridos**, agora quarenta e oito execuções autônomas sem resposta — dezoito dias desde a reescalação direta de 10-17 e nove dias desde a notificação push de 10-26. Esta rodada não repete a reescalação em texto (sem fato novo sobre o bloqueio de rede em si desde 11-03). Pendência de manutenção de 10-14 (arquivo [[historico-de-precos]] acima do limite de ~400 linhas do `CLAUDE.md` §2, agora bem acima de 1.140 linhas) continua **não resolvida**, fora do escopo de uma coleta diária autônoma.
+
+### 🚫 Tentativa de coleta 2026-11-05 — quadragésima nona rodada, bloqueio confirmado de novo (quarenta e oito dias corridos desde 09-18)
+
+Quadragésima nona execução autônoma agendada seguida (09-18 a 11-05), sem o Fabio no circuito. Repositório encontrado de novo em `HEAD` *detached*, apontando para o commit da 48ª coleta (`3330084`, 11-04) — décima ocorrência desse mesmo padrão. Corrigido com `git fetch origin master` seguido de `git checkout master && git merge --ff-only origin/master`; `origin/master` estava 6 commits adiante do ponteiro local, fast-forward limpo, **nenhum trabalho perdido**.
+
+- Status do proxy (`$HTTPS_PROXY/__agentproxy/status`) confirmou de novo `"selective": false`. `curl` direto via `Bash` para `example.com` (controle) e `www.kayak.com.br` → `CONNECT tunnel failed, response 403` nos dois. `WebFetch` para KAYAK (par de datas explícito 20/08–03/09/2027, 3 pax) → `getaddrinfo ENOTFOUND`. `gh auth status` falhou com token `GH_TOKEN` inválido (diagnóstico antigo); `gh api repos/fllemos2/Travelplan-wiki/labels` (REST) funcionou normalmente e confirmou que os quatro labels já existiam. Quadragésima nona rodada seguida com o mesmo bloqueio estrutural de rede para acesso direto a qualquer site de passagem, sem nenhum sinal de melhora em quarenta e oito dias corridos.
+- `WebSearch` funcionou para as três pernas pesquisadas (GIG-MXP, CDG-GIG/GIG-PAR, GIG-FCO/GIG-VCE) mais a busca dedicada de set/2028. Nenhum achado novo: os valores retornados (FlyTAP GIG-MXP 4.607 BRL / 769 EUR, FlyTAP CDG-GIG via França 600–871 EUR em datas variadas sem ano confirmado, FlyTAP GIG-FCO 878–882 EUR fev-mar/jul 2027, FlyTAP GIG-VCE 772 EUR/5.473 BRL fev-mar 2027, Air France GIG-VCE 4.634 BRL) repetem, ponto a ponto, o mesmo índice cacheado já registrado em rodadas anteriores. Nenhum par de data real dentro de ago-set/2027 apareceu, com 3 passageiros e bagagem despachada discriminada.
+- Busca dedicada sobre abertura de vendas de LATAM/TAP para set/2028 de novo não encontrou data oficial nem disponibilidade real de voo para aquele mês — mesmo resultado de todas as rodadas desde 10-13. Único achado lateral, sem relação com a janela-alvo: notícia de 2024/2025 sobre a expansão do codeshare LATAM-TAP e sobre a nova rota TAP Lisboa–Curitiba (vendas abertas para voo de 2026), nada sobre set/2028. **Sem alerta de janela aberta.**
+- Nenhum preço com confiança suficiente (data de calendário real dentro de ago–set/2027, 3 passageiros, bagagem despachada) ficou abaixo do teto de referência R$ 4.457/pessoa nesta rodada.
+- **Veredito da sessão: PASSA.** Quadragésimo nono "sem dados de linha de base real" seguido, mesmo motivo estrutural. Gatilho #1 continua ⏸️ pausado.
+
+**Quarenta e nove rodadas seguidas (09-18 a 11-05) — quarenta e oito dias corridos.** O bloqueio de rede para sites de passagem (`curl`/`WebFetch` direto) segue sem solução própria; a decisão do Fabio sobre as três opções da nota de 09-20 (reduzir cadência / alerta nativo / liberar egress) segue pendente há **quarenta e seis dias corridos**, agora quarenta e nove execuções autônomas sem resposta. Pendência de manutenção de 10-14 (arquivo [[historico-de-precos]] acima do limite de ~400 linhas do `CLAUDE.md` §2, agora bem acima de 1.150 linhas) continua **não resolvida**, fora do escopo de uma coleta diária autônoma.
 
 ## Hospedagem
 
