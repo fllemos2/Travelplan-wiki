@@ -1,6 +1,6 @@
 ---
 tipo: hot-cache
-atualizado: 2026-11-05
+atualizado: 2026-11-06
 janela_palavras: 302
 limite: 500
 ---
@@ -88,30 +88,30 @@ durante a rotina do relatório mensal.
 - Obsidian: Templates → `meta/templates/`; anexos → `raw/assets/`; instalar Dataview
 - Vigilância automática via `/schedule` — só faz sentido a partir de out/2027
 
-### 🚫 Coleta autônoma de preços — bloqueio de rede estrutural (confirmado 49x seguidas: 09-18 a 11-05, quarenta e oito dias corridos, sete semanas)
+### 🚫 Coleta autônoma de preços — bloqueio de rede estrutural (confirmado 50x seguidas: 09-18 a 11-06, quarenta e nove dias corridos, sete semanas)
 
 O `cacador-ofertas` roda em agendamento autônomo diário, mas **`WebFetch` e `curl` direto estão
 sistematicamente bloqueados** para qualquer domínio externo, não só sites de viagem — confirmado de
-novo em 11-05 (`curl` para `example.com`/`www.kayak.com.br` devolveu `CONNECT tunnel failed, response
-403` nos dois, status do proxy confirmou `"selective": false`; `WebFetch` para KAYAK com par de datas
-explícito → `getaddrinfo ENOTFOUND`). `gh auth status` falhou com token `GH_TOKEN` inválido; `gh api`
-(REST) continua funcionando normalmente e confirmou os quatro labels já existentes. Só `WebSearch`
-funciona para preço, e devolve snippets agregados/cacheados de baixíssima confiança (sem data
-específica confirmada, 1 passageiro, sem bagagem) — **não serve para montar a linha de base real de
-ago–set/2027**.
-Rodada de 11-05 sem achado novo: os valores retornados repetem, ponto a ponto, o mesmo índice cacheado
+novo em 11-06 (`curl` para `example.com`/`www.kayak.com.br` devolveu `CONNECT tunnel failed, response
+403` nos dois, status do proxy confirmou `"selective": false`; `WebFetch` para Kayak/Kiwi/Skyscanner/
+Google Flights com par de datas explícito → `getaddrinfo ENOTFOUND` nos quatro). `gh auth status`
+falhou com token `GH_TOKEN` inválido; `gh api` (REST) continua funcionando normalmente e confirmou os
+quatro labels já existentes. Só `WebSearch` funciona para preço, e devolve snippets agregados/cacheados
+de baixíssima confiança (sem data específica confirmada, 1 passageiro, sem bagagem) — **não serve para
+montar a linha de base real de ago–set/2027**.
+Rodada de 11-06 sem achado novo: os valores retornados repetem, ponto a ponto, o mesmo índice cacheado
 de rodadas anteriores. Nenhum par de data real em ago-set/2027 apareceu; nenhuma evidência de abertura
 de vendas para set/2028.
-Rotina operacional desta rodada: sessão iniciou em `HEAD` *detached* no commit da 48ª coleta
-(`3330084`, 11-04) — décima ocorrência do padrão de ponteiro de `master` desatualizado. `git fetch
+Rotina operacional desta rodada: sessão iniciou em `HEAD` *detached* no commit da 49ª coleta
+(`69616c0`, 11-05) — décima primeira ocorrência do padrão de ponteiro de `master` desatualizado. `git fetch
 origin master` antes de `git checkout master && git merge --ff-only origin/master` — fast-forward
-limpo de 6 commits, **nenhum trabalho perdido**.
-**Decisão do Fabio pendente desde 09-20, agora com 49 rodadas seguidas (quarenta e seis dias corridos) sem
+limpo de 8 commits, **nenhum trabalho perdido**.
+**Decisão do Fabio pendente desde 09-20, agora com 50 rodadas seguidas (quarenta e sete dias corridos) sem
 resposta:** (a) reduzir a frequência do agendamento, (b) montar alerta de tarifa nativo (Google
 Flights/KAYAK, fora deste agente), ou (c) pedir liberação de egress para sites de passagem
-especificamente. A reescalação direta mais recente continua sendo a de 10-17 (dezenove dias corridos),
-seguida pela notificação push de 10-26 (dez dias corridos); esta rodada (11-05) não repetiu a
-escalação em texto — sem fato novo que mude o diagnóstico estrutural de rede desde 11-04.
+especificamente. A reescalação direta mais recente continua sendo a de 10-17 (vinte dias corridos),
+seguida pela notificação push de 10-26 (onze dias corridos); esta rodada (11-06) não repetiu a
+escalação em texto nem enviou novo push — sem fato novo que mude o diagnóstico estrutural de rede desde 11-02.
 Detalhe completo em [[historico-de-precos]], nota de 2026-11-05.
 
 **Pendência de manutenção (desde 10-14, ainda não resolvida):** [[historico-de-precos]] passou de 650
