@@ -1,6 +1,6 @@
 ---
 tipo: hot-cache
-atualizado: 2026-11-06
+atualizado: 2026-11-07
 janela_palavras: 302
 limite: 500
 ---
@@ -88,34 +88,34 @@ durante a rotina do relatório mensal.
 - Obsidian: Templates → `meta/templates/`; anexos → `raw/assets/`; instalar Dataview
 - Vigilância automática via `/schedule` — só faz sentido a partir de out/2027
 
-### 🚫 Coleta autônoma de preços — bloqueio de rede estrutural (confirmado 50x seguidas: 09-18 a 11-06, quarenta e nove dias corridos, sete semanas)
+### 🚫 Coleta autônoma de preços — bloqueio de rede estrutural (confirmado 51x seguidas: 09-18 a 11-07, cinquenta dias corridos, mais de sete semanas)
 
 O `cacador-ofertas` roda em agendamento autônomo diário, mas **`WebFetch` e `curl` direto estão
 sistematicamente bloqueados** para qualquer domínio externo, não só sites de viagem — confirmado de
-novo em 11-06 (`curl` para `example.com`/`www.kayak.com.br` devolveu `CONNECT tunnel failed, response
-403` nos dois, status do proxy confirmou `"selective": false`; `WebFetch` para Kayak/Kiwi/Skyscanner/
-Google Flights com par de datas explícito → `getaddrinfo ENOTFOUND` nos quatro). `gh auth status`
-falhou com token `GH_TOKEN` inválido; `gh api` (REST) continua funcionando normalmente e confirmou os
-quatro labels já existentes. Só `WebSearch` funciona para preço, e devolve snippets agregados/cacheados
-de baixíssima confiança (sem data específica confirmada, 1 passageiro, sem bagagem) — **não serve para
-montar a linha de base real de ago–set/2027**.
-Rodada de 11-06 sem achado novo: os valores retornados repetem, ponto a ponto, o mesmo índice cacheado
+novo em 11-07 (`curl` para `www.kayak.com.br` devolveu `CONNECT tunnel failed, response 403`; status
+do proxy confirmou `"selective": false` com rejeição explícita registrada em `recentRelayFailures`).
+`gh auth status` falhou com token `GH_TOKEN` inválido (sem efeito prático); `gh api` (REST) continua
+funcionando normalmente e confirmou os quatro labels já existentes. Só `WebSearch` funciona para
+preço, e devolve snippets agregados/cacheados de baixíssima confiança (sem data específica confirmada,
+1 passageiro, sem bagagem) — **não serve para montar a linha de base real de ago–set/2027**.
+Rodada de 11-07 sem achado novo: os valores retornados repetem, ponto a ponto, o mesmo índice cacheado
 de rodadas anteriores. Nenhum par de data real em ago-set/2027 apareceu; nenhuma evidência de abertura
 de vendas para set/2028.
-Rotina operacional desta rodada: sessão iniciou em `HEAD` *detached* no commit da 49ª coleta
-(`69616c0`, 11-05) — décima primeira ocorrência do padrão de ponteiro de `master` desatualizado. `git fetch
+Rotina operacional desta rodada: sessão iniciou em `HEAD` *detached* no commit da 50ª coleta
+(`b756854`, 11-06) — décima segunda ocorrência do padrão de ponteiro de `master` desatualizado. `git fetch
 origin master` antes de `git checkout master && git merge --ff-only origin/master` — fast-forward
-limpo de 8 commits, **nenhum trabalho perdido**.
-**Decisão do Fabio pendente desde 09-20, agora com 50 rodadas seguidas (quarenta e sete dias corridos) sem
+limpo de 10 commits, **nenhum trabalho perdido**.
+**Decisão do Fabio pendente desde 09-20, agora com 51 rodadas seguidas (quarenta e oito dias corridos) sem
 resposta:** (a) reduzir a frequência do agendamento, (b) montar alerta de tarifa nativo (Google
 Flights/KAYAK, fora deste agente), ou (c) pedir liberação de egress para sites de passagem
-especificamente. A reescalação direta mais recente continua sendo a de 10-17 (vinte dias corridos),
-seguida pela notificação push de 10-26 (onze dias corridos); esta rodada (11-06) não repetiu a
-escalação em texto nem enviou novo push — sem fato novo que mude o diagnóstico estrutural de rede desde 11-02.
-Detalhe completo em [[historico-de-precos]], nota de 2026-11-05.
+especificamente. A reescalação direta mais recente continua sendo a de 10-17 (vinte e um dias corridos),
+seguida pela notificação push de 10-26 (doze dias corridos); **esta rodada (11-07) envia uma nova
+notificação push** — o marco de cinquenta dias corridos de bloqueio sem decisão justifica reativar o
+alerta ao Fabio.
+Detalhe completo em [[historico-de-precos]], nota de 2026-11-07.
 
 **Pendência de manutenção (desde 10-14, ainda não resolvida):** [[historico-de-precos]] passou de 650
-linhas (agora bem acima de 1.150), acima do limite de ~400 linhas recomendado pelo `CLAUDE.md` §2 — considerar
+linhas (agora bem acima de 1.170), acima do limite de ~400 linhas recomendado pelo `CLAUDE.md` §2 — considerar
 arquivar rodadas mais antigas em sub-página numa próxima sessão com o Fabio no circuito (fora do
 escopo de uma coleta diária autônoma).
 

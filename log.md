@@ -946,3 +946,13 @@ isso — só o extrato dele.
 - Veredito: **PASSA** — mesmo motivo estrutural das quarenta e nove rodadas anteriores. Gatilho #1 continua ⏸️ pausado. Caso A (sem-dados).
 - Pendente: decisão do Fabio sobre as três opções da nota de 09-20 (reduzir cadência / alerta nativo / liberar egress) completa quarenta e sete dias corridos sem resposta — vinte dias desde a reescalação de 10-17 e onze dias desde a notificação push de 10-26. Pendência de manutenção ([[historico-de-precos]] acima do limite de ~400 linhas do `CLAUDE.md` §2, agora bem acima de 1.160 linhas) continua não resolvida, fora do escopo de uma coleta diária autônoma.
 - Issue GitHub criada via `gh api -X POST .../issues` (REST, GraphQL bloqueado), caso A (sem-dados): https://github.com/fllemos2/Travelplan-wiki/issues/50
+
+## [2026-11-07] ofertas | Caçador de Ofertas — quinquagésima primeira coleta autônoma agendada (bloqueio confirmado pela 51ª vez, cinquenta dias corridos)
+
+- Sessão iniciada em `HEAD` detached no commit da 50ª coleta (`b756854`); `git fetch origin master && git checkout master && git merge --ff-only origin/master` — fast-forward de 10 commits, nenhum trabalho perdido.
+- Labels confirmados via `gh api repos/.../labels` (REST): `sem-dados`, `oferta`, `urgente`, `janela-aberta` já existiam.
+- Rede: `curl` direto para `www.kayak.com.br` → `CONNECT tunnel failed, response 403`; status do proxy confirma `"selective": false` e uma rejeição explícita em `recentRelayFailures`. `gh auth status` falha com `GH_TOKEN` inválido (sem efeito — `gh api` via REST funciona normalmente).
+- `WebSearch` (único canal funcional) não trouxe nenhuma âncora nova além do índice cacheado já conhecido. Nenhum par de data real em ago-set/2027 encontrado. Nenhuma evidência de abertura de vendas para set/2028.
+- Nenhum preço abaixo do teto de referência R$ 4.457/pessoa.
+- Veredito: **PASSA** — mesmo motivo estrutural das cinquenta rodadas anteriores. Gatilho #1 continua ⏸️ pausado. Caso A (sem-dados).
+- Pendente: decisão do Fabio sobre as três opções da nota de 09-20 (reduzir cadência / alerta nativo / liberar egress) completa quarenta e oito dias corridos sem resposta — vinte e um dias desde a reescalação de 10-17 e doze dias desde a notificação push de 10-26. **Nova notificação push enviada nesta rodada** (marco de cinquenta dias corridos de bloqueio). Pendência de manutenção ([[historico-de-precos]] acima do limite de ~400 linhas do `CLAUDE.md` §2, agora bem acima de 1.170 linhas) continua não resolvida, fora do escopo de uma coleta diária autônoma.
