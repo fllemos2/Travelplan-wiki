@@ -956,3 +956,4 @@ isso — só o extrato dele.
 - Nenhum preço abaixo do teto de referência R$ 4.457/pessoa.
 - Veredito: **PASSA** — mesmo motivo estrutural das cinquenta rodadas anteriores. Gatilho #1 continua ⏸️ pausado. Caso A (sem-dados).
 - Pendente: decisão do Fabio sobre as três opções da nota de 09-20 (reduzir cadência / alerta nativo / liberar egress) completa quarenta e oito dias corridos sem resposta — vinte e um dias desde a reescalação de 10-17 e doze dias desde a notificação push de 10-26. **Nova notificação push enviada nesta rodada** (marco de cinquenta dias corridos de bloqueio). Pendência de manutenção ([[historico-de-precos]] acima do limite de ~400 linhas do `CLAUDE.md` §2, agora bem acima de 1.170 linhas) continua não resolvida, fora do escopo de uma coleta diária autônoma.
+- Issue GitHub criada via `gh api -X POST .../issues` (REST, GraphQL bloqueado), caso A (sem-dados): https://github.com/fllemos2/Travelplan-wiki/issues/51
