@@ -957,3 +957,14 @@ isso — só o extrato dele.
 - Veredito: **PASSA** — mesmo motivo estrutural das cinquenta rodadas anteriores. Gatilho #1 continua ⏸️ pausado. Caso A (sem-dados).
 - Pendente: decisão do Fabio sobre as três opções da nota de 09-20 (reduzir cadência / alerta nativo / liberar egress) completa quarenta e oito dias corridos sem resposta — vinte e um dias desde a reescalação de 10-17 e doze dias desde a notificação push de 10-26. **Nova notificação push enviada nesta rodada** (marco de cinquenta dias corridos de bloqueio). Pendência de manutenção ([[historico-de-precos]] acima do limite de ~400 linhas do `CLAUDE.md` §2, agora bem acima de 1.170 linhas) continua não resolvida, fora do escopo de uma coleta diária autônoma.
 - Issue GitHub criada via `gh api -X POST .../issues` (REST, GraphQL bloqueado), caso A (sem-dados): https://github.com/fllemos2/Travelplan-wiki/issues/51
+
+## [2026-11-08] ofertas | Caçador de Ofertas — quinquagésima segunda coleta autônoma agendada (bloqueio confirmado pela 52ª vez, cinquenta e um dias corridos)
+
+- Repositório encontrado sincronizado com `origin/master`, sem *detached HEAD* (quebra do padrão das últimas rodadas).
+- Labels confirmados via `gh api repos/.../labels` (REST): `sem-dados`, `oferta`, `urgente`, `janela-aberta` já existiam.
+- Rede: `curl` direto para `example.com` (controle) e `www.kayak.com.br` → `CONNECT tunnel failed, response 403` nos dois; status do proxy confirma `"selective": false`, sem falhas registradas em `recentRelayFailures` desta vez. `gh api user` e `gh api .../labels` (REST) funcionaram normalmente.
+- `WebSearch` (único canal funcional) não trouxe nenhuma âncora nova além do índice cacheado já conhecido (Momondo, Kayak, TAP, Azul, Air France, Fluege.de — todos sem par de data real em ago-set/2027). Nenhuma evidência de abertura de vendas para set/2028; único achado lateral foi a política de remarcação "330 dias" da LATAM, que não se aplica à abertura de vendas.
+- Nenhum preço abaixo do teto de referência R$ 4.457/pessoa.
+- Veredito: **PASSA** — mesmo motivo estrutural das cinquenta e uma rodadas anteriores. Gatilho #1 continua ⏸️ pausado. Caso A (sem-dados).
+- Pendente: decisão do Fabio sobre as três opções da nota de 09-20 (reduzir cadência / alerta nativo / liberar egress) completa quarenta e nove dias corridos sem resposta — vinte e dois dias desde a reescalação de 10-17 e um dia desde a notificação push de 11-07 (não repetida nesta rodada, sem fato novo). Pendência de manutenção ([[historico-de-precos]] acima do limite de ~400 linhas do `CLAUDE.md` §2, agora bem acima de 1.180 linhas) continua não resolvida, fora do escopo de uma coleta diária autônoma.
+- Issue GitHub criada via `gh api -X POST .../issues` (REST, GraphQL bloqueado), caso A (sem-dados): PENDENTE_URL

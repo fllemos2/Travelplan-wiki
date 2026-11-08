@@ -1,6 +1,6 @@
 ---
 tipo: hot-cache
-atualizado: 2026-11-07
+atualizado: 2026-11-08
 janela_palavras: 302
 limite: 500
 ---
@@ -88,16 +88,17 @@ durante a rotina do relatório mensal.
 - Obsidian: Templates → `meta/templates/`; anexos → `raw/assets/`; instalar Dataview
 - Vigilância automática via `/schedule` — só faz sentido a partir de out/2027
 
-### 🚫 Coleta autônoma de preços — bloqueio de rede estrutural (confirmado 51x seguidas: 09-18 a 11-07, cinquenta dias corridos, mais de sete semanas)
+### 🚫 Coleta autônoma de preços — bloqueio de rede estrutural (confirmado 52x seguidas: 09-18 a 11-08, cinquenta e um dias corridos, mais de sete semanas)
 
 O `cacador-ofertas` roda em agendamento autônomo diário, mas **`WebFetch` e `curl` direto estão
 sistematicamente bloqueados** para qualquer domínio externo, não só sites de viagem — confirmado de
-novo em 11-07 (`curl` para `www.kayak.com.br` devolveu `CONNECT tunnel failed, response 403`; status
-do proxy confirmou `"selective": false` com rejeição explícita registrada em `recentRelayFailures`).
-`gh auth status` falhou com token `GH_TOKEN` inválido (sem efeito prático); `gh api` (REST) continua
-funcionando normalmente e confirmou os quatro labels já existentes. Só `WebSearch` funciona para
-preço, e devolve snippets agregados/cacheados de baixíssima confiança (sem data específica confirmada,
-1 passageiro, sem bagagem) — **não serve para montar a linha de base real de ago–set/2027**.
+novo em 11-08 (`curl` para `www.kayak.com.br` devolveu `CONNECT tunnel failed, response 403`; status
+do proxy confirmou `"selective": false`, sem falha nova registrada em `recentRelayFailures` desta vez).
+`gh api` (REST) continua funcionando normalmente e confirmou os quatro labels já existentes. Só
+`WebSearch` funciona para preço, e devolve snippets agregados/cacheados de baixíssima confiança (sem
+data específica confirmada, 1 passageiro, sem bagagem) — **não serve para montar a linha de base real
+de ago–set/2027**. Pendência do Fabio (reduzir cadência / alerta nativo / liberar egress, nota de
+09-20) chega a **49 dias corridos** sem resposta.
 Rodada de 11-07 sem achado novo: os valores retornados repetem, ponto a ponto, o mesmo índice cacheado
 de rodadas anteriores. Nenhum par de data real em ago-set/2027 apareceu; nenhuma evidência de abertura
 de vendas para set/2028.
