@@ -968,3 +968,14 @@ isso — só o extrato dele.
 - Veredito: **PASSA** — mesmo motivo estrutural das cinquenta e uma rodadas anteriores. Gatilho #1 continua ⏸️ pausado. Caso A (sem-dados).
 - Pendente: decisão do Fabio sobre as três opções da nota de 09-20 (reduzir cadência / alerta nativo / liberar egress) completa quarenta e nove dias corridos sem resposta — vinte e dois dias desde a reescalação de 10-17 e um dia desde a notificação push de 11-07 (não repetida nesta rodada, sem fato novo). Pendência de manutenção ([[historico-de-precos]] acima do limite de ~400 linhas do `CLAUDE.md` §2, agora bem acima de 1.180 linhas) continua não resolvida, fora do escopo de uma coleta diária autônoma.
 - Issue GitHub criada via `gh api -X POST .../issues` (REST, GraphQL bloqueado), caso A (sem-dados): https://github.com/fllemos2/Travelplan-wiki/issues/52
+
+## [2026-11-09] ofertas | Caçador de Ofertas — quinquagésima terceira coleta autônoma agendada (bloqueio confirmado pela 53ª vez, cinquenta e dois dias corridos)
+
+- Repositório encontrado em `master`, atrasado 2 commits em relação a `origin/master` (sem *detached HEAD*). Corrigido com `git fetch origin master && git merge --ff-only origin/master` — fast-forward limpo, nenhum trabalho perdido.
+- Labels confirmados via `gh api repos/.../labels` (REST): `sem-dados`, `oferta`, `urgente`, `janela-aberta` já existiam.
+- Rede: `curl` direto para `www.kayak.com.br` e `www.google.com` → `CONNECT tunnel failed, response 403` nos dois; status do proxy confirma `"selective": false`, com as duas rejeições registradas em `recentRelayFailures`.
+- `WebSearch` (único canal funcional) não trouxe nenhuma âncora nova além do índice cacheado já conhecido (Momondo, FlyTAP, Air France, Mundi, Kayak, KLM, Expedia, Trip.com — todos sem par de data real em ago-set/2027). Nenhuma evidência de abertura de vendas para set/2028.
+- Nenhum preço abaixo do teto de referência R$ 4.457/pessoa.
+- Veredito: **PASSA** — mesmo motivo estrutural das cinquenta e duas rodadas anteriores. Gatilho #1 continua ⏸️ pausado. Caso A (sem-dados).
+- Pendente: decisão do Fabio sobre as três opções da nota de 09-20 (reduzir cadência / alerta nativo / liberar egress) completa cinquenta dias corridos sem resposta — marco redondo, mas sem fato novo desde 11-07 e com a última notificação push há só dois dias; **sem novo push nesta rodada** para não saturar o canal. Pendência de manutenção ([[historico-de-precos]] acima do limite de ~400 linhas do `CLAUDE.md` §2, agora bem acima de 1.190 linhas) continua não resolvida, fora do escopo de uma coleta diária autônoma.
+- Issue GitHub: criada nesta rodada (ver URL anexada a seguir).

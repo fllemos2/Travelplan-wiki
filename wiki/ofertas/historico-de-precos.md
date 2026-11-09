@@ -2,7 +2,7 @@
 tipo: conceito
 titulo: Histórico de Preços
 criado: 2026-09-01
-atualizado: 2026-11-08
+atualizado: 2026-11-09
 tags: [ofertas, precos, vigilancia]
 fontes: []
 confianca: alta
@@ -1142,6 +1142,18 @@ Quinquagésima segunda execução autônoma agendada seguida (09-18 a 11-08), se
 - **Veredito da sessão: PASSA.** Quinquagésimo segundo "sem dados de linha de base real" seguido, mesmo motivo estrutural. Gatilho #1 continua ⏸️ pausado.
 
 **Cinquenta e duas rodadas seguidas (09-18 a 11-08) — cinquenta e um dias corridos.** O bloqueio de rede para sites de passagem (`curl`/`WebFetch` direto) segue sem solução própria; a decisão do Fabio sobre as três opções da nota de 09-20 (reduzir cadência / alerta nativo / liberar egress) segue pendente há **quarenta e nove dias corridos**, agora cinquenta e duas execuções autônomas sem resposta — vinte e dois dias desde a reescalação direta de 10-17 e um dia desde a notificação push de 11-07 (não repetida nesta rodada, sem fato novo). Pendência de manutenção de 10-14 (arquivo [[historico-de-precos]] acima do limite de ~400 linhas do `CLAUDE.md` §2, agora bem acima de 1.180 linhas) continua **não resolvida**, fora do escopo de uma coleta diária autônoma.
+
+### 🚫 Tentativa de coleta 2026-11-09 — quinquagésima terceira rodada, bloqueio confirmado de novo (cinquenta e dois dias corridos desde 09-18)
+
+Quinquagésima terceira execução autônoma agendada seguida (09-18 a 11-09), sem o Fabio no circuito. Repositório encontrado em `master`, mas **atrasado 2 commits** em relação a `origin/master` (não era *detached HEAD* desta vez, variação do mesmo padrão operacional de ponteiro desatualizado). Corrigido com `git fetch origin master` seguido de `git merge --ff-only origin/master` — fast-forward limpo de 2 commits, **nenhum trabalho perdido**.
+
+- Status do proxy (`$HTTPS_PROXY/__agentproxy/status`) confirmou de novo `"selective": false`, com duas rejeições explícitas registradas em `recentRelayFailures` (`www.kayak.com.br:443` e `www.google.com:443`, "gateway answered 403 to CONNECT (policy denial or upstream failure)"). `curl` direto via `Bash` para KAYAK e Google Flights → `CONNECT tunnel failed, response 403` nos dois (mesmo teste de controle das rodadas anteriores). `gh api repos/fllemos2/Travelplan-wiki/labels` (REST) funcionou normalmente e confirmou que os quatro labels (`sem-dados`, `oferta`, `urgente`, `janela-aberta`) já existiam — nenhuma criação nova necessária. Quinquagésima terceira rodada seguida com o mesmo bloqueio estrutural de rede para acesso direto a qualquer site de passagem, sem nenhum sinal de melhora em cinquenta e dois dias corridos.
+- `WebSearch` funcionou para as duas buscas desta rodada (GIG-MXP e CDG-GIG/PAR-RIO) mais a busca dedicada de set/2028, mas **não trouxe nenhuma âncora materialmente nova**: os valores retornados (Momondo GIG-MXP a partir de R$ 2.052–2.067, teaser de ida isolada; FlyTAP GIG-MXP 4.607 BRL; Air France GIG-MIL a partir de R$ 5.075; Mundi citando setembro entre R$ 6.280–8.094 para a rota, sem data de calendário nem ano confirmado; Kayak com médias mensais históricas — março mais barato a R$ 4.252, julho/dezembro mais caros a R$ 6.992/7.373; Expedia/KLM/Trip.com para CDG-GIG com tarifas de 2026 ou sem ano, KLM citando ~€814 para final de agosto–final de setembro **de 2026**, ano-base, não ano-alvo) repetem, ponto a ponto, o mesmo índice cacheado já registrado em rodadas anteriores (10-22 a 11-08) — nenhum par de data real dentro de ago-set/2027 apareceu nesta rodada, com 3 passageiros e bagagem despachada discriminada. Nenhuma busca dedicada a GIG-FCO/GIG-VCE foi feita nesta rodada (sem indício de que mudaria o resultado, dado o padrão das 52 anteriores).
+- Busca dedicada sobre abertura de vendas para set/2028 de novo não encontrou data oficial nem disponibilidade real de voo para aquele mês — mesmo resultado de todas as rodadas desde 10-13. Único achado lateral, sem relação direta com a janela-alvo: confirmação de que a Azul vende com até 15 meses de antecedência desde 2024 (inicialmente para a alta temporada de inverno de 2025, não para set/2028) e que a recomendação geral de mercado para voos internacionais é comprar com 60–120 dias de antecedência — nenhuma das duas confirma nem contradiz a regra dos ~330 dias usada aqui como referência. **Sem alerta de janela aberta.**
+- Nenhum preço com confiança suficiente (data de calendário real dentro de ago–set/2027, 3 passageiros, bagagem despachada) ficou abaixo do teto de referência R$ 4.457/pessoa nesta rodada.
+- **Veredito da sessão: PASSA.** Quinquagésimo terceiro "sem dados de linha de base real" seguido, mesmo motivo estrutural. Gatilho #1 continua ⏸️ pausado.
+
+**Cinquenta e três rodadas seguidas (09-18 a 11-09) — cinquenta e dois dias corridos.** O bloqueio de rede para sites de passagem (`curl`/`WebFetch` direto) segue sem solução própria; a decisão do Fabio sobre as três opções da nota de 09-20 (reduzir cadência / alerta nativo / liberar egress) segue pendente há **cinquenta dias corridos** — marco redondo, mas sem fato novo sobre o bloqueio em si desde 11-07 e com a última notificação push há apenas dois dias (11-07); esta rodada não repete o alerta para não saturar o canal. Pendência de manutenção de 10-14 (arquivo [[historico-de-precos]] acima do limite de ~400 linhas do `CLAUDE.md` §2, agora bem acima de 1.190 linhas) continua **não resolvida**, fora do escopo de uma coleta diária autônoma.
 
 ## Hospedagem
 
