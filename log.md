@@ -979,3 +979,13 @@ isso — só o extrato dele.
 - Veredito: **PASSA** — mesmo motivo estrutural das cinquenta e duas rodadas anteriores. Gatilho #1 continua ⏸️ pausado. Caso A (sem-dados).
 - Pendente: decisão do Fabio sobre as três opções da nota de 09-20 (reduzir cadência / alerta nativo / liberar egress) completa cinquenta dias corridos sem resposta — marco redondo, mas sem fato novo desde 11-07 e com a última notificação push há só dois dias; **sem novo push nesta rodada** para não saturar o canal. Pendência de manutenção ([[historico-de-precos]] acima do limite de ~400 linhas do `CLAUDE.md` §2, agora bem acima de 1.190 linhas) continua não resolvida, fora do escopo de uma coleta diária autônoma.
 - Issue GitHub criada via `mcp__github__issue_write` (REST, GraphQL/`gh issue create` bloqueado nesta sessão), caso A (sem-dados): https://github.com/fllemos2/Travelplan-wiki/issues/53
+
+## [2026-11-10] ofertas | Caçador de Ofertas — quinquagésima quarta coleta autônoma agendada (bloqueio confirmado pela 54ª vez, cinquenta e três dias corridos)
+
+- Repositório encontrado em `HEAD` *detached* apontando para o mesmo commit de `origin/master` (nenhum trabalho perdido). Corrigido com `git checkout master && git fetch origin master && git merge --ff-only origin/master` — local estava 4 commits atrás, fast-forward limpo.
+- Labels confirmados via `gh label create` (sem `--force`, erro "already exists" ignorado): `sem-dados`, `oferta`, `urgente`, `janela-aberta` já existiam.
+- Rede: `curl` direto para KAYAK, Google Flights, Skyscanner, Kiwi e Hopper → `CONNECT tunnel failed, response 403` nos cinco; status do proxy confirma `"selective": false`.
+- `WebSearch` (único canal funcional) não trouxe nenhuma âncora nova além do índice cacheado já conhecido (FlyTAP, Momondo, Air France, Kayak, Avianca, Mundi — todos sem par de data real em ago-set/2027). Busca dedicada sobre abertura de vendas confirmou a regra de ~330 dias (331 AA/Delta, 337 United, 355 Air Canada/Singapore), projetando abertura de set/2028 para ~21/10/2027 — sem antecipação.
+- Nenhum preço abaixo do teto de referência R$ 4.457/pessoa.
+- Veredito: **PASSA** — mesmo motivo estrutural das cinquenta e três rodadas anteriores. Gatilho #1 continua ⏸️ pausado. Caso A (sem-dados).
+- Pendente: decisão do Fabio sobre as três opções da nota de 09-20 (reduzir cadência / alerta nativo / liberar egress) completa cinquenta e um dias corridos sem resposta — sem fato novo desde 11-07 e com a última notificação push há três dias; **sem novo push nesta rodada** para não saturar o canal. Pendência de manutenção ([[historico-de-precos]] acima do limite de ~400 linhas do `CLAUDE.md` §2, agora bem acima de 1.200 linhas) continua não resolvida, fora do escopo de uma coleta diária autônoma.
