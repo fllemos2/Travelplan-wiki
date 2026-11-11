@@ -2,7 +2,7 @@
 tipo: conceito
 titulo: Histórico de Preços
 criado: 2026-09-01
-atualizado: 2026-11-09
+atualizado: 2026-11-11
 tags: [ofertas, precos, vigilancia]
 fontes: []
 confianca: alta
@@ -1166,6 +1166,18 @@ Quinquagésima quarta execução autônoma agendada seguida (09-18 a 11-10), sem
 - **Veredito da sessão: PASSA.** Quinquagésimo quarto "sem dados de linha de base real" seguido, mesmo motivo estrutural. Gatilho #1 continua ⏸️ pausado.
 
 **Cinquenta e quatro rodadas seguidas (09-18 a 11-10) — cinquenta e três dias corridos.** O bloqueio de rede para sites de passagem (`curl`/`WebFetch` direto) segue sem solução própria; a decisão do Fabio sobre as três opções da nota de 09-20 (reduzir cadência / alerta nativo / liberar egress) segue pendente há **cinquenta e um dias corridos** — sem fato novo sobre o bloqueio em si desde 11-07 e com a última notificação push há três dias (11-07); esta rodada não repete o alerta, por não haver nenhum fato novo que justifique saturar o canal de novo. Pendência de manutenção de 10-14 (arquivo [[historico-de-precos]] acima do limite de ~400 linhas do `CLAUDE.md` §2, agora bem acima de 1.200 linhas) continua **não resolvida**, fora do escopo de uma coleta diária autônoma.
+
+### 🚫 Tentativa de coleta 2026-11-11 — quinquagésima quinta rodada, bloqueio confirmado de novo (cinquenta e quatro dias corridos desde 09-18)
+
+Quinquagésima quinta execução autônoma agendada seguida (09-18 a 11-11), sem o Fabio no circuito. Repositório encontrado em `HEAD` *detached*, apontando para o commit da 54ª coleta (`2f02e54`) — mais uma ocorrência do mesmo padrão recorrente de ponteiro fora de `master`. Corrigido com `git checkout master` seguido de `git fetch origin master && git merge --ff-only origin/master` (local estava 6 commits atrás; fast-forward limpo, **nenhum trabalho perdido**).
+
+- Status do proxy (`$HTTPS_PROXY/__agentproxy/status`) confirmou de novo `"selective": false`, sem falhas prévias em `recentRelayFailures` antes do teste desta rodada. `curl` direto via `Bash` para `example.com` (controle), KAYAK, Google Flights, Skyscanner e Kiwi.com → `CONNECT tunnel failed, response 403` nos cinco, com três rejeições (`www.kiwi.com`, `www.skyscanner.com.br`, `www.google.com`) registradas em `recentRelayFailures` como `connect_rejected`. `WebFetch` para KAYAK (par de datas explícito 20/08–03/09/2027, 3 pax) → `getaddrinfo ENOTFOUND`, mesmo padrão de bloqueio por resolução de nome das rodadas anteriores. `gh label create` (sem `--force`) confirmou que os quatro labels (`sem-dados`, `oferta`, `urgente`, `janela-aberta`) já existiam — nenhuma criação nova necessária. Quinquagésima quinta rodada seguida com o mesmo bloqueio estrutural de rede para acesso direto a qualquer site de passagem, sem nenhum sinal de melhora em cinquenta e quatro dias corridos.
+- `WebSearch` funcionou para as quatro buscas desta rodada (GIG-MXP, CDG-GIG/PAR-RIO, GIG-FCO/GIG-VCE, abertura de vendas set/2028), mas **não trouxe nenhuma âncora materialmente nova**: os valores retornados (FlyTAP MXP-GIG 842 EUR e GIG-MXP 769 EUR/4.607 BRL, datas nov/2026–fev/2027, sem par ago-set; Kayak GIG-MXP média histórica de 12 meses R$ 5.375, faixa R$ 4.482–6.222; Momondo GIG-MIL teaser de ida isolada R$ 2.052–2.524; Air France GIG-CDG a partir de R$ 2.410 em nov/2026 e R$ 3.262 em fev-mar/2027 — ano-base e fora da janela ago-set; Flypass CDG-GIG faixa R$ 2.500–9.000; TAP/Momondo GIG-FCO a partir de 878 EUR/R$ 4.573; TAP/Momondo GIG-VCE a partir de 772 EUR/R$ 4.634–5.473; ITA Airways MXP-RIO a partir de €794, sem data) repetem, ponto a ponto, o mesmo índice cacheado já registrado em rodadas anteriores — nenhum par de data real dentro de ago-set/2027 apareceu nesta rodada, com 3 passageiros e bagagem despachada discriminada.
+- **Teste extra pedido nesta rodada:** busca dedicada por GIG-MXP em **setembro de 2028** (ver se a janela de venda já abriu). Resultado: nenhuma disponibilidade real encontrada para aquele mês — apenas páginas genéricas de comparação de preço e médias históricas (Omio, ITA Airways, Kayak, Air France, Momondo, Mundi, LATAM), nenhuma com voo aberto para set/2028. Confirma a expectativa de que a venda ainda não abriu; sem evidência de antecipação sobre a regra de ~330 dias já registrada (projeção de abertura ~21/10/2027). **Sem alerta de janela aberta.**
+- Nenhum preço com confiança suficiente (data de calendário real dentro de ago–set/2027, 3 passageiros, bagagem despachada) ficou abaixo do teto de referência R$ 4.457/pessoa nesta rodada.
+- **Veredito da sessão: PASSA.** Quinquagésimo quinto "sem dados de linha de base real" seguido, mesmo motivo estrutural. Gatilho #1 continua ⏸️ pausado.
+
+**Cinquenta e cinco rodadas seguidas (09-18 a 11-11) — cinquenta e quatro dias corridos.** O bloqueio de rede para sites de passagem (`curl`/`WebFetch` direto) segue sem solução própria; a decisão do Fabio sobre as três opções da nota de 09-20 (reduzir cadência / alerta nativo / liberar egress) segue pendente há **cinquenta e dois dias corridos** — sem fato novo sobre o bloqueio em si desde 11-07 e com a última notificação push há quatro dias (11-07); esta rodada não repete o alerta, por não haver nenhum fato novo que justifique saturar o canal de novo. Pendência de manutenção de 10-14 (arquivo [[historico-de-precos]] acima do limite de ~400 linhas do `CLAUDE.md` §2, agora bem acima de 1.210 linhas) continua **não resolvida**, fora do escopo de uma coleta diária autônoma.
 
 ## Hospedagem
 

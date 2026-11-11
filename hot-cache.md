@@ -1,6 +1,6 @@
 ---
 tipo: hot-cache
-atualizado: 2026-11-10
+atualizado: 2026-11-11
 janela_palavras: 302
 limite: 500
 ---
@@ -88,34 +88,36 @@ durante a rotina do relatório mensal.
 - Obsidian: Templates → `meta/templates/`; anexos → `raw/assets/`; instalar Dataview
 - Vigilância automática via `/schedule` — só faz sentido a partir de out/2027
 
-### 🚫 Coleta autônoma de preços — bloqueio de rede estrutural (confirmado 54x seguidas: 09-18 a 11-10, cinquenta e três dias corridos, quase oito semanas)
+### 🚫 Coleta autônoma de preços — bloqueio de rede estrutural (confirmado 55x seguidas: 09-18 a 11-11, cinquenta e quatro dias corridos, quase oito semanas)
 
 O `cacador-ofertas` roda em agendamento autônomo diário, mas **`WebFetch` e `curl` direto estão
 sistematicamente bloqueados** para qualquer domínio externo, não só sites de viagem — confirmado de
-novo em 11-10 (`curl` para KAYAK, Google Flights, Skyscanner, Kiwi e Hopper devolveu `CONNECT tunnel
-failed, response 403` nos cinco; status do proxy confirmou `"selective": false`). `gh label create`
-continua funcionando normalmente e confirmou os quatro labels já existentes. Só `WebSearch` funciona
-para preço, e devolve snippets agregados/cacheados de baixíssima confiança (sem data específica
-confirmada, 1 passageiro, sem bagagem) — **não serve para montar a linha de base real de ago–set/2027**.
-Pendência do Fabio (reduzir cadência / alerta nativo / liberar egress, nota de 09-20) chega a **51 dias
+novo em 11-11 (`curl` para `example.com`, KAYAK, Google Flights, Skyscanner e Kiwi.com devolveu `CONNECT
+tunnel failed, response 403` nos cinco; `WebFetch` para KAYAK devolveu `getaddrinfo ENOTFOUND`; status
+do proxy confirmou `"selective": false`). `gh label create` continua funcionando normalmente e
+confirmou os quatro labels já existentes. Só `WebSearch` funciona para preço, e devolve snippets
+agregados/cacheados de baixíssima confiança (sem data específica confirmada, 1 passageiro, sem
+bagagem) — **não serve para montar a linha de base real de ago–set/2027**.
+Pendência do Fabio (reduzir cadência / alerta nativo / liberar egress, nota de 09-20) chega a **52 dias
 corridos** sem resposta.
-Rodada de 11-10 sem achado novo: os valores retornados repetem, ponto a ponto, o mesmo índice cacheado
-de rodadas anteriores. Nenhum par de data real em ago-set/2027 apareceu; a busca sobre abertura de
-vendas confirmou a regra de ~330 dias (331 AA/Delta, 337 United, 355 Air Canada/Singapore), projetando
-abertura de set/2028 para ~21/10/2027 — sem antecipação, nenhuma evidência de janela aberta.
-Rotina operacional desta rodada: sessão iniciou em `HEAD` *detached* no mesmo commit de
-`origin/master` (nenhum trabalho perdido). `git checkout master` seguido de `git fetch origin master
-&& git merge --ff-only origin/master` — local estava 4 commits atrás, fast-forward limpo.
-**Decisão do Fabio pendente desde 09-20, agora com 54 rodadas seguidas (cinquenta e um dias corridos)
+Rodada de 11-11 trouxe um teste extra pedido pela tarefa: busca dedicada por GIG-MXP em **set/2028**
+(checar se a venda já abriu). Resultado: nenhuma disponibilidade real encontrada, só páginas genéricas
+de comparação — a venda ainda não abriu, sem evidência de antecipação sobre a regra de ~330 dias já
+registrada (projeção ~21/10/2027). Os demais valores retornados repetem, ponto a ponto, o mesmo índice
+cacheado de rodadas anteriores; nenhum par de data real em ago-set/2027 apareceu.
+Rotina operacional desta rodada: sessão iniciou em `HEAD` *detached* no commit da 54ª coleta
+(`2f02e54`, nenhum trabalho perdido). `git checkout master` seguido de `git fetch origin master
+&& git merge --ff-only origin/master` — local estava 6 commits atrás, fast-forward limpo.
+**Decisão do Fabio pendente desde 09-20, agora com 55 rodadas seguidas (cinquenta e dois dias corridos)
 sem resposta:** (a) reduzir a frequência do agendamento, (b) montar alerta de tarifa nativo (Google
 Flights/KAYAK, fora deste agente), ou (c) pedir liberação de egress para sites de passagem
 especificamente. A reescalação direta mais recente continua sendo a de 10-17, seguida pela notificação
-push de 11-07 (três dias corridos); **esta rodada (11-10) não repete o alerta** — sem fato novo sobre o
+push de 11-07 (quatro dias corridos); **esta rodada (11-11) não repete o alerta** — sem fato novo sobre o
 bloqueio em si desde 11-07, saturar o canal de novo não ajudaria.
-Detalhe completo em [[historico-de-precos]], nota de 2026-11-10.
+Detalhe completo em [[historico-de-precos]], nota de 2026-11-11.
 
 **Pendência de manutenção (desde 10-14, ainda não resolvida):** [[historico-de-precos]] passou de 650
-linhas (agora bem acima de 1.200), acima do limite de ~400 linhas recomendado pelo `CLAUDE.md` §2 — considerar
+linhas (agora bem acima de 1.210), acima do limite de ~400 linhas recomendado pelo `CLAUDE.md` §2 — considerar
 arquivar rodadas mais antigas em sub-página numa próxima sessão com o Fabio no circuito (fora do
 escopo de uma coleta diária autônoma).
 
