@@ -1014,3 +1014,4 @@ isso — só o extrato dele.
 - Nenhum preço com confiança suficiente (data real ago–set/2027, 3 passageiros, bagagem despachada) abaixo do teto de referência R$ 4.457/pessoa.
 - Atualizadas: [[historico-de-precos]] (nova seção narrativa "quinquagésima sexta rodada" + resumo "cinquenta e seis rodadas" + frontmatter `atualizado: 2026-11-12`); `log.md` (esta entrada).
 - Veredito: **PASSA** — mesmo motivo estrutural das cinquenta e cinco rodadas anteriores. Gatilho #1 continua ⏸️ pausado. Caso A (sem-dados).
+- Issue GitHub criada via `gh api -X POST .../issues` (REST; `gh issue create` falhou com `HTTP 403: GitHub GraphQL is not available`), caso A (sem-dados): https://github.com/fllemos2/Travelplan-wiki/issues/56
