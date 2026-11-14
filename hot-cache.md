@@ -1,6 +1,6 @@
 ---
 tipo: hot-cache
-atualizado: 2026-11-13
+atualizado: 2026-11-14
 janela_palavras: 302
 limite: 500
 ---
@@ -88,39 +88,42 @@ durante a rotina do relatório mensal.
 - Obsidian: Templates → `meta/templates/`; anexos → `raw/assets/`; instalar Dataview
 - Vigilância automática via `/schedule` — só faz sentido a partir de out/2027
 
-### 🚫 Coleta autônoma de preços — bloqueio de rede estrutural (confirmado 57x seguidas: 09-18 a 11-13, cinquenta e seis dias corridos, oito semanas)
+### 🚫 Coleta autônoma de preços — bloqueio de rede estrutural (confirmado 58x seguidas: 09-18 a 11-14, cinquenta e sete dias corridos, oito semanas)
 
 O `cacador-ofertas` roda em agendamento autônomo diário, mas **`WebFetch` e `curl` direto estão
 sistematicamente bloqueados** para qualquer domínio externo, não só sites de viagem — confirmado de
-novo em 11-13 (`curl` para `example.com` de controle, KAYAK, Google Flights, Skyscanner, Kiwi.com e
-Hopper devolveu `CONNECT tunnel failed, response 403` nos seis; `WebFetch` para KAYAK e Hopper devolveu
-`getaddrinfo ENOTFOUND`; status do proxy confirmou `"selective": false`). `gh api repos/.../labels`
-(REST) continua funcionando normalmente e confirmou os quatro labels já existentes (`gh label list`/
-`gh issue create` continuam bloqueados por GraphQL). As ferramentas MCP do GitHub mencionadas na tarefa
-desta rodada (`mcp__github__issue_write` etc.) **não estavam disponíveis** neste toolset de sessão —
-sem mecanismo de busca de ferramentas para carregá-las — então a Issue saiu por `gh api -X POST`, como
-nas rodadas anteriores. Só `WebSearch` funciona para preço, e devolve snippets agregados/cacheados de
+novo em 11-14 (`curl` para `example.com` de controle, KAYAK, Google Flights, Skyscanner, Kiwi.com e
+Hopper devolveu `CONNECT tunnel failed, response 403` nos seis; status do proxy confirmou
+`"selective": false`). Só `WebSearch` funciona para preço, e devolve snippets agregados/cacheados de
 baixíssima confiança (sem data específica confirmada, 1 passageiro, sem bagagem) — **não serve para
 montar a linha de base real de ago–set/2027**.
-Pendência do Fabio (reduzir cadência / alerta nativo / liberar egress, nota de 09-20) chega a **54 dias
+Pendência do Fabio (reduzir cadência / alerta nativo / liberar egress, nota de 09-20) chega a **55 dias
 corridos** sem resposta.
-Rodada de 11-13 repetiu o teste extra: busca dedicada por GIG-MXP em **set/2028** (checar se a venda já
+Rodada de 11-14 repetiu o teste extra: busca dedicada por GIG-MXP em **set/2028** (checar se a venda já
 abriu). Resultado: nenhuma disponibilidade real encontrada, só páginas genéricas de comparação — a
 venda ainda não abriu, sem evidência de antecipação sobre a regra de ~330 dias já registrada (projeção
-~21/10/2027). Os demais valores retornados repetem, ponto a ponto, o mesmo índice cacheado de rodadas
-anteriores; nenhum par de data real em ago-set/2027 apareceu.
-Rotina operacional desta rodada: **diferente das últimas, o repositório já estava em `master`
-sincronizado** (`git status` limpo) — sem `HEAD` detached, sem correção de ponteiro necessária.
-**Decisão do Fabio pendente desde 09-20, agora com 57 rodadas seguidas (cinquenta e quatro dias corridos)
+~21/10/2027).
+
+**Novidade operacional de 11-14:** as ferramentas MCP do GitHub (`mcp__github__get_me`, `get_label`,
+`list_issues`, `issue_write`) ficaram **disponíveis via `ToolSearch`** nesta sessão — primeira vez desde
+que o bloqueio de toolset foi notado em 11-13. A Issue #58 saiu por `mcp__github__issue_write`, sem
+precisar do workaround `gh api -X POST` usado nas rodadas 51–57. Isso resolve só a notificação; o
+bloqueio de rede para sites de passagem continua intacto e é um problema diferente (egress, não
+ferramenta de GitHub).
+Rotina operacional desta rodada: repositório estava em `HEAD` *detached*, 1 commit **acima** de `master`
+local — o commit da 57ª coleta nunca tinha sido anexado ao ponteiro local de `master` (o push para
+`origin/master` já tinha funcionado). Corrigido com `git checkout master && git merge 3138ab7 --ff-only`,
+sem perda de trabalho.
+**Decisão do Fabio pendente desde 09-20, agora com 58 rodadas seguidas (cinquenta e cinco dias corridos)
 sem resposta:** (a) reduzir a frequência do agendamento, (b) montar alerta de tarifa nativo (Google
 Flights/KAYAK, fora deste agente), ou (c) pedir liberação de egress para sites de passagem
 especificamente. A reescalação direta mais recente continua sendo a de 10-17, seguida pela notificação
-push de 11-07 (seis dias corridos); **esta rodada (11-13) não repete o alerta** — sem fato novo sobre o
-bloqueio em si desde 11-07, saturar o canal de novo não ajudaria.
-Detalhe completo em [[historico-de-precos]], nota de 2026-11-13.
+push de 11-07 (sete dias corridos); **esta rodada (11-14) não repete o alerta** — disponibilidade de
+ferramentas MCP é melhoria operacional, não fato novo sobre o bloqueio de rede em si.
+Detalhe completo em [[historico-de-precos]], nota de 2026-11-14.
 
 **Pendência de manutenção (desde 10-14, ainda não resolvida):** [[historico-de-precos]] passou de 650
-linhas (agora bem acima de 1.240), acima do limite de ~400 linhas recomendado pelo `CLAUDE.md` §2 — considerar
+linhas (agora bem acima de 1.250), acima do limite de ~400 linhas recomendado pelo `CLAUDE.md` §2 — considerar
 arquivar rodadas mais antigas em sub-página numa próxima sessão com o Fabio no circuito (fora do
 escopo de uma coleta diária autônoma).
 
