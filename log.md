@@ -1053,3 +1053,14 @@ isso — só o extrato dele.
 - Veredito: **PASSA** — mesmo motivo estrutural das cinquenta e oito rodadas anteriores. Gatilho #1 continua ⏸️ pausado. Caso A (sem-dados).
 - Pendente: decisão do Fabio sobre as três opções da nota de 09-20 (reduzir cadência / alerta nativo / liberar egress) completa cinquenta e seis dias corridos sem resposta — oito dias desde a última notificação push (11-07); **sem novo push nesta rodada** (sem fato novo sobre o bloqueio em si). Pendência de manutenção ([[historico-de-precos]] acima do limite de ~400 linhas do `CLAUDE.md` §2, agora bem acima de 1.260 linhas) continua não resolvida, fora do escopo de uma coleta diária autônoma.
 - Issue GitHub criada via `gh api -X POST .../issues` (REST; `gh issue create` e `gh repo view` falharam de novo com `HTTP 403: GitHub GraphQL is not available`; `gh api repos/.../labels` confirmou os 4 labels via REST), caso A (sem-dados): https://github.com/fllemos2/Travelplan-wiki/issues/59
+
+## [2026-11-15] autonomo-concierge | Relatório mensal — Novembro/2026
+
+- Fonte: leitura completa do cofre (`CLAUDE.md`, `index.md`, `hot-cache.md`, [[o-sonho]], [[plano-de-viabilidade]], [[estrategia-livelo]], destinos, [[rota-mestra]], [[checklist-prazos]], últimas 10 entradas do log) antes de escrever qualquer coisa, conforme rotina do `concierge-visual`.
+- Criadas: [[wiki/consultas/relatorio-mensal-2026-11]].
+- Atualizadas: `index.md` (entrada nova + contagem de páginas).
+- Decisão de destino: confirmado que não há mais nenhuma em aberto — Cinque Terre, Verona+Valpolicella, Jungfrau/Lauterbrunnen e Paris fechados desde 13/09/2026. A decisão em destaque do relatório foi reformulada para a política de vigilância de preços (58 rodadas bloqueadas, 56 dias sem resposta do Fabio desde 20/09) — recomendação do concierge: cadência semanal até perto de out/2027.
+- Imagens: nenhuma nova. Tentativa de baixar fotos de Cinque Terre/Verona/Paris via Wikimedia Commons falhou — `curl` para `upload.wikimedia.org` devolveu `CONNECT tunnel failed, response 403` e `WebFetch` devolveu `ENOTFOUND` (host fora do domínio permitido desta sessão), mesmo padrão de bloqueio estrutural de rede já registrado em [[historico-de-precos]]. Reaproveitadas as três fotos já existentes em `raw/assets/` (lauterbrunnen-vale-01.jpg, zermatt-matterhorn-01.jpg, piemonte-langhe-vinhedos-01.jpg).
+- Lacuna declarada (repetida de outubro, ainda sem solução): o cofre não registra quanto já foi efetivamente guardado desde set/2026 — só o valor planejado.
+- Artifact publicado: https://claude.ai/artifact/TYF5ZoMyEoxC64nxrSDpgg — "Sonho Lemos — Setembro/2028" (favicon `plane`).
+- E-mail enviado com sucesso para fabiodelimalemos@gmail.com via `mcp__Gmail__send_message` (message id `1a1df1e90a6216b4`).

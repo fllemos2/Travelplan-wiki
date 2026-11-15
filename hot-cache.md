@@ -71,8 +71,11 @@ durante a rotina do relatório mensal.
 2. **Responder os dois itens vencidos da [[estrategia-livelo]]** (prazo 30/09/2026, sem registro de resposta):
    qual cartão a família usa para pontuar, e abrir 2ª conta Livelo para a Fabiana.
 3. **Decisão sobre a vigilância de preços** — ver bloco de bloqueio de rede abaixo, pendente desde 20/09.
-4. **Relatório mensal** (`concierge-visual`) — rotina mensal confirmada funcionando; 2º relatório publicado
-   em 15/10/2026: https://claude.ai/artifact/CsHCdJtDq7hcBXJbkYSdm1
+4. **Relatório mensal** (`concierge-visual`) — rotina mensal confirmada funcionando; 3º relatório publicado
+   em 15/11/2026: https://claude.ai/artifact/TYF5ZoMyEoxC64nxrSDpgg. A decisão em destaque deste mês é a
+   mesma de outubro (vigilância de preços bloqueada, 58 rodadas, 56 dias sem resposta) — recomendação do
+   concierge: cadência semanal até perto de out/2027. Nenhuma foto nova: Wikimedia Commons segue
+   inacessível nesta sessão (mesmo bloqueio de rede do [[historico-de-precos]]).
 
 ### Fatos que não podem ser esquecidos
 
