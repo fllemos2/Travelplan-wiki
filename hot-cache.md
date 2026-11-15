@@ -1,6 +1,6 @@
 ---
 tipo: hot-cache
-atualizado: 2026-11-14
+atualizado: 2026-11-15
 janela_palavras: 302
 limite: 500
 ---
@@ -88,42 +88,34 @@ durante a rotina do relatório mensal.
 - Obsidian: Templates → `meta/templates/`; anexos → `raw/assets/`; instalar Dataview
 - Vigilância automática via `/schedule` — só faz sentido a partir de out/2027
 
-### 🚫 Coleta autônoma de preços — bloqueio de rede estrutural (confirmado 58x seguidas: 09-18 a 11-14, cinquenta e sete dias corridos, oito semanas)
+### 🚫 Coleta autônoma de preços — bloqueio de rede estrutural (confirmado 59x seguidas: 09-18 a 11-15, cinquenta e oito dias corridos, mais de oito semanas)
 
 O `cacador-ofertas` roda em agendamento autônomo diário, mas **`WebFetch` e `curl` direto estão
-sistematicamente bloqueados** para qualquer domínio externo, não só sites de viagem — confirmado de
-novo em 11-14 (`curl` para `example.com` de controle, KAYAK, Google Flights, Skyscanner, Kiwi.com e
-Hopper devolveu `CONNECT tunnel failed, response 403` nos seis; status do proxy confirmou
-`"selective": false`). Só `WebSearch` funciona para preço, e devolve snippets agregados/cacheados de
-baixíssima confiança (sem data específica confirmada, 1 passageiro, sem bagagem) — **não serve para
-montar a linha de base real de ago–set/2027**.
-Pendência do Fabio (reduzir cadência / alerta nativo / liberar egress, nota de 09-20) chega a **55 dias
+sistematicamente bloqueados** para qualquer domínio externo de viagem — confirmado de novo em 11-15
+(`curl` para KAYAK, Google Flights, Skyscanner, Kiwi.com e Hopper devolveu `CONNECT tunnel failed,
+response 403` nos cinco; status do proxy confirmou `"selective": false`). Só `WebSearch` funciona para
+preço, e devolve snippets agregados/cacheados de baixíssima confiança (sem data específica confirmada,
+1 passageiro, sem bagagem) — **não serve para montar a linha de base real de ago–set/2027**.
+Pendência do Fabio (reduzir cadência / alerta nativo / liberar egress, nota de 09-20) chega a **56 dias
 corridos** sem resposta.
-Rodada de 11-14 repetiu o teste extra: busca dedicada por GIG-MXP em **set/2028** (checar se a venda já
-abriu). Resultado: nenhuma disponibilidade real encontrada, só páginas genéricas de comparação — a
-venda ainda não abriu, sem evidência de antecipação sobre a regra de ~330 dias já registrada (projeção
-~21/10/2027).
+Rodada de 11-15 repetiu o teste extra: busca dedicada por GIG-MXP em **set/2028** (checar se a venda já
+abriu). Resultado: nenhuma disponibilidade real encontrada — a data mais distante nomeada por qualquer
+fonte (TAP, 30/09–16/10) ainda é de **2026**, não 2027 nem 2028. A venda ainda não abriu, sem evidência
+de antecipação sobre a regra de ~330 dias já registrada (projeção ~21/10/2027).
 
-**Novidade operacional de 11-14:** as ferramentas MCP do GitHub (`mcp__github__get_me`, `get_label`,
-`list_issues`, `issue_write`) ficaram **disponíveis via `ToolSearch`** nesta sessão — primeira vez desde
-que o bloqueio de toolset foi notado em 11-13. A Issue #58 saiu por `mcp__github__issue_write`, sem
-precisar do workaround `gh api -X POST` usado nas rodadas 51–57. Isso resolve só a notificação; o
-bloqueio de rede para sites de passagem continua intacto e é um problema diferente (egress, não
-ferramenta de GitHub).
-Rotina operacional desta rodada: repositório estava em `HEAD` *detached*, 1 commit **acima** de `master`
-local — o commit da 57ª coleta nunca tinha sido anexado ao ponteiro local de `master` (o push para
-`origin/master` já tinha funcionado). Corrigido com `git checkout master && git merge 3138ab7 --ff-only`,
-sem perda de trabalho.
-**Decisão do Fabio pendente desde 09-20, agora com 58 rodadas seguidas (cinquenta e cinco dias corridos)
+Rotina operacional desta rodada: repositório estava em `HEAD` *detached*, 2 commits **atrás** de
+`origin/master` — mesmo padrão recorrente de ponteiro fora de `master` local, sem perda de trabalho
+(`git fetch` + `git checkout master && git merge --ff-only origin/master`, fast-forward limpo).
+**Decisão do Fabio pendente desde 09-20, agora com 59 rodadas seguidas (cinquenta e seis dias corridos)
 sem resposta:** (a) reduzir a frequência do agendamento, (b) montar alerta de tarifa nativo (Google
 Flights/KAYAK, fora deste agente), ou (c) pedir liberação de egress para sites de passagem
 especificamente. A reescalação direta mais recente continua sendo a de 10-17, seguida pela notificação
-push de 11-07 (sete dias corridos); **esta rodada (11-14) não repete o alerta** — disponibilidade de
-ferramentas MCP é melhoria operacional, não fato novo sobre o bloqueio de rede em si.
-Detalhe completo em [[historico-de-precos]], nota de 2026-11-14.
+push de 11-07 (oito dias corridos); **esta rodada (11-15) não repete o alerta** — sem fato novo sobre o
+bloqueio em si desde então.
+Detalhe completo em [[historico-de-precos]], nota de 2026-11-15.
 
 **Pendência de manutenção (desde 10-14, ainda não resolvida):** [[historico-de-precos]] passou de 650
-linhas (agora bem acima de 1.250), acima do limite de ~400 linhas recomendado pelo `CLAUDE.md` §2 — considerar
+linhas (agora bem acima de 1.260), acima do limite de ~400 linhas recomendado pelo `CLAUDE.md` §2 — considerar
 arquivar rodadas mais antigas em sub-página numa próxima sessão com o Fabio no circuito (fora do
 escopo de uma coleta diária autônoma).
 
