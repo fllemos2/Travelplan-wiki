@@ -1064,3 +1064,14 @@ isso — só o extrato dele.
 - Lacuna declarada (repetida de outubro, ainda sem solução): o cofre não registra quanto já foi efetivamente guardado desde set/2026 — só o valor planejado.
 - Artifact publicado: https://claude.ai/artifact/TYF5ZoMyEoxC64nxrSDpgg — "Sonho Lemos — Setembro/2028" (favicon `plane`).
 - E-mail enviado com sucesso para fabiodelimalemos@gmail.com via `mcp__Gmail__send_message` (message id `1a1df1e90a6216b4`).
+
+## [2026-11-16] ofertas | Caçador de Ofertas — sexagésima coleta autônoma agendada (bloqueio confirmado pela 60ª vez, cinquenta e nove dias corridos)
+
+- Repositório encontrado em `HEAD` *detached*, 5 commits atrás de `origin/master` (local tinha o ponteiro de `master` desatualizado, incluindo os commits da 57ª–59ª coletas e o relatório mensal do `concierge-visual`). `git fetch origin master` confirmou que nenhum trabalho foi perdido — corrigido com `git checkout master && git merge --ff-only origin/master`, fast-forward de 5 commits.
+- Rede: `curl` direto via `Bash` para KAYAK, Google Flights, Skyscanner, Kiwi.com e Hopper → `CONNECT tunnel failed, response 403` nos cinco; status do proxy confirma `"selective": false`, com os cinco domínios em `recentRelayFailures` como `connect_rejected`. Mesmo bloqueio estrutural de rede para acesso direto a qualquer site de passagem, sem nenhum sinal de melhora em cinquenta e nove dias corridos.
+- `WebSearch` (único canal funcional) não trouxe nenhuma âncora nova além do índice cacheado já conhecido (FlyTAP, Kayak, Momondo, Air France, Mundi — todos sem par de data real em ago-set/2027). Busca dedicada para GIG-MXP em set/2028 não encontrou nenhuma disponibilidade real de voo para aquele mês — nenhuma fonte citou data além de 2026. Sem evidência de abertura de vendas para set/2028.
+- Nenhum preço com confiança suficiente (data real ago–set/2027, 3 passageiros, bagagem despachada) abaixo do teto de referência R$ 4.457/pessoa.
+- Atualizadas: [[historico-de-precos]] (nova seção narrativa "sexagésima rodada" + resumo "sessenta rodadas" + frontmatter `atualizado: 2026-11-16`); `hot-cache.md` (bloco de bloqueio de rede atualizado); `log.md` (esta entrada).
+- Veredito: **PASSA** — mesmo motivo estrutural das cinquenta e nove rodadas anteriores. Gatilho #1 continua ⏸️ pausado. Caso A (sem-dados).
+- Pendente: decisão do Fabio sobre as três opções da nota de 09-20 (reduzir cadência / alerta nativo / liberar egress) completa cinquenta e sete dias corridos sem resposta — nove dias desde a última notificação push (11-07); **sem novo push nesta rodada** (sem fato novo sobre o bloqueio em si). Pendência de manutenção ([[historico-de-precos]] acima do limite de ~400 linhas do `CLAUDE.md` §2, agora bem acima de 1.270 linhas) continua não resolvida, fora do escopo de uma coleta diária autônoma.
+- Issue GitHub: ver URL abaixo, registrada após a criação.
