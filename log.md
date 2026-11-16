@@ -1074,4 +1074,4 @@ isso — só o extrato dele.
 - Atualizadas: [[historico-de-precos]] (nova seção narrativa "sexagésima rodada" + resumo "sessenta rodadas" + frontmatter `atualizado: 2026-11-16`); `hot-cache.md` (bloco de bloqueio de rede atualizado); `log.md` (esta entrada).
 - Veredito: **PASSA** — mesmo motivo estrutural das cinquenta e nove rodadas anteriores. Gatilho #1 continua ⏸️ pausado. Caso A (sem-dados).
 - Pendente: decisão do Fabio sobre as três opções da nota de 09-20 (reduzir cadência / alerta nativo / liberar egress) completa cinquenta e sete dias corridos sem resposta — nove dias desde a última notificação push (11-07); **sem novo push nesta rodada** (sem fato novo sobre o bloqueio em si). Pendência de manutenção ([[historico-de-precos]] acima do limite de ~400 linhas do `CLAUDE.md` §2, agora bem acima de 1.270 linhas) continua não resolvida, fora do escopo de uma coleta diária autônoma.
-- Issue GitHub: ver URL abaixo, registrada após a criação.
+- Issue GitHub criada via `mcp__github__issue_write` (ferramentas MCP do GitHub disponíveis nesta rodada), caso A (sem-dados): https://github.com/fllemos2/Travelplan-wiki/issues/60
