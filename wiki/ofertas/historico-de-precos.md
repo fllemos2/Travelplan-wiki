@@ -2,7 +2,7 @@
 tipo: conceito
 titulo: Histórico de Preços
 criado: 2026-09-01
-atualizado: 2026-11-17
+atualizado: 2026-11-18
 tags: [ofertas, precos, vigilancia]
 fontes: []
 confianca: alta
@@ -1251,6 +1251,18 @@ Sexagésima primeira execução autônoma agendada seguida (09-18 a 11-17), sem 
 - **Veredito da sessão: PASSA.** Sexagésimo primeiro "sem dados de linha de base real" seguido, mesmo motivo estrutural. Gatilho #1 continua ⏸️ pausado.
 
 **Sessenta e uma rodadas seguidas (09-18 a 11-17) — sessenta dias corridos.** O bloqueio de rede para sites de passagem (`curl`/`WebFetch` direto) segue sem solução própria; a decisão do Fabio sobre as três opções da nota de 09-20 (reduzir cadência / alerta nativo / liberar egress) segue pendente há **cinquenta e oito dias corridos** — sem fato novo sobre o bloqueio em si desde 11-07 e com a última notificação push há dez dias (11-07); esta rodada não repete o alerta, por não haver nenhum fato novo que justifique saturar o canal de novo. Pendência de manutenção de 10-14 (arquivo [[historico-de-precos]] acima do limite de ~400 linhas do `CLAUDE.md` §2, agora bem acima de 1.280 linhas) continua **não resolvida**, fora do escopo de uma coleta diária autônoma.
+
+### 🚫 Tentativa de coleta 2026-11-18 12:02 UTC — sexagésima segunda rodada, bloqueio confirmado de novo (sessenta e um dias corridos desde 09-18)
+
+Sexagésima segunda execução autônoma agendada seguida (09-18 a 11-18), sem o Fabio no circuito. Repositório encontrado em `master`, sincronizado com `origin/master` (`884aedd`), sem divergência — primeira rodada em várias semanas sem o problema recorrente de `HEAD` *detached*.
+
+- Status do proxy (`$HTTPS_PROXY/__agentproxy/status`) confirmou de novo `"selective": false`, sem falhas prévias em `recentRelayFailures`. `curl` direto via `Bash` para `example.com` (controle), KAYAK, Google Flights, Skyscanner, Kiwi.com e Hopper → `CONNECT tunnel failed, response 403` nos seis (inclusive o controle), todos registrados em `recentRelayFailures` como `connect_rejected`. `WebFetch` tentado direto no KAYAK (GIG-MXP) → `getaddrinfo ENOTFOUND www.kayak.com.br`, mesma categoria de bloqueio por outro caminho. Mesmo bloqueio estrutural de rede para acesso direto a qualquer site de passagem, sem nenhum sinal de melhora em sessenta e um dias corridos.
+- `WebSearch` (único canal funcional) rodou para as cinco buscas desta rodada — GIG-MXP ago/2027, CDG-GIG/PAR-RIO set/2027, GIG-FCO set/2027, GIG-VCE ago-set/2027, GIG-MXP set/2028 — mas **não trouxe nenhuma âncora materialmente nova com data de calendário dentro de ago-set/2027**: os valores retornados (FlyTAP MXP-GIG a partir de 842 EUR, fev-mar/2027 — ano-alvo, mas fora de ago-set; FlyTAP GIG-MXP a partir de R$ 4.607 e 769 EUR, sem par de data; Momondo GIG-MIL teaser de ida isolada R$ 2.052–2.524; Kayak GIG-MXP faixa típica R$ 4.482–6.222, mínimo recente R$ 3.735 LATAM "últimos 5 dias"; Air France GIG-MIL a partir de R$ 5.059/5.075, out/2026 — ano-base; Trip.com citando setembro como mês mais barato PAR-RIO, €843–1.094, sem ano; Kayak PAR-RIO ida e volta US$ 1.016, dois stops, sem ano; FlyTAP GIG-FCO a partir de R$ 4.573, out/2026 — ano-base, exec. R$ 15.033; Air France GIG-FCO a partir de R$ 5.119, out-nov/2026 — ano-base; Flypass GIG-FCO citando média set/2025 de ~R$ 4.500, ano errado; Kayak FCO-GIG mínimo R$ 3.768 Delta, faixa R$ 4.609–5.568, sem data; Momondo GIG-VCE teaser ida isolada R$ 2.060–3.828; FlyTAP GIG-VCE a partir de 5.473 BRL, fev-mar/2027 — ano-alvo, mas fora de ago-set; Air France GIG-VCE a partir de R$ 4.634, ago-set/2026 — ano-base, não ano-alvo; Kayak GIG-VCE faixa R$ 4.435–5.966, out, sem voo direto confirmado de novo) repetem, ponto a ponto, o mesmo índice cacheado das sessenta e uma rodadas anteriores — nenhum par de data real dentro de ago-set/2027 apareceu nesta rodada, com 3 passageiros e bagagem despachada discriminada.
+- **Teste extra pedido nesta rodada:** busca dedicada por GIG-MXP em **setembro de 2028** (ver se a janela de venda já abriu). Resultado: nenhuma disponibilidade real encontrada para aquele mês — apenas páginas genéricas de comparadores (Omio, FlyTAP, Momondo, Kayak, Mundi, LATAM — esta última retornando "não encontramos opções de voo" para a busca genérica, resultado vazio e não informativo sobre 2028). Confirma a expectativa de que a venda ainda não abriu (regra de ~330 dias, projeção de abertura ~21/10/2027). **Sem alerta de janela aberta.**
+- Nenhum preço com confiança suficiente (data de calendário real dentro de ago–set/2027, 3 passageiros, bagagem despachada) ficou abaixo do teto de referência R$ 4.457/pessoa nesta rodada.
+- **Veredito da sessão: PASSA.** Sexagésimo segundo "sem dados de linha de base real" seguido, mesmo motivo estrutural. Gatilho #1 continua ⏸️ pausado.
+
+**Sessenta e duas rodadas seguidas (09-18 a 11-18) — sessenta e um dias corridos.** O bloqueio de rede para sites de passagem (`curl`/`WebFetch` direto) segue sem solução própria; a decisão do Fabio sobre as três opções da nota de 09-20 (reduzir cadência / alerta nativo / liberar egress) segue pendente há **cinquenta e nove dias corridos** — sem fato novo sobre o bloqueio em si desde 11-07 e com a última notificação push há onze dias (11-07); esta rodada não repete o alerta, por não haver nenhum fato novo que justifique saturar o canal de novo. Pendência de manutenção de 10-14 (arquivo [[historico-de-precos]] acima do limite de ~400 linhas do `CLAUDE.md` §2, agora bem acima de 1.300 linhas) continua **não resolvida**, fora do escopo de uma coleta diária autônoma.
 
 ## Hospedagem
 
