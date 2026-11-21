@@ -1,6 +1,6 @@
 ---
 tipo: hot-cache
-atualizado: 2026-11-20
+atualizado: 2026-11-21
 janela_palavras: 302
 limite: 500
 ---
@@ -91,35 +91,34 @@ durante a rotina do relatório mensal.
 - Obsidian: Templates → `meta/templates/`; anexos → `raw/assets/`; instalar Dataview
 - Vigilância automática via `/schedule` — só faz sentido a partir de out/2027
 
-### 🚫 Coleta autônoma de preços — bloqueio de rede estrutural (confirmado 64x seguidas: 09-18 a 11-20, sessenta e três dias corridos, mais de nove semanas)
+### 🚫 Coleta autônoma de preços — bloqueio de rede estrutural (confirmado 65x seguidas: 09-18 a 11-21, sessenta e quatro dias corridos, mais de nove semanas)
 
 O `cacador-ofertas` roda em agendamento autônomo diário, mas **`WebFetch` e `curl` direto estão
-sistematicamente bloqueados** para qualquer domínio externo de viagem — confirmado de novo em 11-20
+sistematicamente bloqueados** para qualquer domínio externo de viagem — confirmado de novo em 11-21
 (`curl` para `example.com` (controle), KAYAK, Google, Skyscanner, Kiwi.com e Hopper devolveu
 `CONNECT tunnel failed, response 403` nos seis, inclusive o controle, confirmado pelo log de falhas
-do proxy). Novidade operacional desta rodada: a própria checagem de `$HTTPS_PROXY/__agentproxy/status`
-foi barrada pelo classificador de permissões do ambiente — primeira vez que isso acontece; sem impacto
-no diagnóstico, que já estava confirmado pelo teste direto dos seis domínios. Só `WebSearch` funciona
+do proxy; `WebFetch` direto para `www.kayak.com` e `www.google.com/travel/flights` devolveu
+`getaddrinfo ENOTFOUND` nos dois, mesmo padrão de host fora do allowlist). Só `WebSearch` funciona
 para preço, e devolve snippets agregados/cacheados de baixíssima confiança (sem data específica
 confirmada, 1 passageiro, sem bagagem) — **não serve para montar a linha de base real de ago–set/2027**.
-Pendência do Fabio (reduzir cadência / alerta nativo / liberar egress, nota de 09-20) chega a **61 dias
+Pendência do Fabio (reduzir cadência / alerta nativo / liberar egress, nota de 09-20) chega a **62 dias
 corridos** sem resposta.
-Rodada de 11-20 repetiu o teste extra: busca dedicada por GIG-MXP em **set/2028** (checar se a venda já
+Rodada de 11-21 repetiu o teste extra: busca dedicada por GIG-MXP em **set/2028** (checar se a venda já
 abriu). Resultado: nenhuma disponibilidade real encontrada — nenhuma fonte citou data além de **2026**.
 A venda ainda não abriu, sem evidência de antecipação sobre a regra de ~330 dias já registrada
 (projeção ~21/10/2027).
 
-Rotina operacional desta rodada: repositório encontrado de novo em `HEAD` *detached*, 4 commits atrás
+Rotina operacional desta rodada: repositório encontrado de novo em `HEAD` *detached*, 6 commits atrás
 de `origin/master` — corrigido com `git checkout master && git merge --ff-only origin/master`,
 nenhum trabalho perdido.
-**Decisão do Fabio pendente desde 09-20, agora com 64 rodadas seguidas (sessenta e um dias corridos)
+**Decisão do Fabio pendente desde 09-20, agora com 65 rodadas seguidas (sessenta e dois dias corridos)
 sem resposta:** (a) reduzir a frequência do agendamento, (b) montar alerta de tarifa nativo (Google
 Flights/KAYAK, fora deste agente), ou (c) pedir liberação de egress para sites de passagem
 especificamente. A reescalação direta mais recente continua sendo a de 10-17, seguida pela notificação
-push de 11-07 (treze dias corridos); **esta rodada (11-20) não repete o alerta** — sem fato novo sobre o
-bloqueio em si desde então (o novo bloqueio do classificador sobre o status do proxy não muda o
-diagnóstico nem exige decisão nova).
-Detalhe completo em [[historico-de-precos]], nota de 2026-11-20.
+push de 11-07 (catorze dias corridos); **esta rodada (11-21) não repete o alerta** — sem fato novo sobre o
+bloqueio em si desde então; a cadência das duas escalações anteriores (~3 semanas) sugere a próxima
+reescalação natural perto de 11-28, se a pendência continuar.
+Detalhe completo em [[historico-de-precos]], nota de 2026-11-21.
 
 **Pendência de manutenção (desde 10-14, ainda não resolvida):** [[historico-de-precos]] passou de 650
 linhas (agora bem acima de 1.300), acima do limite de ~400 linhas recomendado pelo `CLAUDE.md` §2 — considerar
