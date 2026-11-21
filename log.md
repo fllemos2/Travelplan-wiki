@@ -1130,3 +1130,4 @@ isso — só o extrato dele.
 - Veredito: **PASSA** — mesmo motivo estrutural das sessenta e quatro rodadas anteriores. Gatilho #1 continua ⏸️ pausado. Caso A (sem-dados).
 - Pendente: decisão do Fabio sobre as três opções da nota de 09-20 (reduzir cadência / alerta nativo / liberar egress) completa sessenta e dois dias corridos sem resposta — catorze dias desde a última notificação push (11-07); **sem novo push nesta rodada** (sem fato novo sobre o bloqueio em si; cadência das escalações anteriores sugere a próxima perto de 11-28). Pendência de manutenção ([[historico-de-precos]] acima do limite de ~400 linhas do `CLAUDE.md` §2, agora bem acima de 1.300 linhas) continua não resolvida, fora do escopo de uma coleta diária autônoma.
 - Issue GitHub criada via `mcp__github__issue_write`, caso A (sem-dados): https://github.com/fllemos2/Travelplan-wiki/issues/65
+- Issue #65 atualizada com o link do commit `9640a93` (campo "Link" preenchido após o push).
