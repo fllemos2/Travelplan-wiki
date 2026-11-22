@@ -1,6 +1,6 @@
 ---
 tipo: hot-cache
-atualizado: 2026-11-21
+atualizado: 2026-11-22
 janela_palavras: 302
 limite: 500
 ---
