@@ -1,6 +1,6 @@
 ---
 tipo: hot-cache
-atualizado: 2026-11-24
+atualizado: 2026-11-25
 janela_palavras: 302
 limite: 500
 ---
@@ -91,32 +91,33 @@ durante a rotina do relatório mensal.
 - Obsidian: Templates → `meta/templates/`; anexos → `raw/assets/`; instalar Dataview
 - Vigilância automática via `/schedule` — só faz sentido a partir de out/2027
 
-### 🚫 Coleta autônoma de preços — bloqueio de rede estrutural (confirmado 68x seguidas: 09-18 a 11-24, sessenta e sete dias corridos, mais de nove semanas)
+### 🚫 Coleta autônoma de preços — bloqueio de rede estrutural (confirmado 69x seguidas: 09-18 a 11-25, sessenta e oito dias corridos, quase dez semanas)
 
 O `cacador-ofertas` roda em agendamento autônomo diário, mas **`WebFetch` e `curl` direto estão
-sistematicamente bloqueados** para qualquer domínio externo de viagem — confirmado de novo em 11-24
-(`curl` para `example.com` (controle), KAYAK, Kiwi.com, Skyscanner e Google devolveu falha de conexão
-sem resposta HTTP, confirmada pelo log do proxy como `connect_rejected`/403 nos cinco, inclusive o
-controle). Só `WebSearch` funciona para preço, e devolve snippets
+sistematicamente bloqueados** para qualquer domínio externo de viagem — confirmado de novo em 11-25
+(`curl` para `example.com` (controle), KAYAK, Kiwi.com, Skyscanner e Google devolveu
+`CONNECT tunnel failed, response 403` nos cinco, inclusive o
+controle, confirmado pelo log do proxy como `connect_rejected`/403). Só `WebSearch` funciona para preço, e devolve snippets
 agregados/cacheados de baixíssima confiança (sem data específica confirmada, 1 passageiro, sem
 bagagem) — **não serve para montar a linha de base real de ago–set/2027**.
-Pendência do Fabio (reduzir cadência / alerta nativo / liberar egress, nota de 09-20) chega a **65 dias
+Pendência do Fabio (reduzir cadência / alerta nativo / liberar egress, nota de 09-20) chega a **66 dias
 corridos** sem resposta.
-Rodada de 11-24 repetiu o teste extra: busca dedicada por GIG-MXP em **set/2028** (checar se a venda já
+Rodada de 11-25 repetiu o teste extra: busca dedicada por GIG-MXP em **set/2028** (checar se a venda já
 abriu). Resultado: nenhuma disponibilidade real encontrada — nenhuma fonte citou data além de jan-fev/**2027**.
 A venda ainda não abriu, sem evidência de antecipação sobre a regra de ~330 dias já registrada
 (projeção ~21/10/2027).
 
-Rotina operacional desta rodada: repositório encontrado já em `master`, sincronizado com
-`origin/master`, sem `HEAD` *detached*.
-**Decisão do Fabio pendente desde 09-20, agora com 68 rodadas seguidas (sessenta e cinco dias corridos)
+Rotina operacional desta rodada: repositório encontrado em `HEAD` *detached*, 2 commits atrás de
+`origin/master` (mesmo padrão recorrente de ponteiro local atrasado) — corrigido com
+`git checkout master && git merge --ff-only origin/master`, sem perda de trabalho.
+**Decisão do Fabio pendente desde 09-20, agora com 69 rodadas seguidas (sessenta e seis dias corridos)
 sem resposta:** (a) reduzir a frequência do agendamento, (b) montar alerta de tarifa nativo (Google
 Flights/KAYAK, fora deste agente), ou (c) pedir liberação de egress para sites de passagem
 especificamente. A reescalação direta mais recente continua sendo a de 10-17, seguida pela notificação
-push de 11-07 (dezessete dias corridos); **esta rodada (11-24) não repete o alerta**, por não haver
+push de 11-07 (dezoito dias corridos); **esta rodada (11-25) não repete o alerta**, por não haver
 fato novo sobre o bloqueio em si desde então; a próxima reescalação natural projetada continua perto de
-11-28 (quatro dias à frente) — se a pendência continuar até lá, aquela rodada deve reescalar.
-Detalhe completo em [[historico-de-precos]], nota de 2026-11-24.
+11-28 (três dias à frente) — se a pendência continuar até lá, aquela rodada deve reescalar.
+Detalhe completo em [[historico-de-precos]], nota de 2026-11-25.
 
 **Pendência de manutenção (desde 10-14, ainda não resolvida):** [[historico-de-precos]] passou de 650
 linhas (agora bem acima de 1.300), acima do limite de ~400 linhas recomendado pelo `CLAUDE.md` §2 — considerar
