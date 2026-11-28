@@ -1,6 +1,6 @@
 ---
 tipo: hot-cache
-atualizado: 2026-11-27
+atualizado: 2026-11-28
 janela_palavras: 302
 limite: 500
 ---
@@ -91,34 +91,34 @@ durante a rotina do relatório mensal.
 - Obsidian: Templates → `meta/templates/`; anexos → `raw/assets/`; instalar Dataview
 - Vigilância automática via `/schedule` — só faz sentido a partir de out/2027
 
-### 🚫 Coleta autônoma de preços — bloqueio de rede estrutural (confirmado 71x seguidas: 09-18 a 11-27, setenta dias corridos, dez semanas)
+### 🚫 Coleta autônoma de preços — bloqueio de rede estrutural (confirmado 72x seguidas: 09-18 a 11-28, setenta e um dias corridos, dez semanas e um dia)
 
 O `cacador-ofertas` roda em agendamento autônomo diário, mas **`WebFetch` e `curl` direto estão
-sistematicamente bloqueados** para qualquer domínio externo de viagem — confirmado de novo em 11-27
+sistematicamente bloqueados** para qualquer domínio externo de viagem — confirmado de novo em 11-28
 (`curl` para `example.com` (controle), KAYAK, Kiwi.com, Skyscanner e Google devolveu
 `CONNECT tunnel failed, response 403` nos cinco, inclusive o
 controle; `WebFetch` direto para KAYAK devolveu `getaddrinfo ENOTFOUND`).
 Só `WebSearch` funciona para preço, e devolve snippets agregados/cacheados de baixíssima confiança
 (sem data específica confirmada, 1 passageiro, sem bagagem) — **não serve para montar a linha de base
 real de ago–set/2027**.
-Pendência do Fabio (reduzir cadência / alerta nativo / liberar egress, nota de 09-20) chega a **68 dias
-corridos** sem resposta.
-Rodada de 11-27 repetiu o teste extra: busca dedicada por GIG-MXP em **set/2028** (checar se a venda já
-abriu). Resultado: nenhuma disponibilidade real encontrada — nenhuma fonte citou data além de fev-mai/**2027**.
+Rodada de 11-28 repetiu o teste extra: busca dedicada por GIG-MXP em **set/2028** (checar se a venda já
+abriu). Resultado: nenhuma disponibilidade real encontrada — nenhuma fonte citou data além de 2027.
 A venda ainda não abriu, sem evidência de antecipação sobre a regra de ~330 dias já registrada
 (projeção ~21/10/2027).
 
-Rotina operacional desta rodada: repositório encontrado em `HEAD` *detached*, 6 commits atrás de
+Rotina operacional desta rodada: repositório encontrado em `HEAD` *detached*, 8 commits atrás de
 `origin/master` (mesmo padrão recorrente de ponteiro local atrasado) — corrigido com
 `git checkout master && git merge --ff-only origin/master`, sem perda de trabalho.
-**Decisão do Fabio pendente desde 09-20, agora com 71 rodadas seguidas (sessenta e oito dias corridos)
-sem resposta:** (a) reduzir a frequência do agendamento, (b) montar alerta de tarifa nativo (Google
+**Decisão do Fabio pendente desde 09-20, agora com 72 rodadas seguidas (69 dias corridos) sem
+resposta:** (a) reduzir a frequência do agendamento, (b) montar alerta de tarifa nativo (Google
 Flights/KAYAK, fora deste agente), ou (c) pedir liberação de egress para sites de passagem
-especificamente. A reescalação direta mais recente continua sendo a de 10-17, seguida pela notificação
-push de 11-07 (vinte dias corridos); **esta rodada (11-27) não repete o alerta**, por não haver
-fato novo sobre o bloqueio em si desde então; a próxima reescalação natural projetada cai **amanhã,
-11-28** — se a pendência continuar até lá, aquela rodada deve reescalar.
-Detalhe completo em [[historico-de-precos]], nota de 2026-11-27.
+especificamente.
+**🔔 Esta rodada (11-28) reescalou por notificação push**, conforme combinado na rodada de 11-27: a
+reescalação natural projetada caía exatamente hoje e a pendência continuou sem resposta — terceira
+reescalação direta desde a nota de 09-20 (depois de 10-17 e 11-07, vinte e um dias atrás). Sem resposta
+do Fabio ainda nesta rodada, a próxima reescalação natural cai em torno de **19/12** (padrão de ~21 dias
+entre reescalações); se a pendência continuar sem fato novo, não reescalar antes disso.
+Detalhe completo em [[historico-de-precos]], nota de 2026-11-28.
 
 **Pendência de manutenção (desde 10-14, ainda não resolvida):** [[historico-de-precos]] passou de 650
 linhas (agora bem acima de 1.400), acima do limite de ~400 linhas recomendado pelo `CLAUDE.md` §2 — considerar
