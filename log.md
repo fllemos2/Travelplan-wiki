@@ -1205,3 +1205,5 @@ isso — só o extrato dele.
 - Issue GitHub criada via `gh api` (REST, `gh issue create` falhou com `GraphQL is not available`, mesmo erro das rodadas anteriores), caso A (sem-dados): https://github.com/fllemos2/Travelplan-wiki/issues/72
 - Commit desta rodada: `af52ece`.
 ## [2026-11-28] ofertas | Caçador de Ofertas — septuagésima segunda coleta autônoma agendada (bloqueio confirmado pela 72ª vez, setenta e um dias corridos; reescalação por push enviada — decisão de Fabio pendente há 69 dias)
+- Issue GitHub criada via MCP `issue_write`, caso A (sem-dados): https://github.com/fllemos2/Travelplan-wiki/issues/73
+- Commit desta rodada: `301589c`.
